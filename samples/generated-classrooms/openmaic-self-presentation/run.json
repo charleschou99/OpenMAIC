@@ -1,0 +1,385 @@
+{
+  "id": "run-oC1_GqQYeeJzA3U1",
+  "state": "completed",
+  "input": {
+    "agents": {
+      "mode": "auto"
+    },
+    "taskEngine": false,
+    "interactive": false,
+    "materialIds": [
+      "mat_sz2z4h1v0er11dkqpg1b3qp558"
+    ],
+    "requirement": "Build a technical classroom that explains the architecture of the OpenMAIC project itself, for an experienced software engineer who has never seen this repository. Work from the attached technical structure brief. Cover, in order: (1) the layering — the Next.js app, the engines in lib/, the reusable @openmaic packages, the skills and the test suites, with the real measured code sizes; (2) the generation pipeline — its exact step order from material analysis through research, outline, outline confirmation, agents, then per scene content, actions and narration, plus the run states; (3) the PostgreSQL data model — what a course is, what a scene is, what the JSON blob holds, and how revision counters let the client refetch only changed scenes; (4) the end-to-end request flow from POST /api/materials and POST /api/generate-classroom through to classroom playback; (5) the DSL boundary and why a dependency-free contract package matters; (6) where a contributor extends the system. Be concrete: real file paths, real table names, the real numbers. The audience reads code and does not need the product pitch.",
+    "outlineReview": "auto"
+  },
+  "outline": {
+    "outlines": [
+      {
+        "id": "scene_1",
+        "type": "slide",
+        "order": 1,
+        "title": "Mental Model and Top-Level Map",
+        "keyPoints": [
+          "Next.js 16 App Router application on a pnpm monorepo of six reusable @openmaic/* packages; three engines live in lib/",
+          "Server-first: PostgreSQL owns all course state, the browser is a view onto it",
+          "What changed in v1.2: the browser used to drive generation step by step and hold the course — closing a tab stopped a course halfway; the server now owns generation, model configuration and persistence",
+          "[Table] Top-level directory map: app/ (6 pages + 78 API routes), lib/ (846 files / ~173,000 lines), components/ (380 files / ~82,000 lines), packages/@openmaic/ (dsl, generation, storage, renderer, editor, importer + vendored mathml2omml, pptxgenjs), skills/, tests/ (950 files / ~234,000 lines), eval/, e2e/, scripts/, render-service/, configs/",
+          "Route inventory to anchor the rest of the course: / , /workspace , /workbench/new , /classroom/[id] , /generation-preview , /eval/whiteboard"
+        ],
+        "description": "Establish the server-first mental model and orient the reader across the repository's top-level directories before drilling into any subsystem.",
+        "estimatedDuration": 180,
+        "teachingObjective": "Build an accurate top-level mental model of the repository and its server-first architecture."
+      },
+      {
+        "id": "scene_2",
+        "type": "slide",
+        "order": 2,
+        "title": "The Layering, With Measured Sizes",
+        "keyPoints": [
+          "Layer 1 — contract: packages/@openmaic/{dsl, generation, storage, renderer, editor, importer}; note packages/docs is excluded from the workspace with its own lockfile, build and deploy",
+          "Layer 2 — engines in lib/: generation, agent-runtime, orchestration, playback, action; lib/ is the densest area of the repo at 846 files / ~173,000 lines",
+          "Layer 3 — app surface: app/ with 6 pages and 78 API routes over components/ (380 files / ~82,000 lines)",
+          "Layer 4 — verification: tests/ at 950 files / ~234,000 lines — the test suite is larger than the engine it tests; plus eval/ (6 LLM-judged suites) and e2e/ (Playwright)",
+          "[Chart] Horizontal bar chart of measured code size by top-level area: tests ~234k, lib ~173k, components ~82k",
+          "[Table] Side surfaces: skills/ (24 built-in skills under skills/agent-runtime/ plus skills/openmaic/), scripts/ (vendor importer sync, standalone player build, i18n key check, node engine contract check, internal dependency range checks, Postgres contract suites), render-service/ (separate Docker service for MP4 export), configs/ (chart, element, font, animation, hotkey, image-clip)"
+        ],
+        "description": "Walk the four layers bottom-up — contract packages, engines, application surface, tests — using the real measured code sizes from the tree.",
+        "estimatedDuration": 210,
+        "teachingObjective": "Map each architectural layer to its concrete directory and measured size."
+      },
+      {
+        "id": "scene_3",
+        "type": "slide",
+        "order": 3,
+        "title": "The Three Engines",
+        "keyPoints": [
+          "Generation — lib/server/generation/run/ (engine.ts, plan.ts, config.ts, deadline.ts, input.ts, media.ts, narration-voice.ts) and lib/server/generation/steps/ (material-analysis, research, outline, agent-profiles, scene-content, scene-actions, image, narration, video)",
+          "Agent runtime — lib/server/agent-runtime/: database-backed sessions with leases, heartbeats, crash resume, cancellation and follow-up steering; it powers the Pro workbench at /workbench/new",
+          "Agent tools are validated, not free-form blob edits: course-tools, dsl-tools, document-writes, curriculum-tools, generate-image, generate-video, fetch-url, plus skill tools create-skill, read-skill, patch-skill",
+          "Orchestration — lib/orchestration/: LangGraph state machine in director-graph.ts, the director prompt, prompt builder, tool schemas, built-in agent registry",
+          "Playback — lib/playback/ (engine.ts, cursor.ts, derived-state.ts, auto-resume.ts); the 21 action types (speech, whiteboard draw, text, shape, chart, spotlight, laser, …) are implemented in lib/action/engine.ts"
+        ],
+        "description": "Distinguish the three engines by responsibility: durable generation, tool-mediated agent runtime, and orchestration plus playback.",
+        "estimatedDuration": 180,
+        "teachingObjective": "Attribute each subsystem to the engine that owns it and describe each engine's contract."
+      },
+      {
+        "id": "scene_4",
+        "type": "quiz",
+        "order": 4,
+        "title": "Checkpoint: Layering and Engines",
+        "keyPoints": [
+          "Which layer does a given path belong to — contract package, engine in lib/, app surface, or test/eval?",
+          "Which engine owns durable execution, and which owns interactive tool use?",
+          "Where do the 21 action types live?",
+          "Why is the docs sub-app not part of the workspace?"
+        ],
+        "quizConfig": {
+          "difficulty": "medium",
+          "questionCount": 3,
+          "questionTypes": [
+            "single",
+            "multiple"
+          ]
+        },
+        "description": "Verify the reader can place a given file path or capability in the correct layer and engine before moving to the pipeline.",
+        "estimatedDuration": 120,
+        "teachingObjective": "Confirm correct layer and engine attribution."
+      },
+      {
+        "id": "scene_5",
+        "type": "slide",
+        "order": 5,
+        "title": "Generation Pipeline: The Authoritative Order",
+        "keyPoints": [
+          "Authoritative order lives in lib/server/generation/run/plan.ts — it is the single source of truth, not the step directory listing",
+          "Step order: material-analysis (only when materials are attached) → research → outline → checkpoint awaiting outline confirmation → agents → then per scene in outline order: content → actions → narration",
+          "The narration step commits the scene into the course in the same transaction — scene persistence is not a separate step",
+          "Steps whose capability does not resolve are skipped rather than failed; this is a design property, not an error path",
+          "Step implementations map one-to-one onto lib/server/generation/steps/ (material-analysis, research, outline, agent-profiles, scene-content, scene-actions, image, narration, video) — note agent-profiles backs the `agents` step and image/video are auxiliary"
+        ],
+        "description": "Read the exact step order out of run/plan.ts, including the conditional first step and the confirmation checkpoint.",
+        "estimatedDuration": 210,
+        "teachingObjective": "Reproduce the pipeline step order exactly and justify each step's position."
+      },
+      {
+        "id": "scene_6",
+        "type": "slide",
+        "order": 6,
+        "title": "Run States, Leases and Durability",
+        "keyPoints": [
+          "Run states: preparing, outlining, generating, awaiting_outline_confirmation, completed, plus the terminal-ish paused, ended, failed",
+          "A paused run is retryable; failed is the hard stop",
+          "awaiting_outline_confirmation is an explicit checkpoint — waiting for confirmation holds no worker",
+          "Runs and agent sessions are leased rows with heartbeats and resume, so a run survives a closed browser tab",
+          "Supporting tables for this machinery: generation_run_events, generation_run_commands, agent_sessions and its event tables"
+        ],
+        "description": "Explain the run state machine and why durability is implemented as leased database rows with heartbeats rather than a client loop.",
+        "estimatedDuration": 180,
+        "teachingObjective": "Describe the run lifecycle and the durability mechanism that makes it server-owned."
+      },
+      {
+        "id": "scene_7",
+        "type": "interactive",
+        "order": 7,
+        "title": "Interactive: Pipeline and State Machine",
+        "keyPoints": [
+          "Walk the ordered plan from material-analysis through narration and watch the run state change",
+          "Toggle 'materials attached' to see material-analysis included or skipped",
+          "Pause at the outline confirmation checkpoint and observe that no worker is held",
+          "Failure paths: capability unresolved → step skipped; runtime error → failed; user pause → paused and retryable"
+        ],
+        "widgetType": "diagram",
+        "description": "Let the reader step through the pipeline to see how the plan, the per-scene loop and the run state transitions map onto one another.",
+        "widgetOutline": {
+          "diagramType": "flowchart"
+        },
+        "estimatedDuration": 210,
+        "teachingObjective": "Internalise the correspondence between plan steps, run states and failure semantics."
+      },
+      {
+        "id": "scene_8",
+        "type": "slide",
+        "order": 8,
+        "title": "The PostgreSQL Data Model",
+        "keyPoints": [
+          "A course is a row in document_stages",
+          "A scene is a row in document_scenes with columns (stage_id, id, scene_order, data jsonb)",
+          "The data blob is the scene: its slide elements plus the agent action script — one JSON document per scene",
+          "Database triggers maintain per-stage and per-scene revision counters, which lets the client refetch only the scenes that actually changed",
+          "[Table] Related tables and their role: generation_run_events, generation_run_commands, agent_sessions + its event tables, asset_blobs, asset_entries, document_folders, document_outlines",
+          "Practical consequence: a client can diff revision counters per scene instead of reloading the whole stage"
+        ],
+        "description": "Define course, scene and the JSONB blob, then explain how database triggers maintain revision counters for incremental refetch.",
+        "estimatedDuration": 240,
+        "teachingObjective": "Read and reason about the persistence schema that backs a course and its incremental sync."
+      },
+      {
+        "id": "scene_9",
+        "type": "slide",
+        "order": 9,
+        "title": "End-to-End Request Flow",
+        "keyPoints": [
+          "POST /api/materials — file bytes as the raw body, filename in the x-material-filename header; returns 201 with a materialId; text extraction continues asynchronously",
+          "POST /api/generate-classroom — JSON body { requirement, materialIds? }; creates a generation run, returns 202, and the returned id is the run id",
+          "The run proceeds server-side and survives a closed tab because it is a leased database row with heartbeats, not a client loop",
+          "Completed scenes are written into document_scenes and the revision trigger fires",
+          "Client polls GET /api/generation-runs/<runId> for status; GET /classroom/<stageId> loads the stage and the playback engine drives the deck; classroom chat goes through /api/chat",
+          "[Chart] Sequence diagram of the six-step flow, annotated with status codes (201, 202) and the one asynchronous boundary"
+        ],
+        "description": "Trace a course from file upload through classroom playback, naming each endpoint, its status code and what it returns.",
+        "estimatedDuration": 210,
+        "teachingObjective": "Trace the full request lifecycle and identify where state is created, persisted and read back."
+      },
+      {
+        "id": "scene_10",
+        "type": "quiz",
+        "order": 10,
+        "title": "Checkpoint: Data Model and Request Flow",
+        "keyPoints": [
+          "Which table holds a course, and which holds a scene with its JSONB blob?",
+          "What status codes do POST /api/materials and POST /api/generate-classroom return, and what does each response body identify?",
+          "What mechanism lets the client refetch only changed scenes?",
+          "Why does generation survive a closed browser tab?"
+        ],
+        "quizConfig": {
+          "difficulty": "medium",
+          "questionCount": 3,
+          "questionTypes": [
+            "single",
+            "multiple"
+          ]
+        },
+        "description": "Test recall of concrete table names, endpoint contracts and status codes, and of the incremental refetch mechanism.",
+        "estimatedDuration": 150,
+        "teachingObjective": "Confirm accurate recall of the persistence and API contracts."
+      },
+      {
+        "id": "scene_11",
+        "type": "slide",
+        "order": 11,
+        "title": "The DSL Boundary",
+        "keyPoints": [
+          "@openmaic/dsl is the pure, dependency-free contract of types, JSON Schema, validators and version migrations",
+          "Dependency direction: renderer, editor, importer and generation all depend on the DSL rather than on each other",
+          "This is what allows a standalone player and a separate render service — the MP4 export in render-service/ never imports the Next.js app",
+          "Version migrations live in the contract package, so schema evolution is versioned in one place instead of across consumers",
+          "Contrast with configs/: rendering defaults (chart, element, font, animation, hotkey, image-clip) are data, not contract — they can change without a migration"
+        ],
+        "description": "Explain what @openmaic/dsl contains, why it depends on nothing, and how that dependency direction enables standalone consumers.",
+        "estimatedDuration": 180,
+        "teachingObjective": "Explain the dependency-inversion argument for the contract package and its downstream effects."
+      },
+      {
+        "id": "scene_12",
+        "type": "slide",
+        "order": 12,
+        "title": "Where a Contributor Extends the System",
+        "keyPoints": [
+          "Teaching voice and prompting → lib/orchestration/director-prompt.ts and lib/orchestration/prompt-builder.ts",
+          "What a slide can contain → packages/@openmaic/dsl (types, JSON Schema, validators, migrations); rendering defaults live in configs/",
+          "Pipeline behaviour, retries, deadlines → lib/server/generation/run/engine.ts, plan.ts, config.ts, deadline.ts",
+          "Agent capabilities → lib/server/agent-runtime/course-tools.ts, dsl-tools.ts, tool-schemas.ts",
+          "Adding a teaching skill → create skills/agent-runtime/<name>/SKILL.md in the standard SKILL.md format; grading teaching quality → eval/<suite>/runner.ts with its judge prompts",
+          "Credentials stay server-side: provider keys never reach the browser, and every capability has a uniform disable switch"
+        ],
+        "description": "Enumerate the extension points by intent, each mapped to the exact file a contributor would open first.",
+        "estimatedDuration": 210,
+        "teachingObjective": "Select the correct extension point for a given change without searching the tree."
+      },
+      {
+        "id": "scene_13",
+        "type": "pbl",
+        "order": 13,
+        "title": "Contributor Project: Extend the Pipeline",
+        "keyPoints": [
+          "Choose one of: a new generation step in run/plan.ts, a new SKILL.md teaching skill, a new DSL element, or a new agent tool",
+          "Justify the step's position in the plan order and which run states it touches",
+          "Decide whether the change requires a DSL version migration and whether the document_scenes data blob shape changes",
+          "Specify the revision-counter implications and the tests/ coverage the change demands",
+          "Present the change as a design review: files touched, dependency direction respected, failure and skip semantics"
+        ],
+        "pblConfig": {
+          "issueCount": 4,
+          "projectTopic": "Extend the OpenMAIC generation pipeline or contract",
+          "targetSkills": [
+            "Reading an unfamiliar repository's layering from measured structure",
+            "Tracing a change through a durable, plan-driven pipeline",
+            "Reasoning about schema and contract evolution with versioned migrations",
+            "Designing tests for a server-owned, stateful subsystem"
+          ],
+          "projectDescription": "Design a concrete extension — a new generation step, a new agent skill, a new DSL element, or a new agent capability — and produce a design review that names the exact files, the plan position and run states, the DSL migration implications, the document_scenes data-blob impact, and the test coverage required."
+        },
+        "description": "A structured extension project in which the learner designs and defends a concrete change to OpenMAIC, touching the plan, the contract, the data model and the tests.",
+        "estimatedDuration": 900,
+        "teachingObjective": "Apply the architecture to a concrete, defensible contribution proposal."
+      }
+    ],
+    "courseTitle": "OpenMAIC Architecture",
+    "taskEngineMode": false,
+    "languageDirective": "Deliver the entire course in English, written for an experienced software engineer who reads code. Keep all identifiers, file paths, table names, API routes, package names and code symbols in their original English form (e.g. lib/server/generation/run/plan.ts, document_scenes, @openmaic/dsl) — never translate or paraphrase them. Use precise technical vocabulary without dumbing it down, and prefer concrete artefacts and measured numbers over product-level description. Where a term has a standard engineering meaning (lease, heartbeat, checkpoint, JSONB, migration), use it directly and assume familiarity.",
+    "revision": 1
+  },
+  "agents": {
+    "agents": [
+      {
+        "id": "gen-qHkq7hzr",
+        "name": "Marcus Feldt",
+        "role": "teacher",
+        "persona": "A former staff engineer who has shipped two durable workflow runtimes and now teaches architecture by reading source trees out loud. He insists on the server-first mental model and on measured line counts rather than product-level description, and he will not move past a layer until you can name the file that implements it. He treats every identifier as load-bearing and expects you to say lib/server/generation/run/plan.ts, not 'the plan file'."
+      },
+      {
+        "id": "gen-lnWNOss9",
+        "name": "Priya Raghunathan",
+        "role": "assistant",
+        "persona": "A backend engineer who owns lease and heartbeat semantics in production, so she specializes in the run state machine and the durability argument for leased database rows over a client loop. She teaches by asking what happens when a worker dies mid-heartbeat, then making you trace the state transition yourself. She is blunt about the difference between a checkpoint that exists and a checkpoint you can resume from."
+      },
+      {
+        "id": "gen-HEjiK5IG",
+        "name": "Tomas Lindqvist",
+        "role": "assistant",
+        "persona": "A database-leaning engineer who thinks in tables, triggers and migrations, and who can explain the PostgreSQL data model and the incremental refetch revision counters without hand-waving. He also drives the end-to-end request flow walkthrough, naming each endpoint, its status code and its response body. He prefers artefacts over adjectives and will happily paste a schema at you."
+      },
+      {
+        "id": "gen-gTQRpCKN",
+        "name": "Dan Okafor",
+        "role": "student",
+        "persona": "A senior developer who has built CRUD apps for a decade and keeps trying to fit the pipeline into a familiar client-side orchestration shape. He asks the naive-but-load-bearing questions about run states and the conditional first step in run/plan.ts, which usually exposes the exact assumption the rest of the room shares. He is not embarrassed to admit when a layer boundary does not click yet."
+      },
+      {
+        "id": "gen-hHO_sVB5",
+        "name": "Sofia Brandt",
+        "role": "student",
+        "persona": "A meticulous engineer who maintains a running table of layer, engine, file path and capability, and who re-reads every checkpoint question before answering. She catches inconsistencies between the DSL boundary story and the actual dependency direction of @openmaic/dsl, and she does not accept a claim about the repository that is not backed by a symbol. She learns by writing the summary herself and comparing it against the source."
+      }
+    ],
+    "agentIds": [
+      "gen-qHkq7hzr",
+      "gen-lnWNOss9",
+      "gen-HEjiK5IG",
+      "gen-gTQRpCKN",
+      "gen-hHO_sVB5"
+    ],
+    "generatedAgentConfigs": [
+      {
+        "id": "gen-qHkq7hzr",
+        "name": "Marcus Feldt",
+        "role": "teacher",
+        "color": "#3b82f6",
+        "avatar": "/avatars/teacher.png",
+        "persona": "A former staff engineer who has shipped two durable workflow runtimes and now teaches architecture by reading source trees out loud. He insists on the server-first mental model and on measured line counts rather than product-level description, and he will not move past a layer until you can name the file that implements it. He treats every identifier as load-bearing and expects you to say lib/server/generation/run/plan.ts, not 'the plan file'.",
+        "priority": 10,
+        "voiceDesign": {
+          "texture": "warm low-pitched slightly gravelly",
+          "delivery": "calm measured and precise",
+          "identity": "middle-aged male instructor"
+        }
+      },
+      {
+        "id": "gen-lnWNOss9",
+        "name": "Priya Raghunathan",
+        "role": "assistant",
+        "color": "#10b981",
+        "avatar": "/avatars/assist.png",
+        "persona": "A backend engineer who owns lease and heartbeat semantics in production, so she specializes in the run state machine and the durability argument for leased database rows over a client loop. She teaches by asking what happens when a worker dies mid-heartbeat, then making you trace the state transition yourself. She is blunt about the difference between a checkpoint that exists and a checkpoint you can resume from.",
+        "priority": 7,
+        "voiceDesign": {
+          "texture": "clear mid-range with crisp consonants",
+          "delivery": "sharp focused and probing",
+          "identity": "thirty-something female engineer"
+        }
+      },
+      {
+        "id": "gen-HEjiK5IG",
+        "name": "Tomas Lindqvist",
+        "role": "assistant",
+        "color": "#f59e0b",
+        "avatar": "/avatars/assist-2.png",
+        "persona": "A database-leaning engineer who thinks in tables, triggers and migrations, and who can explain the PostgreSQL data model and the incremental refetch revision counters without hand-waving. He also drives the end-to-end request flow walkthrough, naming each endpoint, its status code and its response body. He prefers artefacts over adjectives and will happily paste a schema at you.",
+        "priority": 7,
+        "voiceDesign": {
+          "texture": "bright confident and evenly modulated",
+          "delivery": "enthusiastic and briskly methodical",
+          "identity": "young adult male engineer"
+        }
+      },
+      {
+        "id": "gen-gTQRpCKN",
+        "name": "Dan Okafor",
+        "role": "student",
+        "color": "#ec4899",
+        "avatar": "/avatars/curious-2.png",
+        "persona": "A senior developer who has built CRUD apps for a decade and keeps trying to fit the pipeline into a familiar client-side orchestration shape. He asks the naive-but-load-bearing questions about run states and the conditional first step in run/plan.ts, which usually exposes the exact assumption the rest of the room shares. He is not embarrassed to admit when a layer boundary does not click yet.",
+        "priority": 5,
+        "voiceDesign": {
+          "texture": "open mid-pitched with an upward lilt",
+          "delivery": "curious and unhurried",
+          "identity": "adult male software developer"
+        }
+      },
+      {
+        "id": "gen-hHO_sVB5",
+        "name": "Sofia Brandt",
+        "role": "student",
+        "color": "#8b5cf6",
+        "avatar": "/avatars/note-taker.png",
+        "persona": "A meticulous engineer who maintains a running table of layer, engine, file path and capability, and who re-reads every checkpoint question before answering. She catches inconsistencies between the DSL boundary story and the actual dependency direction of @openmaic/dsl, and she does not accept a claim about the repository that is not backed by a symbol. She learns by writing the summary herself and comparing it against the source.",
+        "priority": 4,
+        "voiceDesign": {
+          "texture": "soft focused with a slight husk",
+          "delivery": "thoughtful and steadily paced",
+          "identity": "young adult female engineer"
+        }
+      }
+    ]
+  },
+  "progress": {
+    "scenesTotal": 13,
+    "scenesCompleted": 13
+  },
+  "stageId": "stage-pk-xYPu1_tSM",
+  "createdAt": "2026-10-07T06:43:06.848Z",
+  "updatedAt": "2026-10-07T07:14:21.641Z",
+  "materialTruncated": null
+}

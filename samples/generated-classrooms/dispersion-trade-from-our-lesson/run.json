@@ -1,0 +1,345 @@
+{
+  "id": "run-mv6XfmN7LWeVflIh",
+  "state": "completed",
+  "input": {
+    "agents": {
+      "mode": "auto"
+    },
+    "taskEngine": false,
+    "interactive": false,
+    "materialIds": [
+      "mat_h2c3k0ca3fgz2m3gg3r6mqavc0"
+    ],
+    "requirement": "Build me a teaching classroom from the attached lesson (a lesson I wrote for a second-year equity volatility trader). Cover: what the dispersion trade is, implied vs realized correlation, the P&L decomposition of a short-index-vol / long-single-name-vol book, and the conditions under which the trade loses money. Include a short quiz at the end.",
+    "outlineReview": "auto"
+  },
+  "outline": {
+    "outlines": [
+      {
+        "id": "scene_1",
+        "type": "slide",
+        "order": 1,
+        "title": "The Trade in One Line",
+        "keyPoints": [
+          "Dispersion = short index vol, long single-name vols — a book that is close to flat in outright vol level",
+          "What you are actually trading is the gap between implied and realized correlation, not the market's direction",
+          "Why correlation is quotable and tradable: it is the one number that links index vol to the vol of its members",
+          "Roadmap: extracting implied corr, the P&L identity, the construction choice, and the tail that pays for the premium"
+        ],
+        "description": "Frame the dispersion trade as a position on correlation rather than on direction, and set the roadmap for the lesson.",
+        "estimatedDuration": 90,
+        "teachingObjective": "Describe the dispersion trade in one sentence and identify its true risk factor"
+      },
+      {
+        "id": "scene_2",
+        "type": "slide",
+        "order": 2,
+        "title": "Two Quotes, One Number",
+        "keyPoints": [
+          "Realized corr: the rolling average pairwise correlation of index members, computed from returns only",
+          "Implied corr: solved backwards from option prices — no returns needed, only the index and single-name surfaces",
+          "[Formula] σ²_index_impl = ρ_impl · σ²_avg_member + (1 − ρ_impl) · σ²_avg_member / N",
+          "Because σ_index_impl and σ_avg_member are both observable, ρ_impl is a live quote that updates with every tick of the surface",
+          "For large N the 1/N term collapses and the relationship reduces to ρ_impl ≈ σ²_index / σ²_member"
+        ],
+        "description": "Contrast realized correlation (from returns) with implied correlation (from options) and derive the extraction formula.",
+        "estimatedDuration": 150,
+        "teachingObjective": "Derive implied correlation from index and single-name implied vols and distinguish it from realized correlation"
+      },
+      {
+        "id": "scene_3",
+        "type": "slide",
+        "order": 3,
+        "title": "Worked Example: NK225",
+        "keyPoints": [
+          "NK225 implied 29%, members averaging ~40% implied, N = 225: ρ_impl ≈ 0.29² / 0.16 ≈ 0.52 — matching realized pairwise corr of 0.50",
+          "Index re-prices to 32% implied: ρ_impl ≈ 0.32² / 0.16 ≈ 0.64 against realized 0.50 — a 14-point gap",
+          "[Chart] Bar chart: implied corr vs realized corr across index vol levels (29% / 30% / 31% / 32% / 35%), showing the extraction drill 0.52 / 0.56 / 0.60 / 0.64 / 0.77",
+          "The gap, not the vol level, is the trade: implied corr rich versus realized corr means sell correlation",
+          "Sensitivity check: a 1-point move in index implied vol moves ρ_impl by roughly 0.04 — the surface is the position"
+        ],
+        "description": "Run the extraction on a concrete index and quantify a tradeable gap between implied and realized correlation.",
+        "estimatedDuration": 150,
+        "teachingObjective": "Compute implied correlation from index and member implied vols and size the resulting gap versus realized"
+      },
+      {
+        "id": "scene_4",
+        "type": "interactive",
+        "order": 4,
+        "title": "Correlation Gap Explorer",
+        "keyPoints": [
+          "Slide index implied vol and member implied vol to watch ρ_impl recompute live",
+          "Toggle N between small and large baskets to see the 1/N term matter or collapse",
+          "Set realized correlation and realized vols separately to see the book's P&L under a vega-flat construction",
+          "Stress scenario: push realized corr toward 1 and observe the short index leg's loss widen non-linearly"
+        ],
+        "widgetType": "simulation",
+        "description": "Learners manipulate the surface and realized state to see implied corr, the gap, and the resulting dispersion P&L move in real time.",
+        "widgetOutline": {
+          "concept": "Implied vs realized correlation and dispersion trade P&L",
+          "keyVariables": [
+            "index implied vol",
+            "average member implied vol",
+            "number of names N",
+            "realized correlation",
+            "realized index vol",
+            "realized average member vol"
+          ]
+        },
+        "estimatedDuration": 180,
+        "teachingObjective": "Build intuition for how the implied/realized correlation gap translates into dispersion P&L"
+      },
+      {
+        "id": "scene_5",
+        "type": "quiz",
+        "order": 5,
+        "title": "Checkpoint: Read the Gap",
+        "keyPoints": [
+          "Extract ρ_impl from 32% index implied vol against 40% member implied vol, N = 225",
+          "State what the resulting gap versus realized ~0.50 implies about carry",
+          "Identify what the tail risk of the position actually is"
+        ],
+        "quizConfig": {
+          "difficulty": "medium",
+          "questionCount": 2,
+          "questionTypes": [
+            "single"
+          ]
+        },
+        "description": "Short checkpoint confirming the learner can extract implied correlation and interpret the gap before moving to the P&L machinery.",
+        "estimatedDuration": 120,
+        "teachingObjective": "Verify correct extraction and correct interpretation of the correlation gap"
+      },
+      {
+        "id": "scene_6",
+        "type": "slide",
+        "order": 6,
+        "title": "Anatomy of the Book",
+        "keyPoints": [
+          "Structure: short index vol, long the single-name vols, with a vega ratio chosen so the book is close to vega-neutral",
+          "P&L identity per unit vega: P&L / V = (RV_avg − IV_avg) − (RV_idx − IV_idx)",
+          "Breakeven condition: when members realize exactly at implied, RV_idx = IV_idx, which is precisely realized corr = implied corr",
+          "The book wins if and only if realized correlation comes in below implied correlation",
+          "Direction cancels out of the identity — the position is a pure correlation exposure, which is why index beta hedging is a separate problem"
+        ],
+        "description": "Define the legs of the dispersion position and the dollars-per-vega P&L identity that governs it.",
+        "estimatedDuration": 150,
+        "teachingObjective": "Explain how a vega-flat short-index / long-single-name book isolates correlation exposure"
+      },
+      {
+        "id": "scene_7",
+        "type": "slide",
+        "order": 7,
+        "title": "P&L Decomposition",
+        "keyPoints": [
+          "Pure theta on the book is slightly NEGATIVE: long members bleed θ/vega ≈ −σ/2T, and σ_avg > σ_idx",
+          "The positive expectancy does not come from carry — it comes from realized correlation printing below implied correlation",
+          "Engine of the trade = realized dispersion; theta is a cost you pay for the right to be short correlation",
+          "Note the asymmetry of σ_avg > σ_idx: the long legs carry more vol, hence more theta decay, per unit vega",
+          "[Table] Component breakdown: theta cost, member realized-vol term, index realized-vol term, net P&L — with sign and magnitude per unit vega"
+        ],
+        "description": "Break the carry honestly into theta and realized-dispersion components and locate where the expected P&L actually comes from.",
+        "estimatedDuration": 150,
+        "teachingObjective": "Decompose dispersion P&L into theta cost and realized-correlation P&L and identify the true source of edge"
+      },
+      {
+        "id": "scene_8",
+        "type": "slide",
+        "order": 8,
+        "title": "You Can't Flatten Vega and Gamma at Once",
+        "keyPoints": [
+          "Per gamma-dollar, vega = σ·T — S cancels entirely; equivalently dollar-gamma per vega = 1/(σT)",
+          "Consequence: the LOW-vol leg (the index) carries the MOST dollar-gamma per vega",
+          "Vega-flat → residual SHORT dollar gamma → the correlation-pure book, vol-level exposure ≈ 0",
+          "Gamma-flat on dollar Γ$ (desk convention) → over-buy name vega → residual LONG vega, gains on vol rallies, pays theta",
+          "Gamma-flat per contract (lot matching) → residual SHORT vega, receives theta, loses on vol rallies",
+          "The residual is the configuration choice, not an error — pick the residual you are paid to carry"
+        ],
+        "description": "Show the construction choice between vega-flat and gamma-flat, and the residual exposure each configuration leaves behind.",
+        "estimatedDuration": 150,
+        "teachingObjective": "Choose between vega-flat and gamma-flat construction and identify the residual exposure each implies"
+      },
+      {
+        "id": "scene_9",
+        "type": "slide",
+        "order": 9,
+        "title": "When the Trade Loses: The Tail",
+        "keyPoints": [
+          "Stress week: realized correlation jumps from ~0.50 to 0.75 with members at 40% vol",
+          "[Formula] σ²_index_fair = ρσ² + (1 − ρ)σ²/N ≈ 0.75 × 0.16 = 0.12 → σ_index_fair ≈ 34.6%",
+          "Against the 32% implied you sold on the index leg, that is roughly 2.6 vol points of mark-to-market loss on a leg you are short",
+          "Losing conditions: correlation spikes, realized dispersion collapses, index realizes far above its implied — all three are the same event",
+          "The loss is non-linear and path-dependent: correlation tends to spot and realized vol together, so the legs do not offset",
+          "The correlation risk premium is the compensation for eating exactly this tail — the trade is short insurance the market systematically overprices"
+        ],
+        "description": "Quantify the stress scenario in which correlation spikes and the short index leg is repriced violently against the book.",
+        "estimatedDuration": 150,
+        "teachingObjective": "Quantify the stress-week loss on the short index leg and articulate the conditions under which dispersion loses money"
+      },
+      {
+        "id": "scene_10",
+        "type": "slide",
+        "order": 10,
+        "title": "Review and Key Takeaways",
+        "keyPoints": [
+          "Implied corr is extracted from index vs single-name implied vols; realized corr is measured from returns — two quotes, one number",
+          "Implied corr above realized corr (the premium) → sell correlation → buy dispersion, short index vol plus long names",
+          "P&L driver is the correlation gap, not direction; theta is a small cost, realized dispersion is the engine",
+          "The tail is a correlation spike in stress — that is what the premium pays you for",
+          "Next: sizing the legs, vega ratioing, gamma asymmetry, and why single-name skew matters when you are buying it"
+        ],
+        "description": "Consolidate the machinery of the trade into a short set of rules the desk can act on, and preview the next lesson.",
+        "estimatedDuration": 90,
+        "teachingObjective": "Summarize the dispersion trade's mechanics, edge, and risk in a compact rule set"
+      },
+      {
+        "id": "scene_11",
+        "type": "quiz",
+        "order": 11,
+        "title": "Final Assessment",
+        "keyPoints": [
+          "Compute implied correlation from a given index and member implied vol pair",
+          "Attribute a P&L outcome to theta versus realized correlation",
+          "Identify the residual exposure left by a chosen construction convention",
+          "Quantify the stress-week loss on a short index vol leg"
+        ],
+        "quizConfig": {
+          "difficulty": "hard",
+          "questionCount": 4,
+          "questionTypes": [
+            "single",
+            "multiple"
+          ]
+        },
+        "description": "Closing quiz testing extraction, P&L attribution, construction residuals, and the loss conditions of the dispersion book.",
+        "estimatedDuration": 180,
+        "teachingObjective": "Confirm mastery of implied/realized correlation, P&L decomposition, construction, and tail risk"
+      }
+    ],
+    "courseTitle": "Dispersion Trade & Correlation",
+    "taskEngineMode": false,
+    "languageDirective": "Deliver the entire course in English, at the level of a professional derivatives desk. Use standard market terminology (vega, gamma, implied vol, realized correlation, carry, tail) without translation or simplification, and keep all formulas in their conventional mathematical notation. Assume the learner is a second-year equity volatility trader, so speak peer-to-peer rather than in textbook definitions. Where jargon is used, tie it back to the P&L it drives rather than re-defining it.",
+    "revision": 1
+  },
+  "agents": {
+    "agents": [
+      {
+        "id": "gen-5Ph3vvRP",
+        "name": "Marcus Chen",
+        "role": "teacher",
+        "persona": "Marcus Chen is a senior equity volatility trader with a decade on the dispersion desk. He teaches by grounding every concept in the P&L it drives, using desk shorthand and real trade examples. He expects you to know the Greeks and speaks to you as a peer, not a student."
+      },
+      {
+        "id": "gen-8CApOJlb",
+        "name": "Elena Voss",
+        "role": "assistant",
+        "persona": "Elena Voss is a quant strategist who builds the extraction and P&L attribution tools. She speaks in formulas and Greeks but always connects them to the trade's economics. She's precise, fast, and assumes you're comfortable with standard notation."
+      },
+      {
+        "id": "gen-PeT37W_h",
+        "name": "Priya Nair",
+        "role": "student",
+        "persona": "Priya Nair is a second-year equity vol trader focused on index options. She's sharp on realized vol but new to correlation as an asset class, so she asks practical questions about execution and liquidity. She learns by tying new concepts back to the P&L of positions she already runs."
+      },
+      {
+        "id": "gen-2QJw94_J",
+        "name": "James Okafor",
+        "role": "student",
+        "persona": "James Okafor is a second-year trader on the exotic desk, strong on vega and gamma hedging. He's skeptical about the carry and wants to see the tail risk quantified before he commits capital. He learns by stress-testing ideas and pushing on the construction residuals."
+      },
+      {
+        "id": "gen-qeiAkX-o",
+        "name": "Sofia Ricci",
+        "role": "student",
+        "persona": "Sofia Ricci is a second-year trader with a background in correlation swaps. She's comfortable with the concept but wants to understand the options overlay and how the legs interact. She often plays devil's advocate on construction choices to test the logic."
+      }
+    ],
+    "agentIds": [
+      "gen-5Ph3vvRP",
+      "gen-8CApOJlb",
+      "gen-PeT37W_h",
+      "gen-2QJw94_J",
+      "gen-qeiAkX-o"
+    ],
+    "generatedAgentConfigs": [
+      {
+        "id": "gen-5Ph3vvRP",
+        "name": "Marcus Chen",
+        "role": "teacher",
+        "color": "#3b82f6",
+        "avatar": "/avatars/teacher.png",
+        "persona": "Marcus Chen is a senior equity volatility trader with a decade on the dispersion desk. He teaches by grounding every concept in the P&L it drives, using desk shorthand and real trade examples. He expects you to know the Greeks and speaks to you as a peer, not a student.",
+        "priority": 10,
+        "voiceDesign": {
+          "texture": "low-pitched confident slightly gravelly",
+          "delivery": "measured direct with dry humor",
+          "identity": "middle-aged male senior derivatives trader"
+        }
+      },
+      {
+        "id": "gen-8CApOJlb",
+        "name": "Elena Voss",
+        "role": "assistant",
+        "color": "#10b981",
+        "avatar": "/avatars/assist.png",
+        "persona": "Elena Voss is a quant strategist who builds the extraction and P&L attribution tools. She speaks in formulas and Greeks but always connects them to the trade's economics. She's precise, fast, and assumes you're comfortable with standard notation.",
+        "priority": 7,
+        "voiceDesign": {
+          "texture": "clear mid-range precise",
+          "delivery": "brisk analytical with occasional emphasis",
+          "identity": "young female quant strategist"
+        }
+      },
+      {
+        "id": "gen-PeT37W_h",
+        "name": "Priya Nair",
+        "role": "student",
+        "color": "#f59e0b",
+        "avatar": "/avatars/thinker-2.png",
+        "persona": "Priya Nair is a second-year equity vol trader focused on index options. She's sharp on realized vol but new to correlation as an asset class, so she asks practical questions about execution and liquidity. She learns by tying new concepts back to the P&L of positions she already runs.",
+        "priority": 5,
+        "voiceDesign": {
+          "texture": "warm mid-pitched with slight accent",
+          "delivery": "curious precise with quick follow-ups",
+          "identity": "young female volatility trader"
+        }
+      },
+      {
+        "id": "gen-2QJw94_J",
+        "name": "James Okafor",
+        "role": "student",
+        "color": "#ec4899",
+        "avatar": "/avatars/note-taker.png",
+        "persona": "James Okafor is a second-year trader on the exotic desk, strong on vega and gamma hedging. He's skeptical about the carry and wants to see the tail risk quantified before he commits capital. He learns by stress-testing ideas and pushing on the construction residuals.",
+        "priority": 6,
+        "voiceDesign": {
+          "texture": "steady baritone clear articulation",
+          "delivery": "thoughtful skeptical measured",
+          "identity": "young male derivatives trader"
+        }
+      },
+      {
+        "id": "gen-qeiAkX-o",
+        "name": "Sofia Ricci",
+        "role": "student",
+        "color": "#06b6d4",
+        "avatar": "/avatars/assist-2.png",
+        "persona": "Sofia Ricci is a second-year trader with a background in correlation swaps. She's comfortable with the concept but wants to understand the options overlay and how the legs interact. She often plays devil's advocate on construction choices to test the logic.",
+        "priority": 4,
+        "voiceDesign": {
+          "texture": "bright energetic with slight rasp",
+          "delivery": "lively challenging with a smile",
+          "identity": "young female correlation trader"
+        }
+      }
+    ]
+  },
+  "progress": {
+    "scenesTotal": 11,
+    "scenesCompleted": 11
+  },
+  "stageId": "stage-aF9YuAXm-V4J",
+  "createdAt": "2026-10-07T04:10:42.089Z",
+  "updatedAt": "2026-10-07T04:27:02.695Z",
+  "materialTruncated": null
+}
