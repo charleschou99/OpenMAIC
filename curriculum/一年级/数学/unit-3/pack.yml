@@ -1,0 +1,78 @@
+id: pack-grade-1-math-unit-3
+version: 0.1.0
+gradeId: grade-1
+subjectId: math
+unit:
+  id: unit-3
+  number: 3
+  title: Numbers 1-5 and Operations
+  titleZh: 1-5的认识和加减法
+  textbookPages: 10-31
+  objectives:
+    - 认识数字1-5及其含义
+    - 学会5以内的加减法
+    - 理解加法和减法的意义
+  lessons: []
+lessons:
+  - id: lesson-3-1
+    order: 1
+    title: Numbers 1, 2, 3
+    titleZh: 1、2、3的认识
+    topic: 认识数字1、2、3，理解数的含义，学会书写
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-3-2
+    order: 2
+    title: Numbers 4, 5
+    titleZh: 4、5的认识
+    topic: 认识数字4、5，理解数的含义，学会书写和比较
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-3-3
+    order: 3
+    title: Addition within 5
+    titleZh: 加法的初步认识
+    topic: 理解加法的意义，学习5以内的加法运算
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+    generationHints:
+      interactiveElements:
+        - number-line
+        - counting-blocks
+      quizTypes:
+        - calculation
+        - word-problem
+  - id: lesson-3-4
+    order: 4
+    title: Subtraction within 5
+    titleZh: 减法的初步认识
+    topic: 理解减法的意义，学习5以内的减法运算
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-3-5
+    order: 5
+    title: Number 0
+    titleZh: 0的认识
+    topic: 认识数字0的含义，学会0的书写和运算
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T15:03:55.013Z
+  updatedAt: 2026-10-07T15:03:55.018Z

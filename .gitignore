@@ -7,6 +7,7 @@ CLAUDE.local.md
 # dependencies
 /node_modules
 /openclaw/node_modules
+/pack-builder/node_modules
 /openclaw/package-lock.json
 /.pnp
 .pnp.*
@@ -94,3 +95,6 @@ e2e/__screenshots-619/
 
 # Operator model configuration (see openmaic.yml in RFC #1701); it names secrets via ${VAR}
 /openmaic.yml
+
+# Pack builder exports (generated offline bundles)
+/exports/

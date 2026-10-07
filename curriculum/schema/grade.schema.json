@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://openmaic-yijiao.org/schema/grade.json",
+  "title": "Grade Definition",
+  "description": "Defines a grade level in the Chinese primary school system (小学 1-6年级)",
+  "type": "object",
+  "required": ["id", "name", "nameZh", "level", "ageRange"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^grade-[1-6]$",
+      "description": "Unique identifier for the grade"
+    },
+    "name": {
+      "type": "string",
+      "description": "English name of the grade"
+    },
+    "nameZh": {
+      "type": "string",
+      "description": "Chinese name of the grade (e.g., 一年级)"
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6,
+      "description": "Numeric grade level (1-6 for primary school)"
+    },
+    "ageRange": {
+      "type": "object",
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "type": "integer" },
+        "max": { "type": "integer" }
+      },
+      "description": "Typical age range for students in this grade"
+    },
+    "semester": {
+      "type": "string",
+      "enum": ["上学期", "下学期", "full-year"],
+      "description": "Which semester this content covers"
+    },
+    "subjects": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of subject IDs taught in this grade"
+    }
+  }
+}

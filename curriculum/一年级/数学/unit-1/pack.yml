@@ -1,0 +1,100 @@
+id: pack-grade-1-math-unit-1
+version: 0.1.0
+gradeId: grade-1
+subjectId: math
+unit:
+  id: unit-1
+  number: 1
+  title: Preparation
+  titleZh: 准备课
+  textbookPages: 2-5
+  objectives:
+    - 了解数学学习的基本方式
+    - 培养观察和比较的能力
+    - 建立数学学习兴趣
+  lessons: []
+lessons:
+  - id: lesson-1-1
+    order: 1
+    title: Counting in Our Surroundings
+    titleZh: 数一数
+    topic: 观察图片，数一数各种物品的数量，认识数学与生活的联系
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+    generationHints:
+      visualHeavy: true
+      interactiveElements:
+        - counting-objects
+        - drag-and-drop
+      quizTypes:
+        - single-choice
+        - counting
+      voiceStyle: warm-encouraging
+    stageId: stage-lesson-1-1-muy8mzxx
+  - id: lesson-1-2
+    order: 2
+    title: Comparing Objects
+    titleZh: 比多少
+    topic: 比较物品的多少，学习一一对应的比较方法
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+    generationHints:
+      visualHeavy: true
+      interactiveElements:
+        - matching
+        - comparison
+      quizTypes:
+        - single-choice
+        - matching
+    stageId: stage-lesson-1-2-muy8mzxy
+reviewStatus:
+  status: approved
+  reviewer: 志愿者测试
+  comments:
+    - timestamp: 2026-10-07T15:04:28.463Z
+      reviewer: 志愿者测试
+      comment: 内容适合一年级学生，已验证安全
+    - timestamp: 2026-10-07T15:04:32.482Z
+      reviewer: 志愿者测试
+      comment: "Approved: 批准发布"
+  approvedAt: 2026-10-07T15:04:32.482Z
+metadata:
+  createdAt: 2026-10-07T15:03:55.013Z
+  updatedAt: 2026-10-07T15:04:36.342Z
+  generatedWith:
+    model: mock-fixture
+    provider: fixture
+    generatedAt: 2026-10-07T15:04:00.118Z
+    cost: 0
+safetyCheck:
+  passed: true
+  checkedAt: 2026-10-07T15:04:16.984Z
+  issues:
+    - lessonId: generated-content
+      severity: warning
+      message: Content contains very long sentences that may be hard for young readers
+    - lessonId: generated-content
+      severity: warning
+      message: Content contains very long sentences that may be hard for young readers
+    - lessonId: generated-content
+      severity: warning
+      message: Content contains very long sentences that may be hard for young readers
+    - lessonId: generated-content
+      severity: warning
+      message: Content contains very long sentences that may be hard for young readers
+    - lessonId: generated-content
+      severity: warning
+      message: Content contains very long sentences that may be hard for young readers
+    - lessonId: generated-content
+      severity: warning
+      message: Content contains very long sentences that may be hard for young readers
+exportInfo:
+  exportedAt: 2026-10-07T15:04:36.342Z
+  format: usb-bundle
+  outputPath: /workspace/exports/pack-grade-1-math-unit-1-bundle

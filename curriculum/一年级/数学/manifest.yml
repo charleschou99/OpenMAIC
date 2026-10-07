@@ -1,0 +1,348 @@
+# 一年级数学 上学期 课程清单
+# Grade 1 Mathematics - Fall Semester Curriculum Manifest
+# 教材版本: 人教版 (PEP - People's Education Press)
+# 课程标准: 2022年版义务教育数学课程标准
+
+grade:
+  id: grade-1
+  name: Grade 1
+  nameZh: 一年级
+  level: 1
+  ageRange:
+    min: 6
+    max: 7
+  semester: 上学期
+
+subject:
+  id: math
+  name: Mathematics
+  nameZh: 数学
+  textbookEdition:
+    id: pep
+    nameZh: 人教版
+    publisher: 人民教育出版社
+    fullName: 义务教育教科书·数学（一年级上册）
+  curriculumStandard:
+    year: 2022
+    name: 义务教育数学课程标准（2022年版）
+    coreCompetencies:
+      - 数学抽象
+      - 逻辑推理
+      - 数学建模
+      - 直观想象
+      - 数学运算
+      - 数据分析
+  sessionDurationMinutes: 40
+  lessonsPerWeek: 4
+  contentCharacteristics:
+    visualHeavy: true
+    interactiveSimulations: true
+    voiceHeavy: true
+    minimalText: true
+
+units:
+  - id: unit-1
+    number: 1
+    title: Preparation
+    titleZh: 准备课
+    textbookPages: "2-5"
+    objectives:
+      - 了解数学学习的基本方式
+      - 培养观察和比较的能力
+      - 建立数学学习兴趣
+    lessons:
+      - id: lesson-1-1
+        order: 1
+        title: Counting in Our Surroundings
+        titleZh: 数一数
+        topic: 观察图片，数一数各种物品的数量，认识数学与生活的联系
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+        generationHints:
+          visualHeavy: true
+          interactiveElements: [counting-objects, drag-and-drop]
+          quizTypes: [single-choice, counting]
+          voiceStyle: warm-encouraging
+
+      - id: lesson-1-2
+        order: 2
+        title: Comparing Objects
+        titleZh: 比多少
+        topic: 比较物品的多少，学习一一对应的比较方法
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+        generationHints:
+          visualHeavy: true
+          interactiveElements: [matching, comparison]
+          quizTypes: [single-choice, matching]
+
+  - id: unit-2
+    number: 2
+    title: Position
+    titleZh: 位置
+    textbookPages: "6-9"
+    objectives:
+      - 认识上下、前后、左右
+      - 能用方位词描述物体位置
+      - 发展空间观念
+    lessons:
+      - id: lesson-2-1
+        order: 1
+        title: Up and Down, Front and Back
+        titleZh: 上下、前后
+        topic: 认识上下、前后的位置关系，学会用方位词描述物体位置
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+        generationHints:
+          visualHeavy: true
+          interactiveElements: [position-game, spatial-reasoning]
+
+      - id: lesson-2-2
+        order: 2
+        title: Left and Right
+        titleZh: 左右
+        topic: 认识左右的位置关系，区分自己的左右和他人的左右
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+  - id: unit-3
+    number: 3
+    title: Numbers 1-5 and Operations
+    titleZh: 1-5的认识和加减法
+    textbookPages: "10-31"
+    objectives:
+      - 认识数字1-5及其含义
+      - 学会5以内的加减法
+      - 理解加法和减法的意义
+    lessons:
+      - id: lesson-3-1
+        order: 1
+        title: Numbers 1, 2, 3
+        titleZh: 1、2、3的认识
+        topic: 认识数字1、2、3，理解数的含义，学会书写
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-3-2
+        order: 2
+        title: Numbers 4, 5
+        titleZh: 4、5的认识
+        topic: 认识数字4、5，理解数的含义，学会书写和比较
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-3-3
+        order: 3
+        title: Addition within 5
+        titleZh: 加法的初步认识
+        topic: 理解加法的意义，学习5以内的加法运算
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+        generationHints:
+          interactiveElements: [number-line, counting-blocks]
+          quizTypes: [calculation, word-problem]
+
+      - id: lesson-3-4
+        order: 4
+        title: Subtraction within 5
+        titleZh: 减法的初步认识
+        topic: 理解减法的意义，学习5以内的减法运算
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-3-5
+        order: 5
+        title: Number 0
+        titleZh: 0的认识
+        topic: 认识数字0的含义，学会0的书写和运算
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+  - id: unit-4
+    number: 4
+    title: Recognizing Shapes (1)
+    titleZh: 认识图形（一）
+    textbookPages: "32-35"
+    objectives:
+      - 认识长方体、正方体、圆柱、球
+      - 能辨别和分类立体图形
+      - 发展空间想象能力
+    lessons:
+      - id: lesson-4-1
+        order: 1
+        title: 3D Shapes - Rectangular Prism and Cube
+        titleZh: 长方体和正方体
+        topic: 认识长方体和正方体的特征，能从生活中找到实例
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+        generationHints:
+          interactiveElements: [3d-shapes, shape-sorting]
+
+      - id: lesson-4-2
+        order: 2
+        title: 3D Shapes - Cylinder and Sphere
+        titleZh: 圆柱和球
+        topic: 认识圆柱和球的特征，比较四种立体图形的异同
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+  - id: unit-5
+    number: 5
+    title: Numbers 6-10 and Operations
+    titleZh: 6-10的认识和加减法
+    textbookPages: "36-63"
+    objectives:
+      - 认识数字6-10
+      - 掌握10以内的加减法
+      - 能解决简单的实际问题
+    lessons:
+      - id: lesson-5-1
+        order: 1
+        title: Numbers 6 and 7
+        titleZh: 6和7的认识
+        topic: 认识数字6和7，理解数的组成，学会书写
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-5-2
+        order: 2
+        title: 6 and 7 Operations
+        titleZh: 6、7的加减法
+        topic: 学习6、7的加减法运算，理解数的组成与分解
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-5-3
+        order: 3
+        title: Numbers 8 and 9
+        titleZh: 8和9的认识
+        topic: 认识数字8和9，学习8、9的组成
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-5-4
+        order: 4
+        title: 8 and 9 Operations
+        titleZh: 8、9的加减法
+        topic: 学习8、9的加减法，解决简单问题
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-5-5
+        order: 5
+        title: Number 10
+        titleZh: 10的认识
+        topic: 认识数字10，理解10的特殊意义，学习10的组成
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-5-6
+        order: 6
+        title: 10 Operations
+        titleZh: 10的加减法
+        topic: 学习10的加减法，掌握凑十法
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+  - id: unit-6
+    number: 6
+    title: Numbers 11-20
+    titleZh: 11-20各数的认识
+    textbookPages: "64-71"
+    objectives:
+      - 认识11-20各数
+      - 理解十进制概念
+      - 能正确读写11-20
+    lessons:
+      - id: lesson-6-1
+        order: 1
+        title: Numbers 11-20
+        titleZh: 11-20各数的认识
+        topic: 认识11-20各数，理解"十位"和"个位"的概念
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+        generationHints:
+          interactiveElements: [place-value-blocks, number-line]
+
+      - id: lesson-6-2
+        order: 2
+        title: Reading and Writing 11-20
+        titleZh: 11-20的读法和写法
+        topic: 学习11-20各数的读法和写法，巩固数位概念
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+  - id: unit-7
+    number: 7
+    title: Telling Time
+    titleZh: 认识钟表
+    textbookPages: "72-75"
+    objectives:
+      - 认识钟面和时针、分针
+      - 能认读整时和半时
+      - 建立时间观念
+    lessons:
+      - id: lesson-7-1
+        order: 1
+        title: Clock Face
+        titleZh: 认识钟面
+        topic: 认识钟面的组成，学会认读整时
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+        generationHints:
+          interactiveElements: [clock-widget, time-matching]
+
+      - id: lesson-7-2
+        order: 2
+        title: Reading Time
+        titleZh: 认识整时和半时
+        topic: 学习认读整时和半时，了解时间在生活中的应用
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+  - id: unit-8
+    number: 8
+    title: Addition within 20 (with Carrying)
+    titleZh: 20以内的进位加法
+    textbookPages: "76-91"
+    objectives:
+      - 掌握20以内的进位加法
+      - 理解"凑十法"
+      - 能熟练口算
+    lessons:
+      - id: lesson-8-1
+        order: 1
+        title: 9 Plus Something
+        titleZh: 9加几
+        topic: 学习9加几的进位加法，理解"凑十法"
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+        generationHints:
+          interactiveElements: [number-bonds, ten-frame]
+
+      - id: lesson-8-2
+        order: 2
+        title: 8, 7, 6 Plus Something
+        titleZh: 8、7、6加几
+        topic: 学习8、7、6加几的进位加法，熟练运用凑十法
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-8-3
+        order: 3
+        title: 5, 4, 3, 2 Plus Something
+        titleZh: 5、4、3、2加几
+        topic: 学习较小数加几的进位加法，整理加法表
+        durationMinutes: 40
+        sceneTypes: [slide, interactive, quiz]
+
+      - id: lesson-8-4
+        order: 4
+        title: Review and Practice
+        titleZh: 整理和复习
+        topic: 复习20以内进位加法，提高口算速度
+        durationMinutes: 40
+        sceneTypes: [slide, quiz]
+
+# 共计 24 节课
+# Total: 24 lessons

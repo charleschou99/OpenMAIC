@@ -1,0 +1,46 @@
+id: pack-grade-1-math-unit-2
+version: 0.1.0
+gradeId: grade-1
+subjectId: math
+unit:
+  id: unit-2
+  number: 2
+  title: Position
+  titleZh: 位置
+  textbookPages: 6-9
+  objectives:
+    - 认识上下、前后、左右
+    - 能用方位词描述物体位置
+    - 发展空间观念
+  lessons: []
+lessons:
+  - id: lesson-2-1
+    order: 1
+    title: Up and Down, Front and Back
+    titleZh: 上下、前后
+    topic: 认识上下、前后的位置关系，学会用方位词描述物体位置
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+    generationHints:
+      visualHeavy: true
+      interactiveElements:
+        - position-game
+        - spatial-reasoning
+  - id: lesson-2-2
+    order: 2
+    title: Left and Right
+    titleZh: 左右
+    topic: 认识左右的位置关系，区分自己的左右和他人的左右
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T15:03:55.013Z
+  updatedAt: 2026-10-07T15:03:55.017Z

@@ -1,0 +1,45 @@
+id: pack-grade-1-math-unit-4
+version: 0.1.0
+gradeId: grade-1
+subjectId: math
+unit:
+  id: unit-4
+  number: 4
+  title: Recognizing Shapes (1)
+  titleZh: 认识图形（一）
+  textbookPages: 32-35
+  objectives:
+    - 认识长方体、正方体、圆柱、球
+    - 能辨别和分类立体图形
+    - 发展空间想象能力
+  lessons: []
+lessons:
+  - id: lesson-4-1
+    order: 1
+    title: 3D Shapes - Rectangular Prism and Cube
+    titleZh: 长方体和正方体
+    topic: 认识长方体和正方体的特征，能从生活中找到实例
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+    generationHints:
+      interactiveElements:
+        - 3d-shapes
+        - shape-sorting
+  - id: lesson-4-2
+    order: 2
+    title: 3D Shapes - Cylinder and Sphere
+    titleZh: 圆柱和球
+    topic: 认识圆柱和球的特征，比较四种立体图形的异同
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T15:03:55.013Z
+  updatedAt: 2026-10-07T15:03:55.019Z

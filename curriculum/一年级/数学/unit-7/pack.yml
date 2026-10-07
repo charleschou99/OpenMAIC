@@ -1,0 +1,45 @@
+id: pack-grade-1-math-unit-7
+version: 0.1.0
+gradeId: grade-1
+subjectId: math
+unit:
+  id: unit-7
+  number: 7
+  title: Telling Time
+  titleZh: 认识钟表
+  textbookPages: 72-75
+  objectives:
+    - 认识钟面和时针、分针
+    - 能认读整时和半时
+    - 建立时间观念
+  lessons: []
+lessons:
+  - id: lesson-7-1
+    order: 1
+    title: Clock Face
+    titleZh: 认识钟面
+    topic: 认识钟面的组成，学会认读整时
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+    generationHints:
+      interactiveElements:
+        - clock-widget
+        - time-matching
+  - id: lesson-7-2
+    order: 2
+    title: Reading Time
+    titleZh: 认识整时和半时
+    topic: 学习认读整时和半时，了解时间在生活中的应用
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T15:03:55.013Z
+  updatedAt: 2026-10-07T15:03:55.021Z

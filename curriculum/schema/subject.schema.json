@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://openmaic-yijiao.org/schema/subject.json",
+  "title": "Subject Definition",
+  "description": "Defines a primary school subject with textbook edition information",
+  "type": "object",
+  "required": ["id", "name", "nameZh", "textbookEdition", "curriculumStandard"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z-]+$",
+      "description": "Unique identifier for the subject (e.g., 'math', 'chinese')"
+    },
+    "name": {
+      "type": "string",
+      "description": "English name of the subject"
+    },
+    "nameZh": {
+      "type": "string",
+      "description": "Chinese name of the subject (e.g., 数学, 语文)"
+    },
+    "textbookEdition": {
+      "type": "object",
+      "required": ["id", "nameZh", "publisher"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": ["pep", "tongbian", "jiaoke", "other"],
+          "description": "Textbook edition identifier: pep=人教版, tongbian=部编版/统编版, jiaoke=教科版"
+        },
+        "nameZh": {
+          "type": "string",
+          "description": "Chinese name of the textbook edition"
+        },
+        "publisher": {
+          "type": "string",
+          "description": "Publisher name"
+        },
+        "isbn": {
+          "type": "string",
+          "description": "ISBN of the textbook (optional)"
+        }
+      },
+      "description": "Textbook edition used for this subject"
+    },
+    "curriculumStandard": {
+      "type": "object",
+      "required": ["year", "name"],
+      "properties": {
+        "year": {
+          "type": "integer",
+          "description": "Year of the curriculum standard (e.g., 2022)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the curriculum standard"
+        },
+        "coreCompetencies": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Core competencies (核心素养) for this subject"
+        }
+      },
+      "description": "Reference to the national curriculum standard"
+    },
+    "sessionDurationMinutes": {
+      "type": "integer",
+      "default": 40,
+      "description": "Typical lesson duration in minutes"
+    },
+    "lessonsPerWeek": {
+      "type": "integer",
+      "description": "Typical number of lessons per week"
+    },
+    "contentCharacteristics": {
+      "type": "object",
+      "properties": {
+        "visualHeavy": { "type": "boolean" },
+        "interactiveSimulations": { "type": "boolean" },
+        "voiceHeavy": { "type": "boolean" },
+        "minimalText": { "type": "boolean" }
+      },
+      "description": "Content characteristics for generation hints"
+    }
+  }
+}
