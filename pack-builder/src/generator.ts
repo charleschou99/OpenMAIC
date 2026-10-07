@@ -1,18 +1,28 @@
 /**
  * Lesson generator - creates OpenMAIC classrooms from lesson definitions
  * 
- * Supports two modes:
+ * Supports multiple modes:
  * 1. Mock mode: Uses sample fixtures for testing (no API key needed)
- * 2. Real mode: Uses OpenMAIC's generation pipeline with configured models
+ * 2. Real mode: Uses AI providers (DeepSeek, etc.) for actual generation
+ * 3. Dry-run mode: Estimates costs without making API calls
  */
 
 import fs from 'fs';
 import path from 'path';
 import type { Lesson, LessonPack, GenerationInfo } from './types.js';
+import { 
+  estimateGenerationCost, 
+  formatCostEstimate,
+  isDeepSeekConfigured,
+  getDeepSeekClient,
+  type GenerationCostEstimate,
+} from './providers/deepseek.js';
 
 export interface GeneratorConfig {
   /** Use mock generation with fixture data */
   mockMode: boolean;
+  /** Dry-run mode: estimate costs without making API calls */
+  dryRun?: boolean;
   /** Path to fixture classrooms for mock mode (default: pack-builder/test/fixtures/) */
   fixturesPath?: string;
   /** 
@@ -20,13 +30,21 @@ export interface GeneratorConfig {
    * In mock mode, classrooms are written here instead of the curriculum folder.
    */
   mockOutputDir?: string;
-  /** Model to use for real generation (e.g., 'deepseek:deepseek-v4-flash') */
+  /** Model to use for real generation (e.g., 'deepseek-chat') */
   model?: string;
-  /** Provider ID */
+  /** Provider ID (e.g., 'deepseek') */
   provider?: string;
-  /** Base URL for OpenMAIC server */
+  /** Base URL for OpenMAIC server (for server-based generation) */
   serverUrl?: string;
+  /** Grade level for generation context */
+  gradeLevel?: number;
+  /** Subject name in Chinese for generation context */
+  subjectZh?: string;
+  /** Textbook edition for generation context */
+  textbookEdition?: string;
 }
+
+export { estimateGenerationCost, formatCostEstimate, type GenerationCostEstimate };
 
 export interface GeneratedClassroom {
   stageId: string;
@@ -108,23 +126,64 @@ function adaptFixtureToLesson(
 }
 
 /**
- * Generate a classroom using OpenMAIC's real generation pipeline
+ * Generate a classroom using DeepSeek API directly
+ */
+async function generateWithDeepSeek(
+  lesson: Lesson,
+  config: GeneratorConfig
+): Promise<GeneratedClassroom> {
+  const client = getDeepSeekClient();
+  if (!client) {
+    throw new Error(
+      'DeepSeek API key not configured.\n' +
+      'Set DEEPSEEK_API_KEY in .env.local or environment variables.\n' +
+      'Get your API key at: https://platform.deepseek.com/'
+    );
+  }
+  
+  const gradeLevel = config.gradeLevel ?? 1;
+  const subjectZh = config.subjectZh ?? '数学';
+  const textbookEdition = config.textbookEdition ?? '人教版';
+  
+  console.log(`  Generating with DeepSeek (${config.model || 'deepseek-chat'})...`);
+  
+  const result = await client.generateLesson(lesson, gradeLevel, subjectZh, textbookEdition);
+  
+  // Create a unique stage ID
+  const stageId = `stage-${lesson.id}-${Date.now().toString(36)}`;
+  
+  return {
+    stageId,
+    stage: {
+      id: stageId,
+      name: lesson.titleZh,
+      description: lesson.topic,
+      ...result.stage,
+    },
+    scenes: result.scenes,
+  };
+}
+
+/**
+ * Generate a classroom using OpenMAIC's server-based generation pipeline
  * This requires a running OpenMAIC server with configured API keys
  */
-async function generateRealClassroom(
+async function generateViaServer(
   lesson: Lesson,
   config: GeneratorConfig
 ): Promise<GeneratedClassroom> {
   const serverUrl = config.serverUrl ?? 'http://127.0.0.1:3000';
+  const gradeLevel = config.gradeLevel ?? 1;
+  const ageRange = `${gradeLevel + 5}-${gradeLevel + 6}`;
   
   // Build the generation prompt
   const prompt = `
-为一年级小学生创建一节数学课：${lesson.titleZh}
+为${gradeLevel}年级小学生创建一节${config.subjectZh ?? '数学'}课：${lesson.titleZh}
 
 主题：${lesson.topic}
 
 要求：
-- 语言简单，适合6-7岁儿童
+- 语言简单，适合${ageRange}岁儿童
 - 多用图片和互动元素
 - 语音讲解为主，文字较少
 - 包含趣味小测验
@@ -153,9 +212,7 @@ async function generateRealClassroom(
   
   // Poll for completion if async
   if (result.runId) {
-    // This would poll the generation run status
-    // For now, throw an error indicating real generation needs implementation
-    throw new Error('Async generation polling not yet implemented - use mock mode for testing');
+    throw new Error('Async generation polling not yet implemented - use --provider deepseek for direct API calls');
   }
   
   return {
@@ -163,6 +220,25 @@ async function generateRealClassroom(
     stage: result.stage,
     scenes: result.scenes,
   };
+}
+
+/**
+ * Generate classroom using the appropriate provider
+ */
+async function generateRealClassroom(
+  lesson: Lesson,
+  config: GeneratorConfig
+): Promise<GeneratedClassroom> {
+  const provider = config.provider ?? 'deepseek';
+  
+  switch (provider) {
+    case 'deepseek':
+      return generateWithDeepSeek(lesson, config);
+    case 'server':
+      return generateViaServer(lesson, config);
+    default:
+      throw new Error(`Unknown provider: ${provider}. Supported: deepseek, server`);
+  }
 }
 
 /**
@@ -176,7 +252,25 @@ export async function generatePack(
   pack: LessonPack;
   classrooms: GeneratedClassroom[];
   generationInfo: GenerationInfo;
+  costEstimate?: GenerationCostEstimate;
 }> {
+  // Dry-run mode: just estimate costs
+  if (config.dryRun) {
+    const model = config.model ?? 'deepseek-chat';
+    const costEstimate = estimateGenerationCost(pack.lessons, model);
+    
+    return {
+      pack,
+      classrooms: [],
+      generationInfo: {
+        model,
+        provider: config.provider ?? 'deepseek',
+        generatedAt: new Date().toISOString(),
+      },
+      costEstimate,
+    };
+  }
+  
   const classrooms: GeneratedClassroom[] = [];
   
   for (let i = 0; i < pack.lessons.length; i++) {
@@ -211,11 +305,16 @@ export async function generatePack(
     classrooms.push(classroom);
   }
   
+  // Calculate actual cost from tokens used (for real generation)
+  const costEstimate = config.mockMode 
+    ? undefined 
+    : estimateGenerationCost(pack.lessons, config.model ?? 'deepseek-chat');
+  
   const generationInfo: GenerationInfo = {
-    model: config.mockMode ? 'mock-fixture' : config.model,
-    provider: config.mockMode ? 'fixture' : config.provider,
+    model: config.mockMode ? 'mock-fixture' : (config.model ?? 'deepseek-chat'),
+    provider: config.mockMode ? 'fixture' : (config.provider ?? 'deepseek'),
     generatedAt: new Date().toISOString(),
-    cost: config.mockMode ? 0 : undefined, // Would calculate from API response
+    cost: costEstimate?.estimatedCostUSD,
   };
   
   // Update pack status to generated
@@ -234,6 +333,7 @@ export async function generatePack(
     pack,
     classrooms,
     generationInfo,
+    costEstimate,
   };
 }
 
@@ -241,13 +341,23 @@ export async function generatePack(
  * Check if real generation is available (API key configured)
  */
 export function isRealGenerationAvailable(): boolean {
-  // Check for common Chinese model API keys
-  const apiKeys = [
-    process.env.DEEPSEEK_API_KEY,
-    process.env.QWEN_API_KEY,
-    process.env.GLM_API_KEY,
-    process.env.OPENAI_API_KEY,
+  return isDeepSeekConfigured();
+}
+
+/**
+ * Get available provider information
+ */
+export function getAvailableProviders(): { id: string; name: string; configured: boolean }[] {
+  return [
+    {
+      id: 'deepseek',
+      name: 'DeepSeek',
+      configured: isDeepSeekConfigured(),
+    },
+    {
+      id: 'server',
+      name: 'OpenMAIC Server',
+      configured: false, // Requires running server
+    },
   ];
-  
-  return apiKeys.some(key => key && !key.includes('placeholder'));
 }

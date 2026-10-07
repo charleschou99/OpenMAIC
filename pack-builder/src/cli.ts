@@ -20,7 +20,7 @@ import path from 'path';
 import fs from 'fs';
 
 import { parseManifest, manifestToLessonPacks, saveLessonPack, loadLessonPack, findPacksInDirectory } from './manifest-parser.js';
-import { generatePack, isRealGenerationAvailable, type GeneratorConfig } from './generator.js';
+import { generatePack, isRealGenerationAvailable, formatCostEstimate, type GeneratorConfig } from './generator.js';
 import { checkContentSafety, summarizeSafetyCheck } from './content-safety.js';
 import { updateReviewStatus, formatReviewStatus, getReviewQueue, isApprovedForDistribution } from './review-workflow.js';
 import { exportPack, canExport, type ExportOptions } from './exporter.js';
@@ -78,9 +78,20 @@ program
   .argument('<pack>', 'Path to pack directory or pack.yml file')
   .option('--mock', 'Use mock generation with fixture data', true)
   .option('--real', 'Use real generation with configured API')
+  .option('--dry-run', 'Estimate costs without generating')
+  .option('--provider <name>', 'AI provider: deepseek, server', 'deepseek')
+  .option('--model <name>', 'Model to use (e.g., deepseek-chat)', 'deepseek-chat')
   .option('--fixtures <path>', 'Path to fixture samples (default: pack-builder/test/fixtures/)')
   .option('--mock-output <dir>', 'Output directory for mock-generated classrooms', '.mock-output')
-  .action(async (packPath: string, options: { mock: boolean; real: boolean; fixtures?: string; mockOutput: string }) => {
+  .action(async (packPath: string, options: { 
+    mock: boolean; 
+    real: boolean; 
+    dryRun?: boolean;
+    provider: string;
+    model: string;
+    fixtures?: string; 
+    mockOutput: string 
+  }) => {
     const spinner = ora('Loading pack...').start();
     
     try {
@@ -91,10 +102,17 @@ program
       }
       
       const pack = loadLessonPack(packFile);
-      const useMock = options.real ? false : options.mock;
+      const useMock = options.real ? false : (options.dryRun ? false : options.mock);
+      const isDryRun = options.dryRun ?? false;
       
-      if (!useMock && !isRealGenerationAvailable()) {
-        spinner.warn('No API key found. Use --mock for testing or configure DEEPSEEK_API_KEY/QWEN_API_KEY');
+      if (!useMock && !isDryRun && !isRealGenerationAvailable()) {
+        spinner.warn('No API key found.');
+        console.log(chalk.yellow('\nTo generate with DeepSeek:'));
+        console.log('  1. Get API key: https://platform.deepseek.com/');
+        console.log('  2. Set DEEPSEEK_API_KEY in .env.local or environment');
+        console.log('  3. Run: pack-builder generate <pack> --real --provider deepseek\n');
+        console.log(chalk.cyan('Or use --mock for testing with fixture data'));
+        console.log(chalk.cyan('Or use --dry-run to estimate costs without API key'));
         process.exit(1);
       }
       
@@ -103,17 +121,50 @@ program
       const defaultFixturesPath = path.resolve(cliDir, '..', 'test', 'fixtures');
       const fixturesPath = options.fixtures ? path.resolve(options.fixtures) : defaultFixturesPath;
       
+      // Extract grade/subject info from pack path for generation context
+      const packDirForContext = path.dirname(packFile);
+      const pathParts = packDirForContext.split(path.sep);
+      const gradeMatch = pathParts.find(p => /^[一二三四五六]年级$/.test(p));
+      const gradeLevel = gradeMatch ? ['一', '二', '三', '四', '五', '六'].indexOf(gradeMatch[0]!) + 1 : 1;
+      const subjectZh = pathParts.find(p => ['语文', '数学', '英语', '道德与法治', '科学'].includes(p)) ?? '数学';
+      
       const config: GeneratorConfig = {
         mockMode: useMock,
+        dryRun: isDryRun,
         fixturesPath,
         mockOutputDir: useMock ? path.resolve(options.mockOutput) : undefined,
+        provider: options.provider,
+        model: options.model,
+        gradeLevel,
+        subjectZh,
+        textbookEdition: subjectZh === '语文' || subjectZh === '道德与法治' ? '统编版' : 
+                         subjectZh === '数学' ? '人教版' :
+                         subjectZh === '英语' ? '人教版 PEP' : '教科版',
       };
       
-      spinner.text = `Generating ${pack.lessons.length} lessons (${useMock ? 'mock' : 'real'} mode)...`;
+      if (isDryRun) {
+        spinner.text = 'Estimating generation costs...';
+      } else {
+        spinner.text = `Generating ${pack.lessons.length} lessons (${useMock ? 'mock' : options.provider} mode)...`;
+      }
       
       const result = await generatePack(pack, config, (lesson, index, total) => {
-        spinner.text = `Generating lesson ${index + 1}/${total}: ${lesson.titleZh}`;
+        if (!isDryRun) {
+          spinner.text = `Generating lesson ${index + 1}/${total}: ${lesson.titleZh}`;
+        }
       });
+      
+      // Dry-run: just show cost estimate
+      if (isDryRun) {
+        spinner.stop();
+        console.log('\n' + chalk.bold('📊 Cost Estimate (Dry Run)\n'));
+        if (result.costEstimate) {
+          console.log(formatCostEstimate(result.costEstimate));
+        }
+        console.log(chalk.cyan('\nTo generate for real:'));
+        console.log(`  pack-builder generate ${packPath} --real --provider ${options.provider}`);
+        return;
+      }
       
       // Save updated pack
       const packDir = path.dirname(packFile);
@@ -142,9 +193,16 @@ program
       
       spinner.succeed(`Generated ${result.classrooms.length} classrooms`);
       
+      // Show cost info for real generation
+      if (!useMock && result.costEstimate) {
+        console.log(chalk.dim(`\n💰 Estimated cost: $${result.costEstimate.estimatedCostUSD.toFixed(4)} USD (¥${result.costEstimate.estimatedCostCNY.toFixed(2)} CNY)`));
+      }
+      
       if (useMock) {
         console.log(chalk.yellow('\n⚠️  Mock mode: classrooms use fixture data'));
-        console.log('   To generate real content, set DEEPSEEK_API_KEY or QWEN_API_KEY and use --real');
+        console.log('   To generate real content:');
+        console.log('   1. Set DEEPSEEK_API_KEY in .env.local');
+        console.log(`   2. Run: pack-builder generate ${packPath} --real --provider deepseek`);
       }
       
     } catch (error) {

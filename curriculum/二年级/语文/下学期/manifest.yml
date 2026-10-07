@@ -1,0 +1,163 @@
+grade:
+  id: grade-2
+  name: Grade 2
+  nameZh: 二年级
+  level: 2
+  ageRange:
+    min: 7
+    max: 8
+  semester: 下学期
+subject:
+  id: chinese
+  name: Chinese Language
+  nameZh: 语文
+  textbookEdition:
+    id: tongbian
+    nameZh: 统编版
+    publisher: 人民教育出版社
+  curriculumStandard:
+    year: 2022
+    name: 义务教育语文课程标准（2022年版）
+  sessionDurationMinutes: 40
+  lessonsPerWeek: 8
+  contentCharacteristics:
+    visualHeavy: true
+    voiceHeavy: true
+    minimalText: true
+units:
+  - id: unit-1
+    number: 1
+    title: Texts 1
+    titleZh: 课文（一）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-1-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-2
+    number: 2
+    title: Literacy 1
+    titleZh: 识字（一）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-2-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-3
+    number: 3
+    title: Texts 2
+    titleZh: 课文（二）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-3-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-4
+    number: 4
+    title: Literacy 2
+    titleZh: 识字（二）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-4-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-5
+    number: 5
+    title: Texts 3
+    titleZh: 课文（三）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-5-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-6
+    number: 6
+    title: Texts 4
+    titleZh: 课文（四）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-6-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-7
+    number: 7
+    title: Literacy 3
+    titleZh: 识字（三）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-7-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-8
+    number: 8
+    title: Texts 5
+    titleZh: 课文（五）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-8-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz

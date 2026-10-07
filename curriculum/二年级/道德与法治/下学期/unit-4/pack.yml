@@ -1,0 +1,25 @@
+id: pack-grade-2-ethics-spring-unit-4
+version: 0.1.0
+gradeId: grade-2
+subjectId: ethics
+unit:
+  id: unit-4
+  number: 4
+  title: Our Village
+  titleZh: 我会努力的
+  lessons: []
+lessons:
+  - id: lesson-4-1
+    order: 1
+    title: "TODO: Lesson 1"
+    titleZh: 【待补充】第1课
+    topic: "TODO: Add lesson topic for generation"
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T21:50:27.237Z
+  updatedAt: 2026-10-07T21:50:27.237Z
