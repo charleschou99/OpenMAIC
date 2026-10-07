@@ -1,6 +1,10 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // Local-dev fix (fork): the dev server refuses its own chunk requests when the
+  // page is opened as http://127.0.0.1:3000 — the documented remedy is to list the
+  // origin. Without this the classroom shell hangs on "Loading classroom…".
+  allowedDevOrigins: ['127.0.0.1'],
   env: {
     // Pin even the unset/default value in both client and server bundles.
     // A runtime-only override must not disable the route the built client uses.
