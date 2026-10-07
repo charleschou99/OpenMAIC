@@ -13,8 +13,13 @@ import type { Lesson, LessonPack, GenerationInfo } from './types.js';
 export interface GeneratorConfig {
   /** Use mock generation with fixture data */
   mockMode: boolean;
-  /** Path to fixture classrooms for mock mode */
+  /** Path to fixture classrooms for mock mode (default: pack-builder/test/fixtures/) */
   fixturesPath?: string;
+  /** 
+   * Output directory for mock-generated classrooms (ignored path).
+   * In mock mode, classrooms are written here instead of the curriculum folder.
+   */
+  mockOutputDir?: string;
   /** Model to use for real generation (e.g., 'deepseek:deepseek-v4-flash') */
   model?: string;
   /** Provider ID */
@@ -36,14 +41,20 @@ const _FIXTURE_STAGES = [
 ];
 
 /**
- * Load a fixture classroom from the samples directory
+ * Load a fixture classroom from the test fixtures directory
  */
 function loadFixtureClassroom(fixturesPath: string, index: number): GeneratedClassroom | null {
-  // Cycle through available fixtures
+  // Cycle through available fixtures in pack-builder/test/fixtures/
   const sampleDirs = ['dispersion-trade-from-our-lesson', 'openmaic-self-presentation'];
   const sampleDir = sampleDirs[index % sampleDirs.length];
   
-  const stageDir = path.join(fixturesPath, 'generated-classrooms', sampleDir!);
+  // Try the new fixtures path first (pack-builder/test/fixtures/)
+  let stageDir = path.join(fixturesPath, sampleDir!);
+  
+  // Fall back to samples/generated-classrooms/ if needed
+  if (!fs.existsSync(stageDir)) {
+    stageDir = path.join(fixturesPath, 'generated-classrooms', sampleDir!);
+  }
   
   if (!fs.existsSync(stageDir)) {
     return null;

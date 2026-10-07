@@ -33,7 +33,7 @@ lessons:
         - single-choice
         - counting
       voiceStyle: warm-encouraging
-    stageId: stage-lesson-1-1-muy8mzxx
+    stageId: stage-lesson-1-1-muy9ht4c
   - id: lesson-1-2
     order: 2
     title: Comparing Objects
@@ -52,7 +52,7 @@ lessons:
       quizTypes:
         - single-choice
         - matching
-    stageId: stage-lesson-1-2-muy8mzxy
+    stageId: stage-lesson-1-2-muy9ht4e
 reviewStatus:
   status: approved
   reviewer: 志愿者测试
@@ -63,38 +63,20 @@ reviewStatus:
     - timestamp: 2026-10-07T15:04:32.482Z
       reviewer: 志愿者测试
       comment: "Approved: 批准发布"
-  approvedAt: 2026-10-07T15:04:32.482Z
+  approvedAt: 2026-10-07T15:28:15.110Z
 metadata:
   createdAt: 2026-10-07T15:03:55.013Z
-  updatedAt: 2026-10-07T15:04:36.342Z
+  updatedAt: 2026-10-07T15:29:07.028Z
   generatedWith:
     model: mock-fixture
     provider: fixture
-    generatedAt: 2026-10-07T15:04:00.118Z
+    generatedAt: 2026-10-07T15:27:57.614Z
     cost: 0
 safetyCheck:
   passed: true
-  checkedAt: 2026-10-07T15:04:16.984Z
-  issues:
-    - lessonId: generated-content
-      severity: warning
-      message: Content contains very long sentences that may be hard for young readers
-    - lessonId: generated-content
-      severity: warning
-      message: Content contains very long sentences that may be hard for young readers
-    - lessonId: generated-content
-      severity: warning
-      message: Content contains very long sentences that may be hard for young readers
-    - lessonId: generated-content
-      severity: warning
-      message: Content contains very long sentences that may be hard for young readers
-    - lessonId: generated-content
-      severity: warning
-      message: Content contains very long sentences that may be hard for young readers
-    - lessonId: generated-content
-      severity: warning
-      message: Content contains very long sentences that may be hard for young readers
+  checkedAt: 2026-10-07T15:28:07.505Z
+  issues: []
 exportInfo:
-  exportedAt: 2026-10-07T15:04:36.342Z
+  exportedAt: 2026-10-07T15:29:07.028Z
   format: usb-bundle
   outputPath: /workspace/exports/pack-grade-1-math-unit-1-bundle

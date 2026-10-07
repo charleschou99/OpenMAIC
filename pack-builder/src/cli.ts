@@ -78,8 +78,9 @@ program
   .argument('<pack>', 'Path to pack directory or pack.yml file')
   .option('--mock', 'Use mock generation with fixture data', true)
   .option('--real', 'Use real generation with configured API')
-  .option('--fixtures <path>', 'Path to fixture samples', './samples')
-  .action(async (packPath: string, options: { mock: boolean; real: boolean; fixtures: string }) => {
+  .option('--fixtures <path>', 'Path to fixture samples (default: pack-builder/test/fixtures/)')
+  .option('--mock-output <dir>', 'Output directory for mock-generated classrooms', '.mock-output')
+  .action(async (packPath: string, options: { mock: boolean; real: boolean; fixtures?: string; mockOutput: string }) => {
     const spinner = ora('Loading pack...').start();
     
     try {
@@ -97,9 +98,15 @@ program
         process.exit(1);
       }
       
+      // Determine fixtures path - default to pack-builder/test/fixtures/
+      const cliDir = path.dirname(new URL(import.meta.url).pathname);
+      const defaultFixturesPath = path.resolve(cliDir, '..', 'test', 'fixtures');
+      const fixturesPath = options.fixtures ? path.resolve(options.fixtures) : defaultFixturesPath;
+      
       const config: GeneratorConfig = {
         mockMode: useMock,
-        fixturesPath: path.resolve(options.fixtures),
+        fixturesPath,
+        mockOutputDir: useMock ? path.resolve(options.mockOutput) : undefined,
       };
       
       spinner.text = `Generating ${pack.lessons.length} lessons (${useMock ? 'mock' : 'real'} mode)...`;
@@ -112,8 +119,11 @@ program
       const packDir = path.dirname(packFile);
       saveLessonPack(result.pack, path.dirname(packDir));
       
-      // Save classrooms data
-      const classroomsDir = path.join(packDir, 'classrooms');
+      // In mock mode, save classrooms to the mock output directory (ignored)
+      // In real mode, save to the curriculum folder
+      const classroomsDir = useMock 
+        ? path.join(path.resolve(options.mockOutput), pack.unit.id, 'classrooms')
+        : path.join(packDir, 'classrooms');
       fs.mkdirSync(classroomsDir, { recursive: true });
       
       for (const classroom of result.classrooms) {
@@ -290,10 +300,12 @@ program
   .option('-o, --output <dir>', 'Output directory', './exports')
   .option('-f, --format <type>', 'Export format (usb-bundle, maic-zip)', 'usb-bundle')
   .option('--force', 'Export even if not approved (for testing)')
+  .option('--workspace-root <path>', 'Path to OpenMAIC workspace root')
   .action(async (packPath: string, options: {
     output: string;
     format: string;
     force?: boolean;
+    workspaceRoot?: string;
   }) => {
     const spinner = ora('Loading pack...').start();
     
@@ -305,8 +317,30 @@ program
       
       const pack = loadLessonPack(packFile);
       
-      // Load classrooms
-      const classroomsDir = path.join(path.dirname(packFile), 'classrooms');
+      // Load classrooms - check both mock output and curriculum folder
+      const packUnitId = pack.unit.id;
+      const packDir = path.dirname(packFile);
+      
+      // Find workspace root by looking for package.json with openmaic
+      let workspaceRoot = packDir;
+      for (let i = 0; i < 10; i++) {
+        const pkgPath = path.join(workspaceRoot, 'package.json');
+        if (fs.existsSync(pkgPath)) {
+          const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
+          if (pkg.name === 'openmaic' || pkg.name?.includes('openmaic')) {
+            break;
+          }
+        }
+        const parent = path.dirname(workspaceRoot);
+        if (parent === workspaceRoot) break;
+        workspaceRoot = parent;
+      }
+      
+      const mockClassroomsDir = path.join(workspaceRoot, '.mock-output', packUnitId, 'classrooms');
+      const curriculumClassroomsDir = path.join(packDir, 'classrooms');
+      
+      // Prefer mock output if it exists, otherwise use curriculum folder
+      const classroomsDir = fs.existsSync(mockClassroomsDir) ? mockClassroomsDir : curriculumClassroomsDir;
       const classrooms: Array<{ stageId: string; stage: unknown; scenes: unknown[] }> = [];
       
       if (fs.existsSync(classroomsDir)) {
@@ -329,6 +363,7 @@ program
         outputDir: path.resolve(options.output),
         format: options.format as 'usb-bundle' | 'maic-zip',
         includeUnapproved: options.force,
+        workspaceRoot: options.workspaceRoot,
       };
       
       // Check if export is allowed

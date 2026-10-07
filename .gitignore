@@ -98,3 +98,6 @@ e2e/__screenshots-619/
 
 # Pack builder exports (generated offline bundles)
 /exports/
+
+# Pack builder mock output (test-generated classrooms)
+/.mock-output/

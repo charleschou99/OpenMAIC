@@ -53,6 +53,17 @@ export default function VolunteerLayout({
         </div>
       </header>
 
+      {/* Mock Data Banner */}
+      <div className="bg-amber-50 border-b border-amber-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+          <p className="text-sm text-amber-800 text-center">
+            <span className="font-medium">📊 示例数据</span>
+            <span className="mx-2">·</span>
+            <span>当前显示的是模拟数据，用于演示功能。正式数据将来自：课件审核系统 + 离线平板同步的学习记录</span>
+          </p>
+        </div>
+      </div>
+
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {children}
