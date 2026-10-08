@@ -1,0 +1,34 @@
+id: pack-grade-1-chinese-fall-unit-2
+version: 0.1.0
+gradeId: grade-1
+subjectId: chinese
+unit:
+  id: unit-2
+  number: 2
+  title: Literacy 1
+  titleZh: 识字（一）
+  lessons: []
+lessons:
+  - id: lesson-2-1
+    order: 1
+    title: Heaven, Earth, Man
+    titleZh: 天地人
+    topic: 认识“天、地、人”三个字，学会“你、我、他”三个人称代词，能看图认读、正确朗读。
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - quiz
+  - id: lesson-2-2
+    order: 2
+    title: Metal, Wood, Water, Fire, Earth
+    titleZh: 金木水火土
+    topic: 认识“金、木、水、火、土”五个字，正确朗读韵文，初步感受对韵与数数的节奏。
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T21:50:27.190Z
+  updatedAt: 2026-10-07T21:50:27.190Z

@@ -1,0 +1,25 @@
+id: pack-grade-6-chinese-spring-unit-3
+version: 0.1.0
+gradeId: grade-6
+subjectId: chinese
+unit:
+  id: unit-3
+  number: 3
+  title: "TODO: Unit 3"
+  titleZh: 【待补充】第三单元
+  lessons: []
+lessons:
+  - id: lesson-3-1
+    order: 1
+    title: "TODO: Lesson 1"
+    titleZh: 【待补充】第1课
+    topic: "TODO: Add lesson topic for generation"
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T21:50:27.298Z
+  updatedAt: 2026-10-07T21:50:27.298Z

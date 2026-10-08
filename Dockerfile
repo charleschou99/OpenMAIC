@@ -32,6 +32,7 @@ ARG NPM_REGISTRY
 RUN apk add --no-cache python3 build-base g++ cairo-dev pango-dev jpeg-dev giflib-dev librsvg-dev
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY pack-builder/package.json ./pack-builder/
 COPY packages/ ./packages/
 COPY scripts/ ./scripts/
 
@@ -73,6 +74,13 @@ ENV NEXT_PUBLIC_PRO_WORKBENCH_ENABLED=$NEXT_PUBLIC_PRO_WORKBENCH_ENABLED
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY --from=deps /app/packages ./packages
+# pack-builder is a workspace member with its own dependencies (commander, chalk,
+# ora, yaml). pnpm links those into pack-builder/node_modules, so copying the root
+# node_modules above is not enough — TypeScript resolving an import from
+# pack-builder/src walks up to /app/pack-builder/node_modules and stops there.
+# Without this line `pnpm build` (which typechecks pack-builder via the root
+# tsconfig) fails with TS2307 "Cannot find module 'commander'".
+COPY --from=deps /app/pack-builder/node_modules ./pack-builder/node_modules
 COPY . .
 
 # Build the workspace packages (rollup + tsc) here, not inside `pnpm install`,

@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://openmaic-yijiao.org/schema/lesson-pack.json",
+  "title": "Lesson Pack Definition",
+  "description": "Defines a lesson pack (课件包) containing multiple related classrooms for a curriculum unit",
+  "type": "object",
+  "required": ["id", "version", "gradeId", "subjectId", "unit", "lessons"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^pack-[a-z0-9-]+$",
+      "description": "Unique identifier for the lesson pack"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version of this pack"
+    },
+    "gradeId": {
+      "type": "string",
+      "description": "Reference to grade definition"
+    },
+    "subjectId": {
+      "type": "string",
+      "description": "Reference to subject definition"
+    },
+    "unit": {
+      "type": "object",
+      "required": ["number", "title", "titleZh"],
+      "properties": {
+        "number": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Unit number in the textbook"
+        },
+        "title": {
+          "type": "string",
+          "description": "English title of the unit"
+        },
+        "titleZh": {
+          "type": "string",
+          "description": "Chinese title of the unit"
+        },
+        "textbookPages": {
+          "type": "string",
+          "description": "Page range in the textbook (e.g., '2-15')"
+        },
+        "objectives": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Learning objectives for this unit"
+        }
+      }
+    },
+    "lessons": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "order", "title", "titleZh", "topic"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for this lesson"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Order within the unit"
+          },
+          "title": {
+            "type": "string",
+            "description": "English title of the lesson"
+          },
+          "titleZh": {
+            "type": "string",
+            "description": "Chinese title of the lesson"
+          },
+          "topic": {
+            "type": "string",
+            "description": "Main topic/prompt for generation"
+          },
+          "durationMinutes": {
+            "type": "integer",
+            "default": 40,
+            "description": "Expected duration in minutes"
+          },
+          "sceneTypes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["slide", "quiz", "interactive", "pbl"]
+            },
+            "description": "Types of scenes to generate"
+          },
+          "generationHints": {
+            "type": "object",
+            "properties": {
+              "ageAppropriate": { "type": "boolean", "default": true },
+              "visualHeavy": { "type": "boolean" },
+              "interactiveElements": { "type": "array", "items": { "type": "string" } },
+              "quizTypes": { "type": "array", "items": { "type": "string" } },
+              "voiceStyle": { "type": "string" }
+            },
+            "description": "Hints for the generation pipeline"
+          },
+          "stageId": {
+            "type": "string",
+            "description": "Generated OpenMAIC stage ID (filled after generation)"
+          }
+        }
+      }
+    },
+    "reviewStatus": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["draft", "generated", "under-review", "reviewed", "approved", "rejected"],
+          "default": "draft"
+        },
+        "reviewer": {
+          "type": "string",
+          "description": "Reviewer identifier (anonymous label)"
+        },
+        "reviewedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "approvedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "comments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": { "type": "string", "format": "date-time" },
+              "reviewer": { "type": "string" },
+              "comment": { "type": "string" },
+              "lessonId": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "safetyCheck": {
+      "type": "object",
+      "properties": {
+        "passed": { "type": "boolean" },
+        "checkedAt": { "type": "string", "format": "date-time" },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "lessonId": { "type": "string" },
+              "severity": { "type": "string", "enum": ["warning", "error"] },
+              "message": { "type": "string" },
+              "location": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "exportInfo": {
+      "type": "object",
+      "properties": {
+        "exportedAt": { "type": "string", "format": "date-time" },
+        "format": { "type": "string", "enum": ["maic-zip", "standalone-html", "usb-bundle"] },
+        "outputPath": { "type": "string" }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "generatedWith": {
+          "type": "object",
+          "properties": {
+            "model": { "type": "string" },
+            "provider": { "type": "string" },
+            "cost": { "type": "number" }
+          }
+        }
+      }
+    }
+  }
+}

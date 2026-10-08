@@ -1,0 +1,143 @@
+# Upstream Sync Workflow
+#
+# This workflow keeps the charity fork in sync with the upstream OpenMAIC repository.
+# It runs weekly and can be triggered manually.
+#
+# Strategy:
+# - Charity-specific code lives in dedicated top-level folders (curriculum/, pack-builder/,
+#   volunteer-dashboard/, docs-zh/) to minimize merge conflicts
+# - Upstream changes are merged in, preserving our additions
+# - Any conflicts in charity-specific folders are auto-resolved to keep our version
+
+name: Sync with Upstream
+
+on:
+  schedule:
+    # Run weekly on Sundays at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (do not push changes)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/THU-MAIC/OpenMAIC.git || true
+          git fetch upstream main
+
+      - name: Check for upstream changes
+        id: check_changes
+        run: |
+          BEHIND=$(git rev-list --count HEAD..upstream/main)
+          echo "commits_behind=$BEHIND" >> $GITHUB_OUTPUT
+          if [ "$BEHIND" -gt 0 ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create sync branch
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          BRANCH_NAME="sync/upstream-$(date +%Y%m%d)"
+          git checkout -b $BRANCH_NAME
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_ENV
+
+      - name: Merge upstream changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        id: merge
+        run: |
+          # Attempt to merge upstream/main
+          if git merge upstream/main --no-edit -m "chore: sync with upstream OpenMAIC"; then
+            echo "merge_status=success" >> $GITHUB_OUTPUT
+          else
+            # Handle conflicts in charity-specific folders by keeping ours
+            CHARITY_FOLDERS="curriculum pack-builder volunteer-dashboard docs-zh app/volunteer lib/volunteer"
+            for folder in $CHARITY_FOLDERS; do
+              if [ -d "$folder" ]; then
+                git checkout --ours "$folder" 2>/dev/null || true
+                git add "$folder" 2>/dev/null || true
+              fi
+            done
+            
+            # Check if there are still unresolved conflicts
+            if git diff --name-only --diff-filter=U | grep -v "^curriculum/" | grep -v "^pack-builder/" | grep -v "^volunteer-dashboard/" | grep -v "^docs-zh/" | grep -v "^app/volunteer/" | grep -v "^lib/volunteer/" | head -1; then
+              echo "merge_status=conflicts" >> $GITHUB_OUTPUT
+              echo "Unresolved conflicts in upstream files. Manual resolution required."
+              git diff --name-only --diff-filter=U
+            else
+              git commit -m "chore: sync with upstream OpenMAIC (auto-resolved charity folder conflicts)"
+              echo "merge_status=success" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Push sync branch
+        if: steps.check_changes.outputs.has_changes == 'true' && steps.merge.outputs.merge_status == 'success' && inputs.dry_run != 'true'
+        run: |
+          git push -u origin ${{ env.branch_name }}
+
+      - name: Create Pull Request
+        if: steps.check_changes.outputs.has_changes == 'true' && steps.merge.outputs.merge_status == 'success' && inputs.dry_run != 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.branch_name }}
+          base: main
+          title: "chore: sync with upstream OpenMAIC"
+          body: |
+            ## Upstream Sync
+
+            This PR syncs the fork with the latest changes from [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC).
+
+            **Changes from upstream:** ${{ steps.check_changes.outputs.commits_behind }} commit(s)
+
+            ### Review Checklist
+
+            - [ ] No breaking changes to charity-specific features
+            - [ ] `curriculum/` folder preserved
+            - [ ] `pack-builder/` folder preserved  
+            - [ ] `app/volunteer/` pages preserved
+            - [ ] `docs-zh/` documentation preserved
+            - [ ] Tests pass after merge
+
+            ---
+            *This PR was automatically created by the upstream sync workflow.*
+          labels: |
+            upstream-sync
+            automated
+
+      - name: Report status
+        if: always()
+        run: |
+          if [ "${{ steps.check_changes.outputs.has_changes }}" == "false" ]; then
+            echo "✅ Fork is up to date with upstream"
+          elif [ "${{ steps.merge.outputs.merge_status }}" == "success" ]; then
+            echo "✅ Successfully synced with upstream"
+            echo "   Branch: ${{ env.branch_name }}"
+            echo "   Commits behind: ${{ steps.check_changes.outputs.commits_behind }}"
+          else
+            echo "❌ Sync failed - manual intervention required"
+            echo "   There are merge conflicts that need manual resolution"
+          fi

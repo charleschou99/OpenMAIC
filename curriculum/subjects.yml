@@ -1,0 +1,137 @@
+# 小学学科定义
+# Primary School Subject Definitions
+# 
+# Textbook editions used:
+# - 语文 (Chinese): 统编版/部编版 (Tongbian/Bubian - Unified/Ministry Edition)
+# - 数学 (Math): 人教版 (PEP - People's Education Press)
+# - 英语 (English): 人教版 PEP (grades 3-6 only)
+# - 道德与法治 (Moral & Law): 统编版/部编版
+# - 科学 (Science): 教科版 (Jiaoke - Science Press), configurable
+
+subjects:
+  chinese:
+    id: chinese
+    name: Chinese Language
+    nameZh: 语文
+    textbookEdition:
+      id: tongbian
+      nameZh: 统编版
+      publisher: 人民教育出版社
+      alternateNames: ["部编版", "统编本"]
+    curriculumStandard:
+      year: 2022
+      name: 义务教育语文课程标准（2022年版）
+      coreCompetencies:
+        - 语言运用
+        - 思维能力
+        - 审美创造
+        - 文化自信
+    sessionDurationMinutes: 40
+    lessonsPerWeek: 8
+    gradesAvailable: [1, 2, 3, 4, 5, 6]
+    contentCharacteristics:
+      visualHeavy: true
+      voiceHeavy: true
+      minimalText: false
+
+  math:
+    id: math
+    name: Mathematics
+    nameZh: 数学
+    textbookEdition:
+      id: pep
+      nameZh: 人教版
+      publisher: 人民教育出版社
+    curriculumStandard:
+      year: 2022
+      name: 义务教育数学课程标准（2022年版）
+      coreCompetencies:
+        - 数学抽象
+        - 逻辑推理
+        - 数学建模
+        - 直观想象
+        - 数学运算
+        - 数据分析
+    sessionDurationMinutes: 40
+    lessonsPerWeek: 5
+    gradesAvailable: [1, 2, 3, 4, 5, 6]
+    contentCharacteristics:
+      visualHeavy: true
+      interactiveSimulations: true
+      voiceHeavy: true
+      minimalText: true
+
+  english:
+    id: english
+    name: English
+    nameZh: 英语
+    textbookEdition:
+      id: pep-english
+      nameZh: 人教版 PEP
+      publisher: 人民教育出版社
+      fullName: 义务教育教科书·英语（PEP）
+    curriculumStandard:
+      year: 2022
+      name: 义务教育英语课程标准（2022年版）
+      coreCompetencies:
+        - 语言能力
+        - 文化意识
+        - 思维品质
+        - 学习能力
+    sessionDurationMinutes: 40
+    lessonsPerWeek: 3
+    gradesAvailable: [3, 4, 5, 6]  # English starts in grade 3
+    contentCharacteristics:
+      visualHeavy: true
+      voiceHeavy: true
+      interactiveSimulations: true
+
+  ethics:
+    id: ethics
+    name: Moral Education and Rule of Law
+    nameZh: 道德与法治
+    textbookEdition:
+      id: tongbian
+      nameZh: 统编版
+      publisher: 人民教育出版社
+      alternateNames: ["部编版"]
+    curriculumStandard:
+      year: 2022
+      name: 义务教育道德与法治课程标准（2022年版）
+      coreCompetencies:
+        - 政治认同
+        - 道德修养
+        - 法治观念
+        - 健全人格
+        - 责任意识
+    sessionDurationMinutes: 40
+    lessonsPerWeek: 2
+    gradesAvailable: [1, 2, 3, 4, 5, 6]
+    contentCharacteristics:
+      visualHeavy: true
+      voiceHeavy: true
+
+  science:
+    id: science
+    name: Science
+    nameZh: 科学
+    textbookEdition:
+      id: jiaoke
+      nameZh: 教科版
+      publisher: 教育科学出版社
+      note: "Other editions available: 人教版, 苏教版. Configure based on region."
+    curriculumStandard:
+      year: 2022
+      name: 义务教育科学课程标准（2022年版）
+      coreCompetencies:
+        - 科学观念
+        - 科学思维
+        - 探究实践
+        - 态度责任
+    sessionDurationMinutes: 40
+    lessonsPerWeek: 2
+    gradesAvailable: [1, 2, 3, 4, 5, 6]
+    contentCharacteristics:
+      visualHeavy: true
+      interactiveSimulations: true
+      voiceHeavy: true

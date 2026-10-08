@@ -1,0 +1,25 @@
+id: pack-grade-4-english-spring-unit-6
+version: 0.1.0
+gradeId: grade-4
+subjectId: english
+unit:
+  id: unit-6
+  number: 6
+  title: "TODO: Unit 6"
+  titleZh: 【待补充】第六单元
+  lessons: []
+lessons:
+  - id: lesson-6-1
+    order: 1
+    title: "TODO: Lesson 1"
+    titleZh: 【待补充】第1课
+    topic: "TODO: Add lesson topic for generation"
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T21:50:27.270Z
+  updatedAt: 2026-10-07T21:50:27.270Z

@@ -1,0 +1,45 @@
+id: pack-grade-1-math-unit-6
+version: 0.1.0
+gradeId: grade-1
+subjectId: math
+unit:
+  id: unit-6
+  number: 6
+  title: Numbers 11-20
+  titleZh: 11-20各数的认识
+  textbookPages: 64-71
+  objectives:
+    - 认识11-20各数
+    - 理解十进制概念
+    - 能正确读写11-20
+  lessons: []
+lessons:
+  - id: lesson-6-1
+    order: 1
+    title: Numbers 11-20
+    titleZh: 11-20各数的认识
+    topic: 认识11-20各数，理解"十位"和"个位"的概念
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+    generationHints:
+      interactiveElements:
+        - place-value-blocks
+        - number-line
+  - id: lesson-6-2
+    order: 2
+    title: Reading and Writing 11-20
+    titleZh: 11-20的读法和写法
+    topic: 学习11-20各数的读法和写法，巩固数位概念
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T15:03:55.013Z
+  updatedAt: 2026-10-07T15:03:55.020Z

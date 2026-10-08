@@ -1,0 +1,95 @@
+grade:
+  id: grade-1
+  name: Grade 1
+  nameZh: 一年级
+  level: 1
+  ageRange:
+    min: 6
+    max: 7
+  semester: 下学期
+subject:
+  id: ethics
+  name: Moral Education and Rule of Law
+  nameZh: 道德与法治
+  textbookEdition:
+    id: tongbian
+    nameZh: 统编版
+    publisher: 人民教育出版社
+  curriculumStandard:
+    year: 2022
+    name: 义务教育道德与法治课程标准（2022年版）
+  sessionDurationMinutes: 40
+  lessonsPerWeek: 2
+  contentCharacteristics:
+    visualHeavy: true
+    voiceHeavy: true
+    minimalText: true
+units:
+  - id: unit-1
+    number: 1
+    title: My Good Habits
+    titleZh: 我的好习惯
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-1-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-2
+    number: 2
+    title: I Love My Family
+    titleZh: 我和我的家
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-2-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-3
+    number: 3
+    title: We Love Each Other
+    titleZh: 我们在一起
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-3-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-4
+    number: 4
+    title: Happy Summer
+    titleZh: 我们的夏天
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-4-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz

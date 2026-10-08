@@ -1,0 +1,81 @@
+id: pack-grade-1-math-unit-5
+version: 0.1.0
+gradeId: grade-1
+subjectId: math
+unit:
+  id: unit-5
+  number: 5
+  title: Numbers 6-10 and Operations
+  titleZh: 6-10的认识和加减法
+  textbookPages: 36-63
+  objectives:
+    - 认识数字6-10
+    - 掌握10以内的加减法
+    - 能解决简单的实际问题
+  lessons: []
+lessons:
+  - id: lesson-5-1
+    order: 1
+    title: Numbers 6 and 7
+    titleZh: 6和7的认识
+    topic: 认识数字6和7，理解数的组成，学会书写
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-5-2
+    order: 2
+    title: 6 and 7 Operations
+    titleZh: 6、7的加减法
+    topic: 学习6、7的加减法运算，理解数的组成与分解
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-5-3
+    order: 3
+    title: Numbers 8 and 9
+    titleZh: 8和9的认识
+    topic: 认识数字8和9，学习8、9的组成
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-5-4
+    order: 4
+    title: 8 and 9 Operations
+    titleZh: 8、9的加减法
+    topic: 学习8、9的加减法，解决简单问题
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-5-5
+    order: 5
+    title: Number 10
+    titleZh: 10的认识
+    topic: 认识数字10，理解10的特殊意义，学习10的组成
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-5-6
+    order: 6
+    title: 10 Operations
+    titleZh: 10的加减法
+    topic: 学习10的加减法，掌握凑十法
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T15:03:55.013Z
+  updatedAt: 2026-10-07T15:03:55.019Z

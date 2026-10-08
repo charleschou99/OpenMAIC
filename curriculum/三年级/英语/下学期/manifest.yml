@@ -1,0 +1,129 @@
+grade:
+  id: grade-3
+  name: Grade 3
+  nameZh: 三年级
+  level: 3
+  ageRange:
+    min: 8
+    max: 9
+  semester: 下学期
+subject:
+  id: english
+  name: English
+  nameZh: 英语
+  textbookEdition:
+    id: pep-english
+    nameZh: 人教版 PEP
+    publisher: 人民教育出版社
+  curriculumStandard:
+    year: 2022
+    name: 义务教育英语课程标准（2022年版）
+  sessionDurationMinutes: 40
+  lessonsPerWeek: 3
+  contentCharacteristics:
+    visualHeavy: true
+    voiceHeavy: true
+    minimalText: false
+units:
+  - id: unit-1
+    number: 1
+    title: Welcome back to school!
+    titleZh: Welcome back to school!
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-1-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-2
+    number: 2
+    title: My family
+    titleZh: My family
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-2-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-3
+    number: 3
+    title: At the zoo
+    titleZh: At the zoo
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-3-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-4
+    number: 4
+    title: Where is my car?
+    titleZh: Where is my car?
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-4-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-5
+    number: 5
+    title: Do you like pears?
+    titleZh: Do you like pears?
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-5-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-6
+    number: 6
+    title: How many?
+    titleZh: How many?
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-6-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz

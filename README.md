@@ -851,6 +851,43 @@ Optional config in `~/.openclaw/openclaw.json`:
 
 </details>
 
+### 🎓 义教AI教室 — Rural China Education Project
+
+<table>
+<tr>
+<td valign="top">
+
+OpenMAIC powers **义教AI教室**, a volunteer-driven initiative bringing AI-generated interactive lessons to rural primary schools across China. The project provides complete curriculum coverage for grades 1–6, aligned with national textbook standards.
+
+**Subjects covered:** 语文 (Chinese), 数学 (Math), 英语 (English, grades 3–6), 道德与法治 (Ethics), 科学 (Science)
+
+**How it works:**
+1. Volunteers generate lessons using OpenMAIC with DeepSeek (~¥0.02/lesson)
+2. Lessons are reviewed and quality-checked by the community
+3. Approved lessons are exported as offline HTML for schools without internet
+4. Students learn through interactive AI classrooms on basic tablets
+
+</td>
+<td width="280" valign="top">
+
+**Get involved:**
+- 📚 [Curriculum structure](curriculum/)
+- 📖 [志愿者指南 (Volunteer Guide)](docs-zh/志愿者指南/)
+- 🛠️ [Pack Builder](pack-builder/) — Generate lessons from curriculum manifests
+
+**Quick start for volunteers:**
+
+```bash
+cd pack-builder
+cp .env.example .env
+# Add DEEPSEEK_API_KEY
+pnpm generate ../curriculum/一年级/上学期/语文/
+```
+
+</td>
+</tr>
+</table>
+
 ### Export
 
 | Format | Description |

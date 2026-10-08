@@ -1,0 +1,163 @@
+grade:
+  id: grade-2
+  name: Grade 2
+  nameZh: 二年级
+  level: 2
+  ageRange:
+    min: 7
+    max: 8
+  semester: 上学期
+subject:
+  id: math
+  name: Mathematics
+  nameZh: 数学
+  textbookEdition:
+    id: pep
+    nameZh: 人教版
+    publisher: 人民教育出版社
+  curriculumStandard:
+    year: 2022
+    name: 义务教育数学课程标准（2022年版）
+  sessionDurationMinutes: 40
+  lessonsPerWeek: 5
+  contentCharacteristics:
+    visualHeavy: true
+    voiceHeavy: true
+    minimalText: true
+units:
+  - id: unit-1
+    number: 1
+    title: Length Units
+    titleZh: 长度单位
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-1-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-2
+    number: 2
+    title: Addition and Subtraction within 100 (2)
+    titleZh: 100以内的加法和减法（二）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-2-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-3
+    number: 3
+    title: Angles
+    titleZh: 角的初步认识
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-3-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-4
+    number: 4
+    title: Multiplication Tables (1)
+    titleZh: 表内乘法（一）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-4-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-5
+    number: 5
+    title: Observing Objects (1)
+    titleZh: 观察物体（一）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-5-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-6
+    number: 6
+    title: Multiplication Tables (2)
+    titleZh: 表内乘法（二）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-6-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-7
+    number: 7
+    title: Understanding Time
+    titleZh: 认识时间
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-7-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-8
+    number: 8
+    title: Math Problem Solving
+    titleZh: 数学广角——搭配（一）
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-8-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz

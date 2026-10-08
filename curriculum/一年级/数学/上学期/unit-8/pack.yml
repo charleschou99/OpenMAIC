@@ -1,0 +1,64 @@
+id: pack-grade-1-math-unit-8
+version: 0.1.0
+gradeId: grade-1
+subjectId: math
+unit:
+  id: unit-8
+  number: 8
+  title: Addition within 20 (with Carrying)
+  titleZh: 20以内的进位加法
+  textbookPages: 76-91
+  objectives:
+    - 掌握20以内的进位加法
+    - 理解"凑十法"
+    - 能熟练口算
+  lessons: []
+lessons:
+  - id: lesson-8-1
+    order: 1
+    title: 9 Plus Something
+    titleZh: 9加几
+    topic: 学习9加几的进位加法，理解"凑十法"
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+    generationHints:
+      interactiveElements:
+        - number-bonds
+        - ten-frame
+  - id: lesson-8-2
+    order: 2
+    title: 8, 7, 6 Plus Something
+    titleZh: 8、7、6加几
+    topic: 学习8、7、6加几的进位加法，熟练运用凑十法
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-8-3
+    order: 3
+    title: 5, 4, 3, 2 Plus Something
+    titleZh: 5、4、3、2加几
+    topic: 学习较小数加几的进位加法，整理加法表
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - interactive
+      - quiz
+  - id: lesson-8-4
+    order: 4
+    title: Review and Practice
+    titleZh: 整理和复习
+    topic: 复习20以内进位加法，提高口算速度
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - quiz
+reviewStatus:
+  status: draft
+metadata:
+  createdAt: 2026-10-07T15:03:55.013Z
+  updatedAt: 2026-10-07T15:03:55.021Z

@@ -1,0 +1,62 @@
+grade:
+  id: grade-2
+  name: Grade 2
+  nameZh: 二年级
+  level: 2
+  ageRange:
+    min: 7
+    max: 8
+  semester: 上学期
+subject:
+  id: science
+  name: Science
+  nameZh: 科学
+  textbookEdition:
+    id: jiaoke
+    nameZh: 教科版
+    publisher: 教育科学出版社
+    note: 可配置其他版本：人教版、苏教版
+  curriculumStandard:
+    year: 2022
+    name: 义务教育科学课程标准（2022年版）
+  sessionDurationMinutes: 40
+  lessonsPerWeek: 2
+  contentCharacteristics:
+    visualHeavy: true
+    voiceHeavy: true
+    minimalText: true
+units:
+  - id: unit-1
+    number: 1
+    title: Our Earth Home
+    titleZh: 我们的地球家园
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-1-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
+  - id: unit-2
+    number: 2
+    title: Materials
+    titleZh: 材料
+    textbookPages: TODO
+    objectives:
+      - "TODO: Add learning objectives"
+    lessons:
+      - id: lesson-2-1
+        order: 1
+        title: "TODO: Lesson 1"
+        titleZh: 【待补充】第1课
+        topic: "TODO: Add lesson topic"
+        durationMinutes: 40
+        sceneTypes:
+          - slide
+          - quiz
