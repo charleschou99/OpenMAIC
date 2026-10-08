@@ -1,7 +1,7 @@
 #!/usr/bin/env npx tsx
 /**
  * Generate curriculum skeleton for all grades and subjects
- * 
+ *
  * Creates directory structure and manifest files with:
  * - Real unit titles where known from official textbooks
  * - TODO placeholders where titles need research
@@ -10,7 +10,9 @@
 
 import fs from 'fs';
 import path from 'path';
-import yaml from 'yaml';
+// `yaml` is not a dependency of the root project (only of pack-builder), and this
+// script is typechecked as part of the app — use the root's existing js-yaml.
+import yaml from 'js-yaml';
 
 const GRADES = [
   { level: 1, nameZh: '一年级', name: 'Grade 1', ageMin: 6, ageMax: 7 },
@@ -108,10 +110,13 @@ const SUBJECTS = {
 
 // Real unit titles from official textbooks (where confidently known)
 // Format: { [gradeLevel]: { [semester]: { [subjectZh]: string[] } } }
-const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string; titleZh: string }[]>>> = {
+const KNOWN_UNITS: Record<
+  number,
+  Record<string, Record<string, { title: string; titleZh: string }[]>>
+> = {
   1: {
-    '上学期': {
-      '数学': [
+    上学期: {
+      数学: [
         { title: 'Preparation', titleZh: '准备课' },
         { title: 'Position', titleZh: '位置' },
         { title: 'Numbers 1-5 and Operations', titleZh: '1-5的认识和加减法' },
@@ -121,7 +126,7 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Telling Time', titleZh: '认识钟表' },
         { title: 'Addition within 20', titleZh: '20以内的进位加法' },
       ],
-      '语文': [
+      语文: [
         { title: 'I Go to School', titleZh: '我上学了' },
         { title: 'Literacy 1', titleZh: '识字（一）' },
         { title: 'Chinese Pinyin', titleZh: '汉语拼音' },
@@ -131,19 +136,19 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Texts 3', titleZh: '课文（三）' },
         { title: 'Texts 4', titleZh: '课文（四）' },
       ],
-      '道德与法治': [
+      道德与法治: [
         { title: 'I Am a Primary Student', titleZh: '我是小学生啦' },
         { title: 'Campus Life Begins', titleZh: '校园生活真快乐' },
         { title: 'Home Sweet Home', titleZh: '家中的安全与健康' },
         { title: 'Happy New Year', titleZh: '天气虽冷有温暖' },
       ],
-      '科学': [
+      科学: [
         { title: 'Plants', titleZh: '植物' },
         { title: 'Comparing and Measuring', titleZh: '比较与测量' },
       ],
     },
-    '下学期': {
-      '数学': [
+    下学期: {
+      数学: [
         { title: 'Recognizing Shapes (2)', titleZh: '认识图形（二）' },
         { title: 'Subtraction within 20', titleZh: '20以内的退位减法' },
         { title: 'Sorting and Organizing', titleZh: '分类与整理' },
@@ -152,7 +157,7 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Addition and Subtraction within 100 (1)', titleZh: '100以内的加法和减法（一）' },
         { title: 'Finding Patterns', titleZh: '找规律' },
       ],
-      '语文': [
+      语文: [
         { title: 'Literacy 1', titleZh: '识字（一）' },
         { title: 'Literacy 2', titleZh: '识字（二）' },
         { title: 'Texts 1', titleZh: '课文（一）' },
@@ -162,21 +167,21 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Literacy 3', titleZh: '识字（三）' },
         { title: 'Literacy 4', titleZh: '识字（四）' },
       ],
-      '道德与法治': [
+      道德与法治: [
         { title: 'My Good Habits', titleZh: '我的好习惯' },
         { title: 'I Love My Family', titleZh: '我和我的家' },
         { title: 'We Love Each Other', titleZh: '我们在一起' },
         { title: 'Happy Summer', titleZh: '我们的夏天' },
       ],
-      '科学': [
+      科学: [
         { title: 'Our Senses', titleZh: '我们的感官' },
         { title: 'Animals', titleZh: '动物' },
       ],
     },
   },
   2: {
-    '上学期': {
-      '数学': [
+    上学期: {
+      数学: [
         { title: 'Length Units', titleZh: '长度单位' },
         { title: 'Addition and Subtraction within 100 (2)', titleZh: '100以内的加法和减法（二）' },
         { title: 'Angles', titleZh: '角的初步认识' },
@@ -186,7 +191,7 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Understanding Time', titleZh: '认识时间' },
         { title: 'Math Problem Solving', titleZh: '数学广角——搭配（一）' },
       ],
-      '语文': [
+      语文: [
         { title: 'Texts 1', titleZh: '课文（一）' },
         { title: 'Literacy 1', titleZh: '识字（一）' },
         { title: 'Texts 2', titleZh: '课文（二）' },
@@ -196,19 +201,19 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Texts 5', titleZh: '课文（五）' },
         { title: 'Texts 6', titleZh: '课文（六）' },
       ],
-      '道德与法治': [
+      道德与法治: [
         { title: 'Holidays and Safety', titleZh: '我们的节假日' },
         { title: 'Our Class', titleZh: '我们的班级' },
         { title: 'Our Community', titleZh: '我们在公共场所' },
         { title: 'Our Home', titleZh: '我们生活的地方' },
       ],
-      '科学': [
+      科学: [
         { title: 'Our Earth Home', titleZh: '我们的地球家园' },
         { title: 'Materials', titleZh: '材料' },
       ],
     },
-    '下学期': {
-      '数学': [
+    下学期: {
+      数学: [
         { title: 'Statistics', titleZh: '数据收集整理' },
         { title: 'Division Tables (1)', titleZh: '表内除法（一）' },
         { title: 'Patterns', titleZh: '图形的运动（一）' },
@@ -218,7 +223,7 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Large Numbers', titleZh: '万以内数的认识' },
         { title: 'Weight Units', titleZh: '克和千克' },
       ],
-      '语文': [
+      语文: [
         { title: 'Texts 1', titleZh: '课文（一）' },
         { title: 'Literacy 1', titleZh: '识字（一）' },
         { title: 'Texts 2', titleZh: '课文（二）' },
@@ -228,13 +233,13 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Literacy 3', titleZh: '识字（三）' },
         { title: 'Texts 5', titleZh: '课文（五）' },
       ],
-      '道德与法治': [
-        { title: 'Let\'s Play', titleZh: '让我试试看' },
+      道德与法治: [
+        { title: "Let's Play", titleZh: '让我试试看' },
         { title: 'My Environmental Friends', titleZh: '我们好好玩' },
         { title: 'Green Life', titleZh: '绿色小卫士' },
         { title: 'Our Village', titleZh: '我会努力的' },
       ],
-      '科学': [
+      科学: [
         { title: 'Magnets', titleZh: '磁铁' },
         { title: 'Our Body', titleZh: '我们自己' },
       ],
@@ -242,8 +247,8 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
   },
   // Grades 3-6: Use TODO placeholders for units that need research
   3: {
-    '上学期': {
-      '数学': [
+    上学期: {
+      数学: [
         { title: 'Time', titleZh: '时、分、秒' },
         { title: 'Large Numbers Addition/Subtraction', titleZh: '万以内的加法和减法（一）' },
         { title: 'Measurement', titleZh: '测量' },
@@ -253,7 +258,7 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Rectangles and Squares', titleZh: '长方形和正方形' },
         { title: 'Fractions Introduction', titleZh: '分数的初步认识' },
       ],
-      '语文': [
+      语文: [
         { title: 'TODO: Unit 1', titleZh: '【待补充】第一单元' },
         { title: 'TODO: Unit 2', titleZh: '【待补充】第二单元' },
         { title: 'TODO: Unit 3', titleZh: '【待补充】第三单元' },
@@ -263,28 +268,28 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'TODO: Unit 7', titleZh: '【待补充】第七单元' },
         { title: 'TODO: Unit 8', titleZh: '【待补充】第八单元' },
       ],
-      '英语': [
+      英语: [
         { title: 'Hello!', titleZh: 'Hello!' },
         { title: 'Colours', titleZh: 'Colours' },
         { title: 'Look at me!', titleZh: 'Look at me!' },
         { title: 'We love animals', titleZh: 'We love animals' },
-        { title: 'Let\'s eat!', titleZh: 'Let\'s eat!' },
+        { title: "Let's eat!", titleZh: "Let's eat!" },
         { title: 'Happy birthday!', titleZh: 'Happy birthday!' },
       ],
-      '道德与法治': [
+      道德与法治: [
         { title: 'TODO: Unit 1', titleZh: '【待补充】第一单元' },
         { title: 'TODO: Unit 2', titleZh: '【待补充】第二单元' },
         { title: 'TODO: Unit 3', titleZh: '【待补充】第三单元' },
         { title: 'TODO: Unit 4', titleZh: '【待补充】第四单元' },
       ],
-      '科学': [
+      科学: [
         { title: 'Water', titleZh: '水' },
         { title: 'Air', titleZh: '空气' },
         { title: 'Weather', titleZh: '天气' },
       ],
     },
-    '下学期': {
-      '数学': [
+    下学期: {
+      数学: [
         { title: 'Position and Direction (1)', titleZh: '位置与方向（一）' },
         { title: 'Division', titleZh: '除数是一位数的除法' },
         { title: 'Composite Stats', titleZh: '复式统计表' },
@@ -294,7 +299,7 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Decimals Introduction', titleZh: '小数的初步认识' },
         { title: 'Math Problems', titleZh: '数学广角——搭配（二）' },
       ],
-      '语文': [
+      语文: [
         { title: 'TODO: Unit 1', titleZh: '【待补充】第一单元' },
         { title: 'TODO: Unit 2', titleZh: '【待补充】第二单元' },
         { title: 'TODO: Unit 3', titleZh: '【待补充】第三单元' },
@@ -304,7 +309,7 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'TODO: Unit 7', titleZh: '【待补充】第七单元' },
         { title: 'TODO: Unit 8', titleZh: '【待补充】第八单元' },
       ],
-      '英语': [
+      英语: [
         { title: 'Welcome back to school!', titleZh: 'Welcome back to school!' },
         { title: 'My family', titleZh: 'My family' },
         { title: 'At the zoo', titleZh: 'At the zoo' },
@@ -312,13 +317,13 @@ const KNOWN_UNITS: Record<number, Record<string, Record<string, { title: string;
         { title: 'Do you like pears?', titleZh: 'Do you like pears?' },
         { title: 'How many?', titleZh: 'How many?' },
       ],
-      '道德与法治': [
+      道德与法治: [
         { title: 'TODO: Unit 1', titleZh: '【待补充】第一单元' },
         { title: 'TODO: Unit 2', titleZh: '【待补充】第二单元' },
         { title: 'TODO: Unit 3', titleZh: '【待补充】第三单元' },
         { title: 'TODO: Unit 4', titleZh: '【待补充】第四单元' },
       ],
-      '科学': [
+      科学: [
         { title: 'Plants', titleZh: '植物的生长变化' },
         { title: 'Animals Life Cycle', titleZh: '动物的一生' },
         { title: 'Solar System', titleZh: '太阳、地球和月球' },
@@ -342,29 +347,29 @@ function generateTodoUnits(count: number, subjectZh: string): { title: string; t
 // Fill in remaining grades with TODO placeholders
 for (let grade = 4; grade <= 6; grade++) {
   KNOWN_UNITS[grade] = {
-    '上学期': {
-      '数学': generateTodoUnits(8, '数学'),
-      '语文': generateTodoUnits(8, '语文'),
-      '英语': generateTodoUnits(6, '英语'),
-      '道德与法治': generateTodoUnits(4, '道德与法治'),
-      '科学': generateTodoUnits(3, '科学'),
+    上学期: {
+      数学: generateTodoUnits(8, '数学'),
+      语文: generateTodoUnits(8, '语文'),
+      英语: generateTodoUnits(6, '英语'),
+      道德与法治: generateTodoUnits(4, '道德与法治'),
+      科学: generateTodoUnits(3, '科学'),
     },
-    '下学期': {
-      '数学': generateTodoUnits(8, '数学'),
-      '语文': generateTodoUnits(8, '语文'),
-      '英语': generateTodoUnits(6, '英语'),
-      '道德与法治': generateTodoUnits(4, '道德与法治'),
-      '科学': generateTodoUnits(3, '科学'),
+    下学期: {
+      数学: generateTodoUnits(8, '数学'),
+      语文: generateTodoUnits(8, '语文'),
+      英语: generateTodoUnits(6, '英语'),
+      道德与法治: generateTodoUnits(4, '道德与法治'),
+      科学: generateTodoUnits(3, '科学'),
     },
   };
 }
 
 function generateManifest(
-  grade: typeof GRADES[0],
-  semester: typeof SEMESTERS[0],
+  grade: (typeof GRADES)[0],
+  semester: (typeof SEMESTERS)[0],
   subjectZh: string,
-  subject: typeof SUBJECTS[keyof typeof SUBJECTS],
-  units: { title: string; titleZh: string }[]
+  subject: (typeof SUBJECTS)[keyof typeof SUBJECTS],
+  units: { title: string; titleZh: string }[],
 ) {
   return {
     grade: {
@@ -417,7 +422,7 @@ function generatePackYml(
   subjectId: string,
   unitNumber: number,
   unitTitle: string,
-  unitTitleZh: string
+  unitTitleZh: string,
 ) {
   return {
     id: packId,
@@ -464,7 +469,8 @@ for (const grade of GRADES) {
         continue;
       }
 
-      const units = KNOWN_UNITS[grade.level]?.[semester.id]?.[subjectZh] || generateTodoUnits(6, subjectZh);
+      const units =
+        KNOWN_UNITS[grade.level]?.[semester.id]?.[subjectZh] || generateTodoUnits(6, subjectZh);
 
       // Create directory
       const subjectDir = path.join(curriculumDir, grade.nameZh, subjectZh);
@@ -474,7 +480,7 @@ for (const grade of GRADES) {
       // Generate manifest
       const manifest = generateManifest(grade, semester, subjectZh, subject, units);
       const manifestPath = path.join(semesterDir, 'manifest.yml');
-      fs.writeFileSync(manifestPath, yaml.stringify(manifest), 'utf-8');
+      fs.writeFileSync(manifestPath, yaml.dump(manifest), 'utf-8');
       totalManifests++;
 
       // Generate pack.yml for each unit
@@ -490,10 +496,10 @@ for (const grade of GRADES) {
           subject.id,
           unitIndex + 1,
           unit.title,
-          unit.titleZh
+          unit.titleZh,
         );
         const packPath = path.join(unitDir, 'pack.yml');
-        fs.writeFileSync(packPath, yaml.stringify(pack), 'utf-8');
+        fs.writeFileSync(packPath, yaml.dump(pack), 'utf-8');
         totalPacks++;
       }
     }

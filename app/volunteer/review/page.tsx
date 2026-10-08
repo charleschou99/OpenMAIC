@@ -12,7 +12,8 @@ export default function ReviewQueuePage() {
 
   const filteredPacks = MOCK_REVIEW_QUEUE.filter((pack) => {
     if (filter === 'all') return true;
-    if (filter === 'pending') return ['generated', 'under-review', 'reviewed'].includes(pack.status);
+    if (filter === 'pending')
+      return ['generated', 'under-review', 'reviewed'].includes(pack.status);
     if (filter === 'approved') return pack.status === 'approved';
     if (filter === 'rejected') return pack.status === 'rejected';
     return true;
@@ -20,9 +21,11 @@ export default function ReviewQueuePage() {
 
   const counts = {
     all: MOCK_REVIEW_QUEUE.length,
-    pending: MOCK_REVIEW_QUEUE.filter(p => ['generated', 'under-review', 'reviewed'].includes(p.status)).length,
-    approved: MOCK_REVIEW_QUEUE.filter(p => p.status === 'approved').length,
-    rejected: MOCK_REVIEW_QUEUE.filter(p => p.status === 'rejected').length,
+    pending: MOCK_REVIEW_QUEUE.filter((p) =>
+      ['generated', 'under-review', 'reviewed'].includes(p.status),
+    ).length,
+    approved: MOCK_REVIEW_QUEUE.filter((p) => p.status === 'approved').length,
+    rejected: MOCK_REVIEW_QUEUE.filter((p) => p.status === 'rejected').length,
   };
 
   return (
@@ -30,9 +33,7 @@ export default function ReviewQueuePage() {
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-gray-900">审核队列</h1>
-        <p className="text-gray-500 mt-1">
-          审核AI生成的课件，确保内容适合学生使用
-        </p>
+        <p className="text-gray-500 mt-1">审核AI生成的课件，确保内容适合学生使用</p>
       </div>
 
       {/* Filter Tabs */}
@@ -47,9 +48,7 @@ export default function ReviewQueuePage() {
             key={tab.key}
             onClick={() => setFilter(tab.key)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              filter === tab.key
-                ? 'bg-blue-100 text-blue-700'
-                : 'text-gray-600 hover:bg-gray-100'
+              filter === tab.key ? 'bg-blue-100 text-blue-700' : 'text-gray-600 hover:bg-gray-100'
             }`}
           >
             {tab.label}
@@ -74,9 +73,7 @@ export default function ReviewQueuePage() {
           ))}
 
           {filteredPacks.length === 0 && (
-            <div className="text-center py-12 text-gray-500">
-              没有找到符合条件的课件包
-            </div>
+            <div className="text-center py-12 text-gray-500">没有找到符合条件的课件包</div>
           )}
         </div>
 
@@ -117,13 +114,17 @@ function PackCard({
       <div className="flex justify-between items-start mb-3">
         <div>
           <h3 className="font-semibold text-gray-900 text-lg">{pack.unitTitleZh}</h3>
-          <p className="text-gray-500 text-sm">第{pack.unitNumber}单元 · {pack.unitTitle}</p>
+          <p className="text-gray-500 text-sm">
+            第{pack.unitNumber}单元 · {pack.unitTitle}
+          </p>
         </div>
         <StatusBadge status={pack.status} />
       </div>
 
       <div className="flex items-center gap-4 text-sm text-gray-600">
-        <span>📚 {pack.generatedCount}/{pack.lessonCount} 课</span>
+        <span>
+          📚 {pack.generatedCount}/{pack.lessonCount} 课
+        </span>
         <span>
           {pack.safetyPassed === true && '✅ 安全检查通过'}
           {pack.safetyPassed === false && '❌ 安全检查未通过'}
@@ -145,7 +146,7 @@ function PackDetailPanel({ pack }: { pack: ReviewQueueItem }) {
   const handleAction = async (action: 'approve' | 'reject' | 'start-review') => {
     setIsSubmitting(true);
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     alert(`操作已提交: ${action}\n课件: ${pack.unitTitleZh}\n备注: ${comment || '无'}`);
     setIsSubmitting(false);
     setComment('');
@@ -154,7 +155,7 @@ function PackDetailPanel({ pack }: { pack: ReviewQueueItem }) {
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-6 sticky top-6">
       <h2 className="font-semibold text-gray-900 text-lg mb-4">{pack.unitTitleZh}</h2>
-      
+
       <div className="space-y-4">
         {/* Info Section */}
         <div className="space-y-2">
@@ -162,12 +163,9 @@ function PackDetailPanel({ pack }: { pack: ReviewQueueItem }) {
           <InfoRow label="年级" value="一年级" />
           <InfoRow label="学科" value="数学（人教版）" />
           <InfoRow label="课时" value={`${pack.generatedCount}/${pack.lessonCount} 课`} />
-          <InfoRow 
-            label="状态" 
-            value={<StatusBadge status={pack.status} />} 
-          />
-          <InfoRow 
-            label="安全检查" 
+          <InfoRow label="状态" value={<StatusBadge status={pack.status} />} />
+          <InfoRow
+            label="安全检查"
             value={
               pack.safetyPassed === true ? (
                 <span className="text-green-600">✅ 通过</span>
@@ -176,7 +174,7 @@ function PackDetailPanel({ pack }: { pack: ReviewQueueItem }) {
               ) : (
                 <span className="text-gray-400">⚪ 未检查</span>
               )
-            } 
+            }
           />
         </div>
 
@@ -197,9 +195,7 @@ function PackDetailPanel({ pack }: { pack: ReviewQueueItem }) {
 
         {/* Comment Input */}
         <div className="border-t border-gray-100 pt-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            审核备注
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">审核备注</label>
           <textarea
             value={comment}
             onChange={(e) => setComment(e.target.value)}
@@ -220,7 +216,7 @@ function PackDetailPanel({ pack }: { pack: ReviewQueueItem }) {
               开始审核
             </button>
           )}
-          
+
           {['under-review', 'reviewed'].includes(pack.status) && (
             <>
               <button
@@ -275,8 +271,6 @@ function StatusBadge({ status }: { status: string }) {
   const { bg, text, label } = config[status] ?? config.draft;
 
   return (
-    <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${bg} ${text}`}>
-      {label}
-    </span>
+    <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${bg} ${text}`}>{label}</span>
   );
 }

@@ -1,6 +1,6 @@
 /**
  * Export lesson packs to offline formats
- * 
+ *
  * Reuses OpenMAIC's standalone HTML export capabilities for proper playback
  */
 
@@ -33,7 +33,10 @@ export interface ExportResult {
 /**
  * Check if a pack can be exported for distribution
  */
-export function canExport(pack: LessonPack, options: ExportOptions): { allowed: boolean; reason?: string } {
+export function canExport(
+  pack: LessonPack,
+  options: ExportOptions,
+): { allowed: boolean; reason?: string } {
   // Safety check must pass
   if (!pack.safetyCheck?.passed) {
     return {
@@ -41,7 +44,7 @@ export function canExport(pack: LessonPack, options: ExportOptions): { allowed: 
       reason: 'Safety check has not passed or has not been run',
     };
   }
-  
+
   // Must be approved unless testing
   if (!options.includeUnapproved && !isApprovedForDistribution(pack)) {
     return {
@@ -49,16 +52,16 @@ export function canExport(pack: LessonPack, options: ExportOptions): { allowed: 
       reason: `Pack status is '${pack.reviewStatus?.status}', must be 'approved' for distribution`,
     };
   }
-  
+
   // Must have generated content
-  const generatedLessons = pack.lessons.filter(l => l.stageId);
+  const generatedLessons = pack.lessons.filter((l) => l.stageId);
   if (generatedLessons.length === 0) {
     return {
       allowed: false,
       reason: 'No lessons have been generated yet',
     };
   }
-  
+
   return { allowed: true };
 }
 
@@ -68,7 +71,7 @@ export function canExport(pack: LessonPack, options: ExportOptions): { allowed: 
 export async function exportToUsbBundle(
   pack: LessonPack,
   classrooms: GeneratedClassroom[],
-  options: ExportOptions
+  options: ExportOptions,
 ): Promise<ExportResult> {
   const canExportResult = canExport(pack, options);
   if (!canExportResult.allowed) {
@@ -78,7 +81,7 @@ export async function exportToUsbBundle(
       lessonsExported: 0,
     };
   }
-  
+
   // Determine workspace root (for finding standalone player assets)
   const workspaceRoot = options.workspaceRoot || findWorkspaceRoot();
   if (!workspaceRoot) {
@@ -88,22 +91,27 @@ export async function exportToUsbBundle(
       lessonsExported: 0,
     };
   }
-  
+
   try {
     const standaloneOptions: StandaloneExportOptions = {
       workspaceRoot,
       lang: 'zh-CN',
     };
-    
-    const result = exportPackToStandaloneHtml(pack, classrooms, options.outputDir, standaloneOptions);
-    
+
+    const result = exportPackToStandaloneHtml(
+      pack,
+      classrooms,
+      options.outputDir,
+      standaloneOptions,
+    );
+
     // Update pack export info
     pack.exportInfo = {
       exportedAt: new Date().toISOString(),
       format: 'usb-bundle',
       outputPath: result.outputPath,
     };
-    
+
     return {
       success: result.success,
       outputPath: result.outputPath,
@@ -124,7 +132,7 @@ export async function exportToUsbBundle(
 export async function exportToMaicZip(
   pack: LessonPack,
   classrooms: GeneratedClassroom[],
-  options: ExportOptions
+  options: ExportOptions,
 ): Promise<ExportResult> {
   const canExportResult = canExport(pack, options);
   if (!canExportResult.allowed) {
@@ -134,20 +142,20 @@ export async function exportToMaicZip(
       lessonsExported: 0,
     };
   }
-  
+
   const outputDir = path.join(options.outputDir, pack.id);
   fs.mkdirSync(outputDir, { recursive: true });
-  
+
   let exportedCount = 0;
-  
+
   for (const lesson of pack.lessons) {
     if (!lesson.stageId) continue;
-    
-    const classroom = classrooms.find(c => c.stageId === lesson.stageId);
+
+    const classroom = classrooms.find((c) => c.stageId === lesson.stageId);
     if (!classroom) continue;
-    
+
     const zip = new JSZip();
-    
+
     // Add manifest in the proper format
     const zipManifest = {
       formatVersion: 1,
@@ -156,23 +164,23 @@ export async function exportToMaicZip(
       stage: classroom.stage,
       scenes: classroom.scenes,
     };
-    
+
     zip.file('manifest.json', JSON.stringify(zipManifest, null, 2));
-    
+
     // Generate the zip file
     const zipContent = await zip.generateAsync({ type: 'nodebuffer' });
     const zipPath = path.join(outputDir, `${lesson.id}.maic.zip`);
     fs.writeFileSync(zipPath, zipContent);
-    
+
     exportedCount++;
   }
-  
+
   pack.exportInfo = {
     exportedAt: new Date().toISOString(),
     format: 'maic-zip',
     outputPath: outputDir,
   };
-  
+
   return {
     success: true,
     outputPath: outputDir,
@@ -185,19 +193,19 @@ export async function exportToMaicZip(
  */
 function findWorkspaceRoot(): string | null {
   let dir = process.cwd();
-  
+
   // Walk up the directory tree looking for the workspace
   for (let i = 0; i < 10; i++) {
     const playerDir = path.join(dir, 'public', 'vendor', 'standalone-player');
     if (fs.existsSync(playerDir)) {
       return dir;
     }
-    
+
     const parent = path.dirname(dir);
     if (parent === dir) break;
     dir = parent;
   }
-  
+
   return null;
 }
 
@@ -207,7 +215,7 @@ function findWorkspaceRoot(): string | null {
 export async function exportPack(
   pack: LessonPack,
   classrooms: GeneratedClassroom[],
-  options: ExportOptions
+  options: ExportOptions,
 ): Promise<ExportResult> {
   switch (options.format) {
     case 'usb-bundle':

@@ -1,6 +1,6 @@
 /**
  * Standalone HTML export using OpenMAIC's existing player pipeline
- * 
+ *
  * This module integrates with lib/export/standalone-html/ to produce
  * proper offline-playable classrooms with slides, quizzes, and narration.
  */
@@ -149,14 +149,14 @@ function loadPlayerAssets(workspaceRoot: string): {
   chartsScript: string;
 } {
   const assetDir = path.join(workspaceRoot, 'public', 'vendor', 'standalone-player');
-  
+
   if (!fs.existsSync(assetDir)) {
     throw new Error(
       `Standalone player assets not found at ${assetDir}. ` +
-      `Run 'pnpm build:standalone-player' in the workspace root first.`
+        `Run 'pnpm build:standalone-player' in the workspace root first.`,
     );
   }
-  
+
   return {
     playerScript: fs.readFileSync(path.join(assetDir, 'player.min.js'), 'utf-8'),
     playerStyle: fs.readFileSync(path.join(assetDir, 'player.min.css'), 'utf-8'),
@@ -170,14 +170,14 @@ function loadPlayerAssets(workspaceRoot: string): {
  */
 function classroomToManifest(
   classroom: GeneratedClassroom,
-  lessonTitle: string
+  lessonTitle: string,
 ): ClassroomManifest {
   const stage = classroom.stage as Record<string, unknown>;
   const scenes = classroom.scenes as Array<Record<string, unknown>>;
-  
+
   // Extract stage data
   const stageData = (stage.data || stage) as Record<string, unknown>;
-  
+
   return {
     formatVersion: 1,
     exportedAt: new Date().toISOString(),
@@ -191,7 +191,7 @@ function classroomToManifest(
       (agent) => ({
         name: (agent.name as string) || '教师',
         role: agent.role as string | undefined,
-      })
+      }),
     ),
     scenes: scenes.map((scene, index) => {
       const sceneData = (scene.data || scene) as Record<string, unknown>;
@@ -250,7 +250,7 @@ function assembleStandaloneHtml(input: {
   const styles = [input.playerStyle, ...(input.extraStyles ?? [])]
     .map((css) => `<style>${css}</style>`)
     .join('\n');
-    
+
   return [
     '<!doctype html>',
     `<html lang="${escapeHtmlText(input.lang)}">`,
@@ -281,23 +281,23 @@ function assembleStandaloneHtml(input: {
 export function buildStandaloneHtmlForLesson(
   classroom: GeneratedClassroom,
   lessonTitle: string,
-  options: StandaloneExportOptions
+  options: StandaloneExportOptions,
 ): string {
   const assets = loadPlayerAssets(options.workspaceRoot);
   const manifest = classroomToManifest(classroom, lessonTitle);
   const strings = options.strings || CHINESE_PLAYER_STRINGS;
-  
+
   const extraStyles: string[] = [];
   const extraScripts: string[] = [];
-  
+
   if (needsMathFonts(manifest)) {
     extraStyles.push(assets.mathFonts);
   }
-  
+
   if (needsCharts(manifest)) {
     extraScripts.push(assets.chartsScript);
   }
-  
+
   return assembleStandaloneHtml({
     manifest,
     config: { strings },
@@ -316,36 +316,36 @@ export function exportPackToStandaloneHtml(
   pack: LessonPack,
   classrooms: GeneratedClassroom[],
   outputDir: string,
-  options: StandaloneExportOptions
+  options: StandaloneExportOptions,
 ): { success: boolean; outputPath: string; lessonsExported: number } {
   const bundleDir = path.join(outputDir, `${pack.id}-bundle`);
   fs.mkdirSync(bundleDir, { recursive: true });
-  
+
   const lessonsDir = path.join(bundleDir, 'lessons');
   fs.mkdirSync(lessonsDir, { recursive: true });
-  
+
   let exportedCount = 0;
-  
+
   for (const lesson of pack.lessons) {
     if (!lesson.stageId) continue;
-    
+
     const classroom = classrooms.find((c) => c.stageId === lesson.stageId);
     if (!classroom) continue;
-    
+
     const lessonDir = path.join(lessonsDir, lesson.id);
     fs.mkdirSync(lessonDir, { recursive: true });
-    
+
     // Build standalone HTML using the real player
     const html = buildStandaloneHtmlForLesson(classroom, lesson.titleZh, options);
     fs.writeFileSync(path.join(lessonDir, 'index.html'), html, 'utf-8');
-    
+
     exportedCount++;
   }
-  
+
   // Create bundle index
   const indexHtml = createBundleIndexHtml(pack);
   fs.writeFileSync(path.join(bundleDir, 'index.html'), indexHtml, 'utf-8');
-  
+
   // Create manifest
   const manifest = {
     bundleVersion: '1.0.0',
@@ -359,14 +359,20 @@ export function exportPackToStandaloneHtml(
         titleZh: pack.unit.titleZh,
       },
     },
-    lessons: pack.lessons.filter((l) => l.stageId).map((l) => ({
-      id: l.id,
-      order: l.order,
-      titleZh: l.titleZh,
-    })),
+    lessons: pack.lessons
+      .filter((l) => l.stageId)
+      .map((l) => ({
+        id: l.id,
+        order: l.order,
+        titleZh: l.titleZh,
+      })),
   };
-  fs.writeFileSync(path.join(bundleDir, 'manifest.json'), JSON.stringify(manifest, null, 2), 'utf-8');
-  
+  fs.writeFileSync(
+    path.join(bundleDir, 'manifest.json'),
+    JSON.stringify(manifest, null, 2),
+    'utf-8',
+  );
+
   return {
     success: true,
     outputPath: bundleDir,
@@ -383,7 +389,7 @@ function createBundleIndexHtml(pack: LessonPack): string {
         <span class="lesson-order">${l.order}</span>
         <span class="lesson-title">${l.titleZh}</span>
       </a>
-    `
+    `,
     )
     .join('\n');
 

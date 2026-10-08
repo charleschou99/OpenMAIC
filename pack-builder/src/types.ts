@@ -77,7 +77,13 @@ export interface ReviewComment {
   lessonId?: string;
 }
 
-export type ReviewStatus = 'draft' | 'generated' | 'under-review' | 'reviewed' | 'approved' | 'rejected';
+export type ReviewStatus =
+  | 'draft'
+  | 'generated'
+  | 'under-review'
+  | 'reviewed'
+  | 'approved'
+  | 'rejected';
 
 export interface ReviewState {
   status: ReviewStatus;

@@ -10,11 +10,11 @@ import type { Manifest, LessonPack, Lesson } from './types.js';
 export function parseManifest(manifestPath: string): Manifest {
   const content = fs.readFileSync(manifestPath, 'utf-8');
   const data = yaml.parse(content);
-  
+
   if (!data.grade || !data.subject || !data.units) {
     throw new Error(`Invalid manifest: missing required fields (grade, subject, units)`);
   }
-  
+
   return {
     grade: data.grade,
     subject: data.subject,
@@ -24,15 +24,15 @@ export function parseManifest(manifestPath: string): Manifest {
 
 export function manifestToLessonPacks(manifest: Manifest): LessonPack[] {
   const packs: LessonPack[] = [];
-  
+
   for (const unit of manifest.units) {
     const packId = `pack-${manifest.grade.id}-${manifest.subject.id}-${unit.id}`;
-    
-    const lessons: Lesson[] = unit.lessons.map(lesson => ({
+
+    const lessons: Lesson[] = unit.lessons.map((lesson) => ({
       ...lesson,
       durationMinutes: lesson.durationMinutes ?? manifest.subject.sessionDurationMinutes,
     }));
-    
+
     packs.push({
       id: packId,
       version: '0.1.0',
@@ -52,20 +52,21 @@ export function manifestToLessonPacks(manifest: Manifest): LessonPack[] {
       },
     });
   }
-  
+
   return packs;
 }
 
 export function saveLessonPack(pack: LessonPack, outputDir: string): string {
   const packDir = path.join(outputDir, pack.unit.id);
   fs.mkdirSync(packDir, { recursive: true });
-  
+
   const packPath = path.join(packDir, 'pack.yml');
   pack.metadata = {
     ...pack.metadata,
+    createdAt: pack.metadata?.createdAt ?? new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
-  
+
   fs.writeFileSync(packPath, yaml.stringify(pack), 'utf-8');
   return packPath;
 }
@@ -77,13 +78,13 @@ export function loadLessonPack(packPath: string): LessonPack {
 
 export function findPacksInDirectory(dir: string): string[] {
   const packs: string[] = [];
-  
+
   if (!fs.existsSync(dir)) {
     return packs;
   }
-  
+
   const entries = fs.readdirSync(dir, { withFileTypes: true });
-  
+
   for (const entry of entries) {
     if (entry.isDirectory()) {
       const packPath = path.join(dir, entry.name, 'pack.yml');
@@ -92,6 +93,6 @@ export function findPacksInDirectory(dir: string): string[] {
       }
     }
   }
-  
+
   return packs;
 }

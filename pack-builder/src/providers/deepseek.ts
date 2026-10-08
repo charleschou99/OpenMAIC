@@ -1,12 +1,12 @@
 /**
  * DeepSeek provider integration for classroom generation
- * 
+ *
  * DeepSeek offers cost-effective Chinese language models suitable for educational content.
- * 
+ *
  * Pricing (as of 2024):
  * - deepseek-chat: $0.14/M input, $0.28/M output (8K context)
  * - deepseek-coder: $0.14/M input, $0.28/M output
- * 
+ *
  * For classroom generation, typical usage per lesson:
  * - Input: ~2000 tokens (prompt + context)
  * - Output: ~8000 tokens (slides, quiz, actions)
@@ -53,7 +53,7 @@ const USD_TO_CNY = 7.2;
  */
 export function estimateGenerationCost(
   lessons: Lesson[],
-  model: string = 'deepseek-chat'
+  model: string = 'deepseek-chat',
 ): GenerationCostEstimate {
   // Calculate input tokens
   let inputTokens = PROMPT_BASE_TOKENS;
@@ -61,16 +61,17 @@ export function estimateGenerationCost(
     const topicTokens = (lesson.topic?.length ?? 0) * TOKENS_PER_CHAR_ZH;
     inputTokens += LESSON_CONTEXT_TOKENS + topicTokens;
   }
-  
+
   // Estimate output tokens
   const outputTokens = lessons.length * OUTPUT_TOKENS_PER_LESSON;
-  
+
   // Calculate cost
-  const pricing = DEEPSEEK_PRICING[model as keyof typeof DEEPSEEK_PRICING] ?? DEEPSEEK_PRICING['deepseek-chat'];
+  const pricing =
+    DEEPSEEK_PRICING[model as keyof typeof DEEPSEEK_PRICING] ?? DEEPSEEK_PRICING['deepseek-chat'];
   const inputCost = (inputTokens / 1_000_000) * pricing.input;
   const outputCost = (outputTokens / 1_000_000) * pricing.output;
   const totalCostUSD = inputCost + outputCost;
-  
+
   return {
     inputTokens: Math.ceil(inputTokens),
     outputTokens: Math.ceil(outputTokens),
@@ -103,10 +104,10 @@ export function buildLessonPrompt(
   lesson: Lesson,
   gradeLevel: number,
   subjectZh: string,
-  textbookEdition: string
+  textbookEdition: string,
 ): string {
   const ageRange = `${gradeLevel + 5}-${gradeLevel + 6}`;
-  
+
   return `
 你是一位资深的小学${subjectZh}教师，正在为${gradeLevel}年级学生（${ageRange}岁）设计一节课。
 
@@ -148,7 +149,7 @@ export function buildLessonPrompt(
  */
 export class DeepSeekClient {
   private config: DeepSeekConfig;
-  
+
   constructor(config: DeepSeekConfig) {
     this.config = {
       model: 'deepseek-chat',
@@ -158,7 +159,7 @@ export class DeepSeekClient {
       ...config,
     };
   }
-  
+
   /**
    * Generate classroom content for a lesson
    */
@@ -166,15 +167,19 @@ export class DeepSeekClient {
     lesson: Lesson,
     gradeLevel: number,
     subjectZh: string,
-    textbookEdition: string
-  ): Promise<{ stage: unknown; scenes: unknown[]; tokensUsed: number }> {
+    textbookEdition: string,
+  ): Promise<{
+    stage: Record<string, unknown>;
+    scenes: Record<string, unknown>[];
+    tokensUsed: number;
+  }> {
     const prompt = buildLessonPrompt(lesson, gradeLevel, subjectZh, textbookEdition);
-    
+
     const response = await fetch(`${this.config.baseUrl}/v1/chat/completions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.config.apiKey}`,
+        Authorization: `Bearer ${this.config.apiKey}`,
       },
       body: JSON.stringify({
         model: this.config.model,
@@ -193,32 +198,53 @@ export class DeepSeekClient {
         response_format: { type: 'json_object' },
       }),
     });
-    
+
     if (!response.ok) {
       const error = await response.text();
       throw new Error(`DeepSeek API error: ${response.status} - ${error}`);
     }
-    
-    const result = await response.json() as {
+
+    const result = (await response.json()) as {
       choices: Array<{ message: { content: string } }>;
       usage: { total_tokens: number };
     };
-    
+
     const content = result.choices[0]?.message?.content;
     if (!content) {
       throw new Error('No content returned from DeepSeek API');
     }
-    
-    // Parse the generated content
-    const generated = JSON.parse(content);
-    
+
+    // Parse and validate the generated content. The return type is a promise the
+    // callers rely on (they spread `stage` and iterate `scenes`), so refuse
+    // anything that is not shaped like a classroom instead of handing back junk.
+    const parsed: unknown = JSON.parse(content);
+    if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
+      throw new Error(`DeepSeek returned JSON that is not an object (lesson ${lesson.id})`);
+    }
+    const generated = parsed as { stage?: unknown; scenes?: unknown };
+    const stage =
+      typeof generated.stage === 'object' &&
+      generated.stage !== null &&
+      !Array.isArray(generated.stage)
+        ? (generated.stage as Record<string, unknown>)
+        : { name: lesson.titleZh };
+    const scenes = Array.isArray(generated.scenes)
+      ? generated.scenes.filter(
+          (scene): scene is Record<string, unknown> =>
+            typeof scene === 'object' && scene !== null && !Array.isArray(scene),
+        )
+      : [];
+    if (scenes.length === 0) {
+      throw new Error(`DeepSeek returned no usable scenes for lesson ${lesson.id}`);
+    }
+
     return {
-      stage: generated.stage || { name: lesson.titleZh },
-      scenes: generated.scenes || [],
+      stage,
+      scenes,
       tokensUsed: result.usage?.total_tokens ?? 0,
     };
   }
-  
+
   /**
    * Validate API key by making a minimal request
    */
@@ -226,7 +252,7 @@ export class DeepSeekClient {
     try {
       const response = await fetch(`${this.config.baseUrl}/v1/models`, {
         headers: {
-          'Authorization': `Bearer ${this.config.apiKey}`,
+          Authorization: `Bearer ${this.config.apiKey}`,
         },
       });
       return response.ok;
@@ -252,7 +278,7 @@ export function getDeepSeekClient(): DeepSeekClient | null {
   if (!apiKey || apiKey.includes('placeholder')) {
     return null;
   }
-  
+
   return new DeepSeekClient({
     apiKey,
     model: process.env.DEEPSEEK_MODEL || 'deepseek-chat',

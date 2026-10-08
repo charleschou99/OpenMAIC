@@ -10,13 +10,7 @@
     "id": "stage-aF9YuAXm-V4J",
     "name": "Dispersion Trade & Correlation",
     "style": "professional",
-    "agentIds": [
-      "gen-5Ph3vvRP",
-      "gen-8CApOJlb",
-      "gen-PeT37W_h",
-      "gen-2QJw94_J",
-      "gen-qeiAkX-o"
-    ],
+    "agentIds": ["gen-5Ph3vvRP", "gen-8CApOJlb", "gen-PeT37W_h", "gen-2QJw94_J", "gen-qeiAkX-o"],
     "createdAt": 1791346275453,
     "updatedAt": 1791347222697,
     "dslVersion": "0.3.0",

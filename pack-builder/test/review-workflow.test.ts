@@ -3,12 +3,12 @@ import type { LessonPack, ReviewStatus, ReviewAction } from '../src/types.js';
 
 // Inline the core logic for testing (avoids yaml dependency in tests)
 const VALID_TRANSITIONS: Record<ReviewStatus, ReviewStatus[]> = {
-  'draft': ['generated'],
-  'generated': ['under-review'],
+  draft: ['generated'],
+  generated: ['under-review'],
   'under-review': ['reviewed', 'rejected'],
-  'reviewed': ['approved', 'rejected', 'under-review'],
-  'approved': [],
-  'rejected': ['draft', 'under-review'],
+  reviewed: ['approved', 'rejected', 'under-review'],
+  approved: [],
+  rejected: ['draft', 'under-review'],
 };
 
 function canTransition(from: ReviewStatus, to: ReviewStatus): boolean {
@@ -22,12 +22,12 @@ function isApprovedForDistribution(pack: LessonPack): boolean {
 function formatReviewStatus(pack: LessonPack): string {
   const status = pack.reviewStatus?.status ?? 'draft';
   const statusEmoji: Record<ReviewStatus, string> = {
-    'draft': '📝',
-    'generated': '🤖',
+    draft: '📝',
+    generated: '🤖',
     'under-review': '👀',
-    'reviewed': '✅',
-    'approved': '🎉',
-    'rejected': '❌',
+    reviewed: '✅',
+    approved: '🎉',
+    rejected: '❌',
   };
   return `${statusEmoji[status]} ${status.toUpperCase()}`;
 }
@@ -128,7 +128,7 @@ describe('Review Workflow', () => {
   describe('updateReviewStatus', () => {
     it('should start review from generated status', () => {
       const pack = createMockPack('generated');
-      
+
       const updated = updateReviewStatus(pack, {
         action: 'start-review',
         reviewer: 'volunteer-a',
@@ -140,7 +140,7 @@ describe('Review Workflow', () => {
 
     it('should submit review with comment', () => {
       const pack = createMockPack('under-review');
-      
+
       const updated = updateReviewStatus(pack, {
         action: 'submit-review',
         reviewer: 'volunteer-a',
@@ -154,7 +154,7 @@ describe('Review Workflow', () => {
 
     it('should approve pack', () => {
       const pack = createMockPack('reviewed');
-      
+
       const updated = updateReviewStatus(pack, {
         action: 'approve',
         reviewer: 'volunteer-a',
@@ -167,7 +167,7 @@ describe('Review Workflow', () => {
 
     it('should reject pack', () => {
       const pack = createMockPack('under-review');
-      
+
       const updated = updateReviewStatus(pack, {
         action: 'reject',
         reviewer: 'volunteer-a',
@@ -179,7 +179,7 @@ describe('Review Workflow', () => {
 
     it('should throw error for invalid transition', () => {
       const pack = createMockPack('draft');
-      
+
       expect(() => {
         updateReviewStatus(pack, {
           action: 'approve',

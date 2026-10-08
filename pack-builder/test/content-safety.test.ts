@@ -2,7 +2,9 @@ import { describe, it, expect } from 'vitest';
 import { checkContentSafety, summarizeSafetyCheck } from '../src/content-safety.js';
 import type { LessonPack } from '../src/types.js';
 
-const createMockPack = (lessons: { id: string; title: string; titleZh: string; topic: string }[]): LessonPack => ({
+const createMockPack = (
+  lessons: { id: string; title: string; titleZh: string; topic: string }[],
+): LessonPack => ({
   id: 'pack-test',
   version: '0.1.0',
   gradeId: 'grade-1',
@@ -31,7 +33,7 @@ describe('Content Safety Filter', () => {
       const result = await checkContentSafety(pack);
 
       expect(result.passed).toBe(true);
-      expect(result.issues.filter(i => i.severity === 'error')).toHaveLength(0);
+      expect(result.issues.filter((i) => i.severity === 'error')).toHaveLength(0);
     });
 
     it('should detect blocked terms in lesson content', async () => {
@@ -42,8 +44,8 @@ describe('Content Safety Filter', () => {
       const result = await checkContentSafety(pack);
 
       expect(result.passed).toBe(false);
-      expect(result.issues.some(i => i.severity === 'error')).toBe(true);
-      expect(result.issues.some(i => i.matchedTerm === '暴力')).toBe(true);
+      expect(result.issues.some((i) => i.severity === 'error')).toBe(true);
+      expect(result.issues.some((i) => i.matchedTerm === '暴力')).toBe(true);
     });
 
     it('should warn about complex vocabulary', async () => {
@@ -53,7 +55,7 @@ describe('Content Safety Filter', () => {
 
       const result = await checkContentSafety(pack);
 
-      expect(result.issues.some(i => i.severity === 'warning')).toBe(true);
+      expect(result.issues.some((i) => i.severity === 'warning')).toBe(true);
     });
 
     it('should check generated stage data', async () => {
@@ -63,15 +65,13 @@ describe('Content Safety Filter', () => {
 
       const stageData = {
         name: 'Test Stage',
-        scenes: [
-          { title: '暴力场景', content: 'bad content with violence' },
-        ],
+        scenes: [{ title: '暴力场景', content: 'bad content with violence' }],
       };
 
       const result = await checkContentSafety(pack, stageData);
 
       expect(result.passed).toBe(false);
-      expect(result.issues.some(i => i.matchedTerm === '暴力')).toBe(true);
+      expect(result.issues.some((i) => i.matchedTerm === '暴力')).toBe(true);
     });
 
     it('should support custom blocklist terms', async () => {
@@ -84,7 +84,7 @@ describe('Content Safety Filter', () => {
       });
 
       expect(result.passed).toBe(false);
-      expect(result.issues.some(i => i.matchedTerm === '自定义敏感词')).toBe(true);
+      expect(result.issues.some((i) => i.matchedTerm === '自定义敏感词')).toBe(true);
     });
   });
 
@@ -104,9 +104,7 @@ describe('Content Safety Filter', () => {
       const result = {
         passed: false,
         checkedAt: new Date().toISOString(),
-        issues: [
-          { lessonId: 'lesson-1', severity: 'error' as const, message: 'Bad content' },
-        ],
+        issues: [{ lessonId: 'lesson-1', severity: 'error' as const, message: 'Bad content' }],
       };
 
       const summary = summarizeSafetyCheck(result);

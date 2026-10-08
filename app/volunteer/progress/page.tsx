@@ -5,7 +5,9 @@ import { MOCK_CLASS_PROGRESS, MOCK_RECENT_COMPLETIONS } from '@/lib/volunteer/mo
 import type { ClassProgress, StudentProgress } from '@/lib/volunteer/types';
 
 export default function ProgressPage() {
-  const [selectedClass, setSelectedClass] = useState<ClassProgress | null>(MOCK_CLASS_PROGRESS[0] ?? null);
+  const [selectedClass, setSelectedClass] = useState<ClassProgress | null>(
+    MOCK_CLASS_PROGRESS[0] ?? null,
+  );
   const [selectedStudent, setSelectedStudent] = useState<StudentProgress | null>(null);
 
   return (
@@ -13,9 +15,7 @@ export default function ProgressPage() {
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-gray-900">学习进度</h1>
-        <p className="text-gray-500 mt-1">
-          查看学生的学习进度和测验成绩（数据来自离线设备同步）
-        </p>
+        <p className="text-gray-500 mt-1">查看学生的学习进度和测验成绩（数据来自离线设备同步）</p>
       </div>
 
       {/* Class Selector */}
@@ -45,12 +45,7 @@ export default function ProgressPage() {
         <>
           {/* Class Overview */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <StatCard
-              icon="👨‍🎓"
-              label="学生人数"
-              value={selectedClass.totalStudents}
-              color="blue"
-            />
+            <StatCard icon="👨‍🎓" label="学生人数" value={selectedClass.totalStudents} color="blue" />
             <StatCard
               icon="📊"
               label="平均完成率"
@@ -119,15 +114,21 @@ export default function ProgressPage() {
                     <div>
                       <p className="font-medium text-gray-900">{completion.studentLabel}</p>
                       <p className="text-sm text-gray-500">
-                        完成 {completion.lessonId} · 用时 {Math.round(completion.durationSeconds / 60)} 分钟
+                        完成 {completion.lessonId} · 用时{' '}
+                        {Math.round(completion.durationSeconds / 60)} 分钟
                       </p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className={`text-lg font-semibold ${
-                      completion.score >= 90 ? 'text-green-600' :
-                      completion.score >= 70 ? 'text-yellow-600' : 'text-red-600'
-                    }`}>
+                    <p
+                      className={`text-lg font-semibold ${
+                        completion.score >= 90
+                          ? 'text-green-600'
+                          : completion.score >= 70
+                            ? 'text-yellow-600'
+                            : 'text-red-600'
+                      }`}
+                    >
                       {completion.score}分
                     </p>
                     <p className="text-xs text-gray-400">
@@ -144,12 +145,12 @@ export default function ProgressPage() {
   );
 }
 
-function StatCard({ 
-  icon, 
-  label, 
-  value, 
-  color 
-}: { 
+function StatCard({
+  icon,
+  label,
+  value,
+  color,
+}: {
   icon: string;
   label: string;
   value: number | string;
@@ -181,7 +182,7 @@ function StudentRow({
   onSelect: () => void;
 }) {
   const completionPercent = Math.round((student.lessonsCompleted / student.totalLessons) * 100);
-  
+
   return (
     <div
       onClick={onSelect}
@@ -201,28 +202,36 @@ function StudentRow({
             </p>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-6">
           {/* Progress Bar */}
           <div className="w-32">
             <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
               <div
                 className={`h-full rounded-full ${
-                  completionPercent === 100 ? 'bg-green-500' :
-                  completionPercent >= 50 ? 'bg-blue-500' : 'bg-yellow-500'
+                  completionPercent === 100
+                    ? 'bg-green-500'
+                    : completionPercent >= 50
+                      ? 'bg-blue-500'
+                      : 'bg-yellow-500'
                 }`}
                 style={{ width: `${completionPercent}%` }}
               />
             </div>
             <p className="text-xs text-gray-400 mt-1 text-right">{completionPercent}%</p>
           </div>
-          
+
           {/* Score */}
           <div className="text-right w-16">
-            <p className={`text-lg font-semibold ${
-              student.averageScore >= 90 ? 'text-green-600' :
-              student.averageScore >= 70 ? 'text-yellow-600' : 'text-red-600'
-            }`}>
+            <p
+              className={`text-lg font-semibold ${
+                student.averageScore >= 90
+                  ? 'text-green-600'
+                  : student.averageScore >= 70
+                    ? 'text-yellow-600'
+                    : 'text-red-600'
+              }`}
+            >
               {Math.round(student.averageScore)}
             </p>
             <p className="text-xs text-gray-400">平均分</p>
@@ -280,10 +289,15 @@ function StudentDetailPanel({ student }: { student: StudentProgress }) {
                 </span>
               </div>
               {lesson.score !== null && (
-                <span className={`text-sm font-medium ${
-                  lesson.score >= 90 ? 'text-green-600' :
-                  lesson.score >= 70 ? 'text-yellow-600' : 'text-red-600'
-                }`}>
+                <span
+                  className={`text-sm font-medium ${
+                    lesson.score >= 90
+                      ? 'text-green-600'
+                      : lesson.score >= 70
+                        ? 'text-yellow-600'
+                        : 'text-red-600'
+                  }`}
+                >
                   {lesson.score}分
                 </span>
               )}
@@ -294,9 +308,7 @@ function StudentDetailPanel({ student }: { student: StudentProgress }) {
 
       {/* Privacy Notice */}
       <div className="mt-6 pt-4 border-t border-gray-100">
-        <p className="text-xs text-gray-400 text-center">
-          🔒 数据匿名化处理，无个人隐私信息
-        </p>
+        <p className="text-xs text-gray-400 text-center">🔒 数据匿名化处理，无个人隐私信息</p>
       </div>
     </div>
   );

@@ -10,13 +10,7 @@
     "id": "stage-pk-xYPu1_tSM",
     "name": "OpenMAIC Architecture",
     "style": "professional",
-    "agentIds": [
-      "gen-qHkq7hzr",
-      "gen-lnWNOss9",
-      "gen-HEjiK5IG",
-      "gen-gTQRpCKN",
-      "gen-hHO_sVB5"
-    ],
+    "agentIds": ["gen-qHkq7hzr", "gen-lnWNOss9", "gen-HEjiK5IG", "gen-gTQRpCKN", "gen-hHO_sVB5"],
     "createdAt": 1791355413460,
     "updatedAt": 1791357261643,
     "dslVersion": "0.3.0",

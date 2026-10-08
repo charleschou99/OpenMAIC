@@ -1,6 +1,6 @@
 /**
  * Content safety filter for lesson packs
- * 
+ *
  * Implements checks aligned with 未成年人保护法 (Minors Protection Law) and
  * general child-safety requirements for educational content.
  */
@@ -12,49 +12,69 @@ import type { LessonPack, SafetyCheckResult, SafetyIssue } from './types.js';
 const BLOCKLIST = {
   // Violence-related terms
   violence: [
-    '杀', '死亡', '血腥', '暴力', '武器', '枪', '刀', '打架',
-    'kill', 'death', 'blood', 'violence', 'weapon', 'gun', 'knife', 'fight',
+    '杀',
+    '死亡',
+    '血腥',
+    '暴力',
+    '武器',
+    '枪',
+    '刀',
+    '打架',
+    'kill',
+    'death',
+    'blood',
+    'violence',
+    'weapon',
+    'gun',
+    'knife',
+    'fight',
   ],
-  
+
   // Adult content indicators (use specific phrases to avoid false positives)
   adult: [
-    '成人内容', '成人网站', '色情', '裸体', '性行为', '性爱',
-    'adult content', 'adult website', 'porn', 'nude', 'sexual',
+    '成人内容',
+    '成人网站',
+    '色情',
+    '裸体',
+    '性行为',
+    '性爱',
+    'adult content',
+    'adult website',
+    'porn',
+    'nude',
+    'sexual',
   ],
-  
+
   // Harmful substances
-  substances: [
-    '毒品', '吸毒', '酒精', '香烟', '赌博',
-    'drugs', 'alcohol', 'cigarette', 'gambling',
-  ],
-  
+  substances: ['毒品', '吸毒', '酒精', '香烟', '赌博', 'drugs', 'alcohol', 'cigarette', 'gambling'],
+
   // Politically sensitive (for educational neutrality)
   political: [
     // Note: This is intentionally minimal - actual content should align with
     // official textbook content for 道德与法治
   ],
-  
+
   // Scary/disturbing for young children
-  scary: [
-    '鬼', '恐怖', '噩梦', '怪物',
-    'ghost', 'horror', 'nightmare', 'monster',
-  ],
-  
+  scary: ['鬼', '恐怖', '噩梦', '怪物', 'ghost', 'horror', 'nightmare', 'monster'],
+
   // Discrimination
-  discrimination: [
-    '歧视', '种族', '侮辱',
-    'discriminat', 'racist', 'insult',
-  ],
+  discrimination: ['歧视', '种族', '侮辱', 'discriminat', 'racist', 'insult'],
 };
 
 // Age-appropriate complexity warnings (not errors)
 const COMPLEXITY_PATTERNS = {
   // Complex vocabulary that may be too advanced for Grade 1
   advancedVocabulary: [
-    /抽象/, /理论/, /概念性/, /假设/,
-    /abstract/, /theoretical/, /conceptual/, /hypothesis/,
+    /抽象/,
+    /理论/,
+    /概念性/,
+    /假设/,
+    /abstract/,
+    /theoretical/,
+    /conceptual/,
+    /hypothesis/,
   ],
-  
+
   // Long sentences (may be hard for young readers)
   longSentences: /[^。！？.!?]{60,}/,
 };
@@ -86,11 +106,11 @@ function extractTextContent(obj: unknown, texts: string[] = []): string[] {
 function checkBlocklist(
   text: string,
   lessonId: string,
-  additionalTerms: string[] = []
+  additionalTerms: string[] = [],
 ): SafetyIssue[] {
   const issues: SafetyIssue[] = [];
   const lowerText = text.toLowerCase();
-  
+
   // Check all blocklist categories
   for (const [category, terms] of Object.entries(BLOCKLIST)) {
     for (const term of terms) {
@@ -104,7 +124,7 @@ function checkBlocklist(
       }
     }
   }
-  
+
   // Check additional custom terms
   for (const term of additionalTerms) {
     if (lowerText.includes(term.toLowerCase())) {
@@ -116,13 +136,13 @@ function checkBlocklist(
       });
     }
   }
-  
+
   return issues;
 }
 
 function checkComplexity(text: string, lessonId: string): SafetyIssue[] {
   const issues: SafetyIssue[] = [];
-  
+
   // Check for advanced vocabulary
   for (const pattern of COMPLEXITY_PATTERNS.advancedVocabulary) {
     if (pattern.test(text)) {
@@ -135,7 +155,7 @@ function checkComplexity(text: string, lessonId: string): SafetyIssue[] {
       break; // Only one warning per lesson
     }
   }
-  
+
   // Check for long sentences
   if (COMPLEXITY_PATTERNS.longSentences.test(text)) {
     issues.push({
@@ -144,7 +164,7 @@ function checkComplexity(text: string, lessonId: string): SafetyIssue[] {
       message: `Content contains very long sentences that may be hard for young readers`,
     });
   }
-  
+
   return issues;
 }
 
@@ -154,36 +174,30 @@ function checkComplexity(text: string, lessonId: string): SafetyIssue[] {
 export async function checkContentSafety(
   pack: LessonPack,
   stageData?: Record<string, unknown>,
-  options: SafetyFilterOptions = {}
+  options: SafetyFilterOptions = {},
 ): Promise<SafetyCheckResult> {
   const issues: SafetyIssue[] = [];
   const additionalTerms = options.additionalBlocklist ?? [];
-  
+
   // Check lesson metadata
   for (const lesson of pack.lessons) {
-    const lessonTexts = [
-      lesson.title,
-      lesson.titleZh,
-      lesson.topic,
-    ].filter(Boolean);
-    
+    const lessonTexts = [lesson.title, lesson.titleZh, lesson.topic].filter(Boolean);
+
     for (const text of lessonTexts) {
       issues.push(...checkBlocklist(text, lesson.id, additionalTerms));
       issues.push(...checkComplexity(text, lesson.id));
     }
   }
-  
+
   // Check unit metadata
-  const unitTexts = [
-    pack.unit.title,
-    pack.unit.titleZh,
-    ...(pack.unit.objectives ?? []),
-  ].filter(Boolean);
-  
+  const unitTexts = [pack.unit.title, pack.unit.titleZh, ...(pack.unit.objectives ?? [])].filter(
+    Boolean,
+  );
+
   for (const text of unitTexts) {
     issues.push(...checkBlocklist(text, 'unit-metadata', additionalTerms));
   }
-  
+
   // Check generated stage data if provided
   if (stageData) {
     const allTexts = extractTextContent(stageData);
@@ -193,12 +207,12 @@ export async function checkContentSafety(
       issues.push(...checkComplexity(text, 'generated-content'));
     }
   }
-  
+
   // Determine if check passed
-  const hasErrors = issues.some(i => i.severity === 'error');
-  const hasWarnings = issues.some(i => i.severity === 'warning');
+  const hasErrors = issues.some((i) => i.severity === 'error');
+  const hasWarnings = issues.some((i) => i.severity === 'warning');
   const passed = !hasErrors && (!options.blockOnWarnings || !hasWarnings);
-  
+
   return {
     passed,
     checkedAt: new Date().toISOString(),
@@ -212,7 +226,7 @@ export async function checkContentSafety(
  */
 export async function classifyWithLLM(
   text: string,
-  _options?: { model?: string; apiKey?: string }
+  _options?: { model?: string; apiKey?: string },
 ): Promise<{ safe: boolean; reason?: string }> {
   // TODO: Implement LLM-based classification when API key is available
   // For now, return safe if blocklist check passes
@@ -227,13 +241,13 @@ export async function classifyWithLLM(
  * Get a summary of safety check results
  */
 export function summarizeSafetyCheck(result: SafetyCheckResult): string {
-  const errorCount = result.issues.filter(i => i.severity === 'error').length;
-  const warningCount = result.issues.filter(i => i.severity === 'warning').length;
-  
+  const errorCount = result.issues.filter((i) => i.severity === 'error').length;
+  const warningCount = result.issues.filter((i) => i.severity === 'warning').length;
+
   if (result.passed && errorCount === 0 && warningCount === 0) {
     return '✅ All safety checks passed';
   }
-  
+
   const parts: string[] = [];
   if (errorCount > 0) {
     parts.push(`❌ ${errorCount} error(s)`);
@@ -241,6 +255,6 @@ export function summarizeSafetyCheck(result: SafetyCheckResult): string {
   if (warningCount > 0) {
     parts.push(`⚠️ ${warningCount} warning(s)`);
   }
-  
+
   return parts.join(', ') + (result.passed ? ' (passed)' : ' (blocked)');
 }

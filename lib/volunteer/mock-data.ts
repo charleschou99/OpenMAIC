@@ -1,6 +1,6 @@
 /**
  * Mock data for volunteer dashboard development and testing
- * 
+ *
  * In production, this would be replaced with real data from:
  * 1. Pack manifests (review queue)
  * 2. SQLite sync from offline tablets (progress data)
@@ -85,11 +85,11 @@ const createStudentProgress = (
   label: string,
   completionRate: number,
   avgScore: number,
-  totalLessons: number
+  totalLessons: number,
 ): StudentProgress => {
   const lessonsCompleted = Math.floor(totalLessons * completionRate);
   const lessons = [];
-  
+
   for (let i = 1; i <= totalLessons; i++) {
     const completed = i <= lessonsCompleted;
     lessons.push({
@@ -97,18 +97,22 @@ const createStudentProgress = (
       lessonTitle: `第${i}课`,
       completed,
       score: completed ? Math.floor(avgScore + (Math.random() - 0.5) * 20) : null,
-      completedAt: completed ? new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000).toISOString() : null,
+      completedAt: completed
+        ? new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000).toISOString()
+        : null,
     });
   }
-  
+
   return {
     label,
     lessonsCompleted,
     totalLessons,
     averageScore: avgScore,
-    lastActivity: lessons.filter(l => l.completedAt).sort((a, b) => 
-      (b.completedAt ?? '').localeCompare(a.completedAt ?? '')
-    )[0]?.completedAt ?? new Date().toISOString(),
+    lastActivity:
+      lessons
+        .filter((l) => l.completedAt)
+        .sort((a, b) => (b.completedAt ?? '').localeCompare(a.completedAt ?? ''))[0]?.completedAt ??
+      new Date().toISOString(),
     lessonDetails: lessons,
   };
 };

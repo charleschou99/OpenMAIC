@@ -11,9 +11,18 @@ unit:
 lessons:
   - id: lesson-2-1
     order: 1
-    title: "TODO: Lesson 1"
-    titleZh: 【待补充】第1课
-    topic: "TODO: Add lesson topic for generation"
+    title: Heaven, Earth, Man
+    titleZh: 天地人
+    topic: 认识“天、地、人”三个字，学会“你、我、他”三个人称代词，能看图认读、正确朗读。
+    durationMinutes: 40
+    sceneTypes:
+      - slide
+      - quiz
+  - id: lesson-2-2
+    order: 2
+    title: Metal, Wood, Water, Fire, Earth
+    titleZh: 金木水火土
+    topic: 认识“金、木、水、火、土”五个字，正确朗读韵文，初步感受对韵与数数的节奏。
     durationMinutes: 40
     sceneTypes:
       - slide

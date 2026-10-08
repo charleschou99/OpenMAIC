@@ -1,26 +1,30 @@
 'use client';
 
 import Link from 'next/link';
-import { MOCK_REVIEW_QUEUE, MOCK_CLASS_PROGRESS, MOCK_RECENT_COMPLETIONS } from '@/lib/volunteer/mock-data';
+import {
+  MOCK_REVIEW_QUEUE,
+  MOCK_CLASS_PROGRESS,
+  MOCK_RECENT_COMPLETIONS,
+} from '@/lib/volunteer/mock-data';
 
 export default function VolunteerDashboard() {
   // Calculate stats
-  const pendingReview = MOCK_REVIEW_QUEUE.filter(p => 
-    p.status === 'generated' || p.status === 'under-review'
+  const pendingReview = MOCK_REVIEW_QUEUE.filter(
+    (p) => p.status === 'generated' || p.status === 'under-review',
   ).length;
-  const approved = MOCK_REVIEW_QUEUE.filter(p => p.status === 'approved').length;
-  
+  const approved = MOCK_REVIEW_QUEUE.filter((p) => p.status === 'approved').length;
+
   const totalStudents = MOCK_CLASS_PROGRESS.reduce((sum, c) => sum + c.totalStudents, 0);
-  const avgCompletion = MOCK_CLASS_PROGRESS.reduce((sum, c) => sum + c.averageCompletion, 0) / MOCK_CLASS_PROGRESS.length;
+  const avgCompletion =
+    MOCK_CLASS_PROGRESS.reduce((sum, c) => sum + c.averageCompletion, 0) /
+    MOCK_CLASS_PROGRESS.length;
 
   return (
     <div className="space-y-8">
       {/* Welcome Banner */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
         <h1 className="text-2xl font-bold mb-2">欢迎，志愿者！</h1>
-        <p className="text-blue-100">
-          感谢您为乡村儿童教育贡献力量。这里是您的工作台。
-        </p>
+        <p className="text-blue-100">感谢您为乡村儿童教育贡献力量。这里是您的工作台。</p>
       </div>
 
       {/* Stats Grid */}
@@ -32,12 +36,7 @@ export default function VolunteerDashboard() {
           color="yellow"
           href="/volunteer/review"
         />
-        <StatCard
-          icon="✅"
-          label="已批准课件"
-          value={approved}
-          color="green"
-        />
+        <StatCard icon="✅" label="已批准课件" value={approved} color="green" />
         <StatCard
           icon="👨‍🎓"
           label="学习中学生"
@@ -63,9 +62,9 @@ export default function VolunteerDashboard() {
               查看全部 →
             </Link>
           </div>
-          
+
           <div className="space-y-3">
-            {MOCK_REVIEW_QUEUE.filter(p => p.status !== 'approved' && p.status !== 'rejected')
+            {MOCK_REVIEW_QUEUE.filter((p) => p.status !== 'approved' && p.status !== 'rejected')
               .slice(0, 4)
               .map((pack) => (
                 <div
@@ -92,7 +91,7 @@ export default function VolunteerDashboard() {
               查看全部 →
             </Link>
           </div>
-          
+
           <div className="space-y-3">
             {MOCK_RECENT_COMPLETIONS.slice(0, 4).map((completion) => (
               <div
@@ -106,7 +105,11 @@ export default function VolunteerDashboard() {
                   <div>
                     <p className="font-medium text-gray-900">{completion.studentLabel}</p>
                     <p className="text-sm text-gray-500">
-                      完成课程 · {new Date(completion.completedAt).toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })}
+                      完成课程 ·{' '}
+                      {new Date(completion.completedAt).toLocaleTimeString('zh-CN', {
+                        hour: '2-digit',
+                        minute: '2-digit',
+                      })}
                     </p>
                   </div>
                 </div>
@@ -147,13 +150,13 @@ export default function VolunteerDashboard() {
   );
 }
 
-function StatCard({ 
-  icon, 
-  label, 
-  value, 
+function StatCard({
+  icon,
+  label,
+  value,
   color,
-  href 
-}: { 
+  href,
+}: {
   icon: string;
   label: string;
   value: number | string;
@@ -168,7 +171,9 @@ function StatCard({
   };
 
   const content = (
-    <div className={`rounded-xl p-5 border ${colorClasses[color]} ${href ? 'hover:shadow-md transition-shadow cursor-pointer' : ''}`}>
+    <div
+      className={`rounded-xl p-5 border ${colorClasses[color]} ${href ? 'hover:shadow-md transition-shadow cursor-pointer' : ''}`}
+    >
       <div className="text-2xl mb-2">{icon}</div>
       <p className="text-3xl font-bold">{value}</p>
       <p className="text-sm opacity-80">{label}</p>
@@ -191,18 +196,16 @@ function StatusBadge({ status }: { status: string }) {
   const { bg, text, label } = config[status] ?? config.draft;
 
   return (
-    <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${bg} ${text}`}>
-      {label}
-    </span>
+    <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${bg} ${text}`}>{label}</span>
   );
 }
 
-function QuickAction({ 
-  icon, 
-  title, 
-  description, 
-  href 
-}: { 
+function QuickAction({
+  icon,
+  title,
+  description,
+  href,
+}: {
   icon: string;
   title: string;
   description: string;

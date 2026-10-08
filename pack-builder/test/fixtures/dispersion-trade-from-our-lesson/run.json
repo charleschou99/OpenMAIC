@@ -7,9 +7,7 @@
     },
     "taskEngine": false,
     "interactive": false,
-    "materialIds": [
-      "mat_h2c3k0ca3fgz2m3gg3r6mqavc0"
-    ],
+    "materialIds": ["mat_h2c3k0ca3fgz2m3gg3r6mqavc0"],
     "requirement": "Build me a teaching classroom from the attached lesson (a lesson I wrote for a second-year equity volatility trader). Cover: what the dispersion trade is, implied vs realized correlation, the P&L decomposition of a short-index-vol / long-single-name-vol book, and the conditions under which the trade loses money. Include a short quiz at the end.",
     "outlineReview": "auto"
   },
@@ -102,9 +100,7 @@
         "quizConfig": {
           "difficulty": "medium",
           "questionCount": 2,
-          "questionTypes": [
-            "single"
-          ]
+          "questionTypes": ["single"]
         },
         "description": "Short checkpoint confirming the learner can extract implied correlation and interpret the gap before moving to the P&L machinery.",
         "estimatedDuration": 120,
@@ -206,10 +202,7 @@
         "quizConfig": {
           "difficulty": "hard",
           "questionCount": 4,
-          "questionTypes": [
-            "single",
-            "multiple"
-          ]
+          "questionTypes": ["single", "multiple"]
         },
         "description": "Closing quiz testing extraction, P&L attribution, construction residuals, and the loss conditions of the dispersion book.",
         "estimatedDuration": 180,
@@ -254,13 +247,7 @@
         "persona": "Sofia Ricci is a second-year trader with a background in correlation swaps. She's comfortable with the concept but wants to understand the options overlay and how the legs interact. She often plays devil's advocate on construction choices to test the logic."
       }
     ],
-    "agentIds": [
-      "gen-5Ph3vvRP",
-      "gen-8CApOJlb",
-      "gen-PeT37W_h",
-      "gen-2QJw94_J",
-      "gen-qeiAkX-o"
-    ],
+    "agentIds": ["gen-5Ph3vvRP", "gen-8CApOJlb", "gen-PeT37W_h", "gen-2QJw94_J", "gen-qeiAkX-o"],
     "generatedAgentConfigs": [
       {
         "id": "gen-5Ph3vvRP",

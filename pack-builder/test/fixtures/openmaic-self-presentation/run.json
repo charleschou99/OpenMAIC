@@ -7,9 +7,7 @@
     },
     "taskEngine": false,
     "interactive": false,
-    "materialIds": [
-      "mat_sz2z4h1v0er11dkqpg1b3qp558"
-    ],
+    "materialIds": ["mat_sz2z4h1v0er11dkqpg1b3qp558"],
     "requirement": "Build a technical classroom that explains the architecture of the OpenMAIC project itself, for an experienced software engineer who has never seen this repository. Work from the attached technical structure brief. Cover, in order: (1) the layering — the Next.js app, the engines in lib/, the reusable @openmaic packages, the skills and the test suites, with the real measured code sizes; (2) the generation pipeline — its exact step order from material analysis through research, outline, outline confirmation, agents, then per scene content, actions and narration, plus the run states; (3) the PostgreSQL data model — what a course is, what a scene is, what the JSON blob holds, and how revision counters let the client refetch only changed scenes; (4) the end-to-end request flow from POST /api/materials and POST /api/generate-classroom through to classroom playback; (5) the DSL boundary and why a dependency-free contract package matters; (6) where a contributor extends the system. Be concrete: real file paths, real table names, the real numbers. The audience reads code and does not need the product pitch.",
     "outlineReview": "auto"
   },
@@ -78,10 +76,7 @@
         "quizConfig": {
           "difficulty": "medium",
           "questionCount": 3,
-          "questionTypes": [
-            "single",
-            "multiple"
-          ]
+          "questionTypes": ["single", "multiple"]
         },
         "description": "Verify the reader can place a given file path or capability in the correct layer and engine before moving to the pipeline.",
         "estimatedDuration": 120,
@@ -186,10 +181,7 @@
         "quizConfig": {
           "difficulty": "medium",
           "questionCount": 3,
-          "questionTypes": [
-            "single",
-            "multiple"
-          ]
+          "questionTypes": ["single", "multiple"]
         },
         "description": "Test recall of concrete table names, endpoint contracts and status codes, and of the incremental refetch mechanism.",
         "estimatedDuration": 150,
@@ -294,13 +286,7 @@
         "persona": "A meticulous engineer who maintains a running table of layer, engine, file path and capability, and who re-reads every checkpoint question before answering. She catches inconsistencies between the DSL boundary story and the actual dependency direction of @openmaic/dsl, and she does not accept a claim about the repository that is not backed by a symbol. She learns by writing the summary herself and comparing it against the source."
       }
     ],
-    "agentIds": [
-      "gen-qHkq7hzr",
-      "gen-lnWNOss9",
-      "gen-HEjiK5IG",
-      "gen-gTQRpCKN",
-      "gen-hHO_sVB5"
-    ],
+    "agentIds": ["gen-qHkq7hzr", "gen-lnWNOss9", "gen-HEjiK5IG", "gen-gTQRpCKN", "gen-hHO_sVB5"],
     "generatedAgentConfigs": [
       {
         "id": "gen-qHkq7hzr",

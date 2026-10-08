@@ -92,13 +92,7 @@
             },
             "fontName": "Microsoft YaHei",
             "fontColor": "#333333",
-            "themeColors": [
-              "#5b9bd5",
-              "#ed7d31",
-              "#a5a5a5",
-              "#ffc000",
-              "#4472c4"
-            ],
+            "themeColors": ["#5b9bd5", "#ed7d31", "#a5a5a5", "#ffc000", "#4472c4"],
             "backgroundColor": "#ffffff"
           },
           "elements": [
@@ -124,10 +118,7 @@
               "width": 880,
               "height": 3,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -140,10 +131,7 @@
               "width": 880,
               "height": 60,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -168,10 +156,7 @@
               "width": 266,
               "height": 150,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -184,10 +169,7 @@
               "width": 266,
               "height": 5,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -200,10 +182,7 @@
               "width": 266,
               "height": 150,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -216,10 +195,7 @@
               "width": 266,
               "height": 5,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -232,10 +208,7 @@
               "width": 266,
               "height": 150,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -248,10 +221,7 @@
               "width": 266,
               "height": 5,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -348,10 +318,7 @@
               "width": 205,
               "height": 84,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -364,10 +331,7 @@
               "width": 205,
               "height": 84,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -380,10 +344,7 @@
               "width": 205,
               "height": 84,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -396,10 +357,7 @@
               "width": 205,
               "height": 84,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -578,13 +536,7 @@
             },
             "fontName": "Microsoft YaHei",
             "fontColor": "#333333",
-            "themeColors": [
-              "#5b9bd5",
-              "#ed7d31",
-              "#a5a5a5",
-              "#ffc000",
-              "#4472c4"
-            ],
+            "themeColors": ["#5b9bd5", "#ed7d31", "#a5a5a5", "#ffc000", "#4472c4"],
             "backgroundColor": "#ffffff"
           },
           "elements": [
@@ -610,10 +562,7 @@
               "width": 860,
               "height": 3,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -626,10 +575,7 @@
               "width": 425,
               "height": 160,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -642,10 +588,7 @@
               "width": 425,
               "height": 160,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -732,10 +675,7 @@
               "width": 880,
               "height": 60,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -748,10 +688,7 @@
               "width": 5,
               "height": 60,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -873,13 +810,7 @@
             },
             "fontName": "Microsoft YaHei",
             "fontColor": "#333333",
-            "themeColors": [
-              "#5b9bd5",
-              "#ed7d31",
-              "#a5a5a5",
-              "#ffc000",
-              "#4472c4"
-            ],
+            "themeColors": ["#5b9bd5", "#ed7d31", "#a5a5a5", "#ffc000", "#4472c4"],
             "backgroundColor": "#ffffff"
           },
           "elements": [
@@ -905,10 +836,7 @@
               "width": 680,
               "height": 3,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -965,33 +893,12 @@
               "id": "chart__ijltcTP",
               "top": 208,
               "data": {
-                "labels": [
-                  "29%",
-                  "30%",
-                  "31%",
-                  "32%",
-                  "35%"
-                ],
+                "labels": ["29%", "30%", "31%", "32%", "35%"],
                 "series": [
-                  [
-                    0.52,
-                    0.56,
-                    0.6,
-                    0.64,
-                    0.77
-                  ],
-                  [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
-                  ]
+                  [0.52, 0.56, 0.6, 0.64, 0.77],
+                  [0.5, 0.5, 0.5, 0.5, 0.5]
                 ],
-                "legends": [
-                  "Implied corr",
-                  "Realized corr"
-                ]
+                "legends": ["Implied corr", "Realized corr"]
               },
               "left": 540,
               "type": "chart",
@@ -999,10 +906,7 @@
               "height": 196,
               "rotate": 0,
               "chartType": "bar",
-              "themeColors": [
-                "#2563eb",
-                "#f59e0b"
-              ]
+              "themeColors": ["#2563eb", "#f59e0b"]
             },
             {
               "id": "shape_Yggc9dfe",
@@ -1014,10 +918,7 @@
               "width": 880,
               "height": 85,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1266,9 +1167,7 @@
           {
             "id": "q1",
             "type": "single",
-            "answer": [
-              "A"
-            ],
+            "answer": ["A"],
             "options": [
               {
                 "label": "~64% (0.64)",
@@ -1294,9 +1193,7 @@
           {
             "id": "q2",
             "type": "single",
-            "answer": [
-              "A"
-            ],
+            "answer": ["A"],
             "options": [
               {
                 "label": "Positive carry from selling rich implied correlation; the tail risk is a correlation spike in a crash, where index vol explodes and the short index-vol leg loses far more than the long single-stock vol leg gains.",
@@ -1405,13 +1302,7 @@
             },
             "fontName": "Microsoft YaHei",
             "fontColor": "#333333",
-            "themeColors": [
-              "#5b9bd5",
-              "#ed7d31",
-              "#a5a5a5",
-              "#ffc000",
-              "#4472c4"
-            ],
+            "themeColors": ["#5b9bd5", "#ed7d31", "#a5a5a5", "#ffc000", "#4472c4"],
             "backgroundColor": "#ffffff"
           },
           "elements": [
@@ -1437,10 +1328,7 @@
               "width": 860,
               "height": 3,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1453,10 +1341,7 @@
               "width": 430,
               "height": 104,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1469,10 +1354,7 @@
               "width": 430,
               "height": 104,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1509,10 +1391,7 @@
               "width": 880,
               "height": 89,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1525,10 +1404,7 @@
               "width": 6,
               "height": 89,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1567,10 +1443,7 @@
               "width": 880,
               "height": 146,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1698,13 +1571,7 @@
             },
             "fontName": "Microsoft YaHei",
             "fontColor": "#333333",
-            "themeColors": [
-              "#5b9bd5",
-              "#ed7d31",
-              "#a5a5a5",
-              "#ffc000",
-              "#4472c4"
-            ],
+            "themeColors": ["#5b9bd5", "#ed7d31", "#a5a5a5", "#ffc000", "#4472c4"],
             "backgroundColor": "#ffffff"
           },
           "elements": [
@@ -1718,10 +1585,7 @@
               "width": 140,
               "height": 4,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1734,10 +1598,7 @@
               "width": 880,
               "height": 1,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1762,10 +1623,7 @@
               "width": 220,
               "height": 80,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1792,10 +1650,7 @@
               "width": 446,
               "height": 348,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1808,10 +1663,7 @@
               "width": 4,
               "height": 75,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1824,10 +1676,7 @@
               "width": 4,
               "height": 75,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -1840,10 +1689,7 @@
               "width": 4,
               "height": 75,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2104,11 +1950,7 @@
                 "style": "solid",
                 "width": 1
               },
-              "colWidths": [
-                0.44,
-                0.12,
-                0.44
-              ]
+              "colWidths": [0.44, 0.12, 0.44]
             },
             {
               "id": "text_toTz6SGk",
@@ -2217,13 +2059,7 @@
             },
             "fontName": "Microsoft YaHei",
             "fontColor": "#333333",
-            "themeColors": [
-              "#5b9bd5",
-              "#ed7d31",
-              "#a5a5a5",
-              "#ffc000",
-              "#4472c4"
-            ],
+            "themeColors": ["#5b9bd5", "#ed7d31", "#a5a5a5", "#ffc000", "#4472c4"],
             "backgroundColor": "#ffffff"
           },
           "elements": [
@@ -2249,10 +2085,7 @@
               "width": 880,
               "height": 88,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2436,11 +2269,7 @@
                 "style": "solid",
                 "width": 1
               },
-              "colWidths": [
-                0.22,
-                0.26,
-                0.52
-              ]
+              "colWidths": [0.22, 0.26, 0.52]
             }
           ],
           "background": {
@@ -2577,13 +2406,7 @@
             },
             "fontName": "Microsoft YaHei",
             "fontColor": "#333333",
-            "themeColors": [
-              "#5b9bd5",
-              "#ed7d31",
-              "#a5a5a5",
-              "#ffc000",
-              "#4472c4"
-            ],
+            "themeColors": ["#5b9bd5", "#ed7d31", "#a5a5a5", "#ffc000", "#4472c4"],
             "backgroundColor": "#ffffff"
           },
           "elements": [
@@ -2597,10 +2420,7 @@
               "width": 880,
               "height": 2,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2613,10 +2433,7 @@
               "width": 430,
               "height": 206,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2629,10 +2446,7 @@
               "width": 430,
               "height": 206,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2645,10 +2459,7 @@
               "width": 880,
               "height": 104,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2661,10 +2472,7 @@
               "width": 5,
               "height": 104,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2865,13 +2673,7 @@
             },
             "fontName": "Microsoft YaHei",
             "fontColor": "#333333",
-            "themeColors": [
-              "#5b9bd5",
-              "#ed7d31",
-              "#a5a5a5",
-              "#ffc000",
-              "#4472c4"
-            ],
+            "themeColors": ["#5b9bd5", "#ed7d31", "#a5a5a5", "#ffc000", "#4472c4"],
             "backgroundColor": "#ffffff"
           },
           "elements": [
@@ -2897,10 +2699,7 @@
               "width": 160,
               "height": 3,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2913,10 +2712,7 @@
               "width": 430,
               "height": 146,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2929,10 +2725,7 @@
               "width": 430,
               "height": 146,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2945,10 +2738,7 @@
               "width": 430,
               "height": 146,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2961,10 +2751,7 @@
               "width": 430,
               "height": 146,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2977,10 +2764,7 @@
               "width": 5,
               "height": 146,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -2993,10 +2777,7 @@
               "width": 5,
               "height": 146,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -3009,10 +2790,7 @@
               "width": 5,
               "height": 146,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -3025,10 +2803,7 @@
               "width": 5,
               "height": 146,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -3089,10 +2864,7 @@
               "width": 4,
               "height": 56,
               "rotate": 0,
-              "viewBox": [
-                1,
-                1
-              ],
+              "viewBox": [1, 1],
               "fixedRatio": false
             },
             {
@@ -3148,9 +2920,7 @@
           {
             "id": "q1",
             "type": "single",
-            "answer": [
-              "B"
-            ],
+            "answer": ["B"],
             "points": 20,
             "options": [
               {
@@ -3177,9 +2947,7 @@
           {
             "id": "q2",
             "type": "single",
-            "answer": [
-              "B"
-            ],
+            "answer": ["B"],
             "points": 20,
             "options": [
               {
@@ -3206,10 +2974,7 @@
           {
             "id": "q3",
             "type": "multiple",
-            "answer": [
-              "A",
-              "C"
-            ],
+            "answer": ["A", "C"],
             "points": 25,
             "options": [
               {
@@ -3236,9 +3001,7 @@
           {
             "id": "q4",
             "type": "single",
-            "answer": [
-              "B"
-            ],
+            "answer": ["B"],
             "points": 25,
             "options": [
               {
