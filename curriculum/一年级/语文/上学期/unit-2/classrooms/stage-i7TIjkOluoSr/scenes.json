@@ -1,0 +1,4595 @@
+[
+  {
+    "id": "AcdUd4fUvhbXO4itjwuk4",
+    "type": "slide",
+    "order": 1,
+    "title": "汉字乐园欢迎你",
+    "actions": [
+      {
+        "id": "action_ng20AAe4",
+        "type": "spotlight",
+        "elementId": "text__2yWXpkF"
+      },
+      {
+        "id": "action_GZCDFj5H",
+        "text": "小朋友们好！欢迎来到汉字乐园。",
+        "type": "speech"
+      },
+      {
+        "id": "action_3V2v6YiY",
+        "type": "spotlight",
+        "elementId": "text_L9LexDEb"
+      },
+      {
+        "id": "action_0P90bDbk",
+        "text": "今天，我们先认一认三个神奇的字。",
+        "type": "speech"
+      },
+      {
+        "id": "action_31SkuZUx",
+        "type": "spotlight",
+        "elementId": "text_C9Ibgxzs"
+      },
+      {
+        "id": "action_iGWVwRyP",
+        "text": "第一个字，天。你看，蓝蓝的天空，就是天。",
+        "type": "speech"
+      },
+      {
+        "id": "action_OuJA_agL",
+        "type": "spotlight",
+        "elementId": "text_RclkQAJd"
+      },
+      {
+        "id": "action_mRvWAMGe",
+        "text": "第二个字，地。绿绿的大地，就是地。",
+        "type": "speech"
+      },
+      {
+        "id": "action_Y8gSlQAs",
+        "type": "spotlight",
+        "elementId": "text_jCkx4kZv"
+      },
+      {
+        "id": "action_S8KBVSir",
+        "text": "第三个字，人。我们每一个小朋友，都是人。",
+        "type": "speech"
+      },
+      {
+        "id": "action_cwrKGVvU",
+        "type": "spotlight",
+        "elementId": "text__Hvgqrjo"
+      },
+      {
+        "id": "action_0Uh-x2B4",
+        "text": "还要学一学三个好用的词。",
+        "type": "speech"
+      },
+      {
+        "id": "action_VrD2mzhI",
+        "type": "laser",
+        "elementId": "text_OfCSO7aH"
+      },
+      {
+        "id": "action_reOCjRkV",
+        "type": "laser",
+        "elementId": "text_8lYo8OUU"
+      },
+      {
+        "id": "action_bajbSeQe",
+        "type": "laser",
+        "elementId": "text_GTaAqxmc"
+      },
+      {
+        "id": "action_hq9K7r2C",
+        "text": "它们就是你、我、他。来，我们拍拍手，一起读一读：你，我，他。汉字乐园真好玩，我们出发啦！",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "7ZVhsD9ceYoIf64ArHrta",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "shape_1FUpMes5",
+            "top": 52,
+            "fill": "#ffe066",
+            "left": 885,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 58,
+            "height": 58,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_TWWagNLi",
+            "top": 60,
+            "fill": "#dbeeff",
+            "left": 85,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 110,
+            "height": 36,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape__oZTvsV7",
+            "top": 148,
+            "fill": "#dbeeff",
+            "left": 790,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 120,
+            "height": 34,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_na8dwWoo",
+            "top": 128,
+            "fill": "#7fc4e8",
+            "left": 70,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 860,
+            "height": 3,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_2ZJsxmyU",
+            "top": 190,
+            "fill": "#cfe9ff",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 260,
+            "height": 116,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_P4FHzG9H",
+            "top": 190,
+            "fill": "#d3f0d3",
+            "left": 370,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 260,
+            "height": 116,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_G259xNRV",
+            "top": 190,
+            "fill": "#ffe3c2",
+            "left": 680,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 260,
+            "height": 116,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_-1A1cbbD",
+            "top": 368,
+            "fill": "#e3dbff",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 260,
+            "height": 116,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_GKC0tuHs",
+            "top": 368,
+            "fill": "#ffd9e2",
+            "left": 370,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 260,
+            "height": 116,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_1lmdgeZ3",
+            "top": 368,
+            "fill": "#fff0b3",
+            "left": 680,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 260,
+            "height": 116,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_kIkU3vGx",
+            "top": 496,
+            "fill": "#b7e4a0",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 880,
+            "height": 15,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text__2yWXpkF",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>汉字乐园欢迎你</strong></p>",
+            "defaultColor": "#12507f",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_L9LexDEb",
+            "top": 138,
+            "left": 60,
+            "type": "text",
+            "width": 400,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px\"><strong>认一认 · 三个字</strong></p>",
+            "defaultColor": "#12507f",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text__Hvgqrjo",
+            "top": 316,
+            "left": 60,
+            "type": "text",
+            "width": 400,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px\"><strong>学一学 · 三个词</strong></p>",
+            "defaultColor": "#b35c00",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_C9Ibgxzs",
+            "top": 213,
+            "left": 80,
+            "type": "text",
+            "width": 220,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\">天 <span style=\"font-size:14px;color:#5a6b7b\">tiān</span></p>",
+            "defaultColor": "#0d47a1",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_RclkQAJd",
+            "top": 213,
+            "left": 390,
+            "type": "text",
+            "width": 220,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\">地 <span style=\"font-size:14px;color:#5a6b7b\">dì</span></p>",
+            "defaultColor": "#1b5e20",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_jCkx4kZv",
+            "top": 213,
+            "left": 700,
+            "type": "text",
+            "width": 220,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\">人 <span style=\"font-size:14px;color:#5a6b7b\">rén</span></p>",
+            "defaultColor": "#a0522d",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_OfCSO7aH",
+            "top": 391,
+            "left": 80,
+            "type": "text",
+            "width": 220,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\">你 <span style=\"font-size:14px;color:#5a6b7b\">nǐ</span></p>",
+            "defaultColor": "#4527a0",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_8lYo8OUU",
+            "top": 391,
+            "left": 390,
+            "type": "text",
+            "width": 220,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\">我 <span style=\"font-size:14px;color:#5a6b7b\">wǒ</span></p>",
+            "defaultColor": "#b03060",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_GTaAqxmc",
+            "top": 391,
+            "left": 700,
+            "type": "text",
+            "width": 220,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\">他 <span style=\"font-size:14px;color:#5a6b7b\">tā</span></p>",
+            "defaultColor": "#8a6d00",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#eef8ff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791421585975,
+    "outlineId": "scene_1",
+    "updatedAt": 1791421585975
+  },
+  {
+    "id": "Wf66ARI1gB148WDUVCxDA",
+    "type": "slide",
+    "order": 2,
+    "title": "认识'天'",
+    "actions": [
+      {
+        "id": "action_ATH2b3zt",
+        "type": "spotlight",
+        "elementId": "text_4DoPHJn_"
+      },
+      {
+        "id": "action_JmdN2JzG",
+        "text": "小朋友，坐坐好。我们接着认字啦。这一页，认识「天」。",
+        "type": "speech"
+      },
+      {
+        "id": "action_v31nMF0n",
+        "type": "spotlight",
+        "elementId": "text_f-JtbK8h"
+      },
+      {
+        "id": "action_WG-HoSGz",
+        "text": "看，蓝蓝的天，白白的云。天，好大好大呀。",
+        "type": "speech"
+      },
+      {
+        "id": "action_EFVRg9Tu",
+        "type": "spotlight",
+        "elementId": "text_kRLITeQ3"
+      },
+      {
+        "id": "action_FwtdhsuT",
+        "text": "这个字读——天。跟我读，天。再来一遍，天。",
+        "type": "speech"
+      },
+      {
+        "id": "action_xwr0bAXf",
+        "type": "spotlight",
+        "elementId": "text_PX8gKn-E"
+      },
+      {
+        "id": "action_Qa0_aUc3",
+        "text": "「天」像一个人，站得高高的。头顶上，就是大大的天。",
+        "type": "speech"
+      },
+      {
+        "id": "action_TzlL5M0W",
+        "type": "laser",
+        "elementId": "text_KRLQrcZs"
+      },
+      {
+        "id": "action_JQHbXil6",
+        "type": "discussion",
+        "topic": "说一说：天上有什么？",
+        "prompt": "抬起头，我们看看天。天上有什么呀？太阳、白云，还有小鸟吗？说给大家听一听。",
+        "agentId": "gen-kdeeZ_ye"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "kVG7KrqLpn0iMs2KmddYR",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "text_4DoPHJn_",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px\"><strong>认识汉字「天」</strong></p>",
+            "defaultColor": "#1e3a8a",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_k3Pduu8G",
+            "top": 124,
+            "fill": "#5b9bd5",
+            "left": 70,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 860,
+            "height": 3,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_pQtKOkmu",
+            "top": 145,
+            "fill": "#9dd6f5",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 420,
+            "height": 360,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_bQNbXrlQ",
+            "top": 172,
+            "fill": "#FFD93D",
+            "left": 390,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 64,
+            "height": 64,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_1x8OyfNM",
+            "top": 245,
+            "fill": "#ffffff",
+            "left": 110,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 145,
+            "height": 35,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_v77qvYyP",
+            "top": 220,
+            "fill": "#ffffff",
+            "left": 110,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 60,
+            "height": 60,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_mUBoewR5",
+            "top": 198,
+            "fill": "#ffffff",
+            "left": 145,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 85,
+            "height": 85,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_iC9_TcXO",
+            "top": 220,
+            "fill": "#ffffff",
+            "left": 195,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 60,
+            "height": 60,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_8ib_sRZz",
+            "top": 355,
+            "fill": "#ffffff",
+            "left": 285,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 140,
+            "height": 32,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_xdZUhrPy",
+            "top": 330,
+            "fill": "#ffffff",
+            "left": 285,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 56,
+            "height": 56,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_Jp_zcvXc",
+            "top": 310,
+            "fill": "#ffffff",
+            "left": 318,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 82,
+            "height": 82,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_l2TWBf0W",
+            "top": 330,
+            "fill": "#ffffff",
+            "left": 368,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 56,
+            "height": 56,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_f-JtbK8h",
+            "top": 435,
+            "left": 80,
+            "type": "text",
+            "width": 380,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px;text-align:center\">蓝蓝的天，白白的云</p>",
+            "defaultColor": "#0c4a6e",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_e9OCijmz",
+            "top": 145,
+            "fill": "#dbeafe",
+            "left": 520,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 420,
+            "height": 110,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_kRLITeQ3",
+            "top": 165,
+            "left": 540,
+            "type": "text",
+            "width": 380,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\">tiān 天</p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_edzSrRkp",
+            "top": 270,
+            "fill": "#fef3c7",
+            "left": 520,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 420,
+            "height": 110,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_PX8gKn-E",
+            "top": 287,
+            "left": 540,
+            "type": "text",
+            "width": 380,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:18px;text-align:center\">「天」像个站得高高的人，</p><p style=\"font-size:18px;text-align:center\">头顶着大大的天。</p>",
+            "defaultColor": "#92400e",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_3cSsGUOy",
+            "top": 395,
+            "fill": "#dcfce7",
+            "left": 520,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 420,
+            "height": 110,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_KRLQrcZs",
+            "top": 412,
+            "left": 540,
+            "type": "text",
+            "width": 380,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:18px;text-align:center\">说一说：天上有什么？</p><p style=\"font-size:18px;text-align:center\">太阳、白云、小鸟</p>",
+            "defaultColor": "#166534",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791421642487,
+    "outlineId": "scene_2",
+    "updatedAt": 1791421642488
+  },
+  {
+    "id": "AcOy-G7MQ7Y4Bf4HKdY5l",
+    "type": "slide",
+    "order": 3,
+    "title": "认识'地'",
+    "actions": [
+      {
+        "id": "action_rKlJfAae",
+        "type": "spotlight",
+        "elementId": "text_qB9cvRyI"
+      },
+      {
+        "id": "action_LTfFtzCp",
+        "text": "刚才我们认识了「天」。现在，我们认识「地」。",
+        "type": "speech"
+      },
+      {
+        "id": "action_6pmD-Ubn",
+        "type": "spotlight",
+        "elementId": "text_mbD9XYAA"
+      },
+      {
+        "id": "action_WRfty0z-",
+        "text": "看，这个字就是「地」。地，就在我们脚下。",
+        "type": "speech"
+      },
+      {
+        "id": "action_THbNXO8e",
+        "type": "spotlight",
+        "elementId": "text_VpYaKJAI"
+      },
+      {
+        "id": "action_goVkp4r3",
+        "text": "地，读作 dì。我们一起读一读。",
+        "type": "speech"
+      },
+      {
+        "id": "action_BSSUjQ6G",
+        "type": "spotlight",
+        "elementId": "text_tTZAiG4X"
+      },
+      {
+        "id": "action_SMpgVP1E",
+        "text": "跟着老师读两遍。dì —— dì —— 真棒！",
+        "type": "speech"
+      },
+      {
+        "id": "action_B7o-jLuw",
+        "type": "spotlight",
+        "elementId": "text_r4w5xDux"
+      },
+      {
+        "id": "action_KvHetcC6",
+        "text": "地，就是我们脚下的土地。",
+        "type": "speech"
+      },
+      {
+        "id": "action_s6ssA9Fh",
+        "type": "spotlight",
+        "elementId": "text_DzqrovsA"
+      },
+      {
+        "id": "action_R2ZksaLz",
+        "text": "瞧，草地绿绿的，长在大地上。",
+        "type": "speech"
+      },
+      {
+        "id": "action_nrU6POCn",
+        "type": "spotlight",
+        "elementId": "text_dCUVCsdK"
+      },
+      {
+        "id": "action_AnRSDQpn",
+        "text": "泥土小路弯弯的，也在地上。",
+        "type": "speech"
+      },
+      {
+        "id": "action_dQvdVr_N",
+        "type": "spotlight",
+        "elementId": "text_jnvdbUUB"
+      },
+      {
+        "id": "action_EqOkzScj",
+        "text": "现在，我们一起跺跺脚。感受到了吗？脚下就是大地。",
+        "type": "speech"
+      },
+      {
+        "id": "action_VhiAsqDc",
+        "type": "spotlight",
+        "elementId": "text_2ZIoHmd0"
+      },
+      {
+        "id": "action_e_Bj-WyJ",
+        "text": "说一说，地上有什么呀？有小草、小花，还有小石头。",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "p5homo4YQOcGvib0UXW7v",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "text_qB9cvRyI",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px\"><strong>认识“地”—— 我们脚下的土地</strong></p>",
+            "defaultColor": "#1f4e79",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_T-oJn4Ju",
+            "top": 130,
+            "fill": "#5b9bd5",
+            "left": 70,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 860,
+            "height": 3,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_z93sZkhW",
+            "top": 150,
+            "fill": "#fff3d6",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 280,
+            "height": 357,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_VpYaKJAI",
+            "top": 219,
+            "left": 140,
+            "type": "text",
+            "width": 120,
+            "height": 64,
+            "rotate": 0,
+            "content": "<p style=\"font-size:28px;text-align:center\"><strong>dì</strong></p>",
+            "defaultColor": "#d97706",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_mbD9XYAA",
+            "top": 299,
+            "left": 140,
+            "type": "text",
+            "width": 120,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>地</strong></p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_r4w5xDux",
+            "top": 391,
+            "left": 80,
+            "type": "text",
+            "width": 240,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px;text-align:center\">脚下的土地</p>",
+            "defaultColor": "#7c5c3a",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_u_Wc6hWK",
+            "top": 150,
+            "fill": "#d9f0d9",
+            "left": 370,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 265,
+            "height": 130,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_DzqrovsA",
+            "top": 168,
+            "left": 390,
+            "type": "text",
+            "width": 225,
+            "height": 94,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center\"><strong>草地</strong></p><p style=\"font-size:16px;text-align:center\">绿绿的</p>",
+            "defaultColor": "#2e7d32",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_Q7jjqJoE",
+            "top": 150,
+            "fill": "#ece0cd",
+            "left": 675,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 265,
+            "height": 130,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_dCUVCsdK",
+            "top": 168,
+            "left": 695,
+            "type": "text",
+            "width": 225,
+            "height": 94,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center\"><strong>泥土小路</strong></p><p style=\"font-size:16px;text-align:center\">弯弯的</p>",
+            "defaultColor": "#8a5a2b",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_jZwQuEZe",
+            "top": 300,
+            "fill": "#5b9bd5",
+            "left": 370,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 5,
+            "height": 42,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_tTZAiG4X",
+            "top": 295,
+            "left": 392,
+            "type": "text",
+            "width": 548,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px\"><strong>读一读：</strong>dì —— 跟读两遍</p>",
+            "defaultColor": "#1f4e79",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_UdrwJHzR",
+            "top": 364,
+            "fill": "#ed7d31",
+            "left": 370,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 5,
+            "height": 42,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_jnvdbUUB",
+            "top": 359,
+            "left": 392,
+            "type": "text",
+            "width": 548,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px\"><strong>跺跺脚：</strong>感受脚下的大地</p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_43b0vHnl",
+            "top": 433,
+            "fill": "#2e9e63",
+            "left": 370,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 5,
+            "height": 66,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_2ZIoHmd0",
+            "top": 425,
+            "left": 392,
+            "type": "text",
+            "width": 548,
+            "height": 82,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px\"><strong>说一说：</strong>地上有什么？</p><p style=\"font-size:18px;color:#2e7d32\">小草 · 小花 · 小石头</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791421683748,
+    "outlineId": "scene_3",
+    "updatedAt": 1791421683748
+  },
+  {
+    "id": "OTyMT0yOujXnSe35pmD81",
+    "type": "slide",
+    "order": 4,
+    "title": "认识'人'",
+    "actions": [
+      {
+        "id": "action_uq5zLdSJ",
+        "type": "spotlight",
+        "elementId": "text_DW09waAE"
+      },
+      {
+        "id": "action_RNAEAUUE",
+        "text": "刚才我们认识了'地'。今天再来认识一个新朋友，'人'字。",
+        "type": "speech"
+      },
+      {
+        "id": "action_acQ71cex",
+        "type": "spotlight",
+        "elementId": "text_rlG7S3TR"
+      },
+      {
+        "id": "action_R14U_7bp",
+        "text": "看，这个字读人，拼音是 rén。我们一起读两遍，rén，rén。",
+        "type": "speech"
+      },
+      {
+        "id": "action_HQYjcywN",
+        "type": "spotlight",
+        "elementId": "text_sVXEZLZw"
+      },
+      {
+        "id": "action_nX2N8PD2",
+        "text": "这就是'人'字。一笔撇，一笔捺，写起来像不像一个人的样子呀？",
+        "type": "speech"
+      },
+      {
+        "id": "action_YJhwoTO2",
+        "type": "spotlight",
+        "elementId": "text_ToOcB7ac"
+      },
+      {
+        "id": "action_657E0kkc",
+        "text": "'人'就像两条腿分开站，站得稳稳的。",
+        "type": "speech"
+      },
+      {
+        "id": "action_nWGBmBad",
+        "type": "spotlight",
+        "elementId": "text_I9k4JeeM"
+      },
+      {
+        "id": "action_1pkY5qsn",
+        "text": "所以记住啦，'人'字就像一个人，分开两条腿，稳稳地站着。",
+        "type": "speech"
+      },
+      {
+        "id": "action_2kzrZSjv",
+        "type": "spotlight",
+        "elementId": "text_oIlmUKkf"
+      },
+      {
+        "id": "action_vlBhFQcO",
+        "text": "现在我们一起站起来，学一学'人'字的样子。撇，捺，站好喽！真棒，你们都变成小小的'人'啦。",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "n8AgVG2f9GoSBXN9CH5Ge",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "text_DW09waAE",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px\"><strong>认识“人”</strong></p>",
+            "defaultColor": "#1f2937",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_9zcinniq",
+            "top": 126,
+            "fill": "#5b9bd5",
+            "left": 70,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 860,
+            "height": 3,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_ZG9N41Br",
+            "top": 160,
+            "fill": "#fff7e6",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 300,
+            "height": 330,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_rlG7S3TR",
+            "top": 210,
+            "left": 80,
+            "type": "text",
+            "width": 260,
+            "height": 64,
+            "rotate": 0,
+            "content": "<p style=\"font-size:28px;text-align:center\">rén</p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_sVXEZLZw",
+            "top": 290,
+            "left": 80,
+            "type": "text",
+            "width": 260,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>人</strong></p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_ToOcB7ac",
+            "top": 400,
+            "left": 80,
+            "type": "text",
+            "width": 260,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px;text-align:center\">两条腿分开站</p>",
+            "defaultColor": "#92400e",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_SRRrngXi",
+            "top": 160,
+            "fill": "#dbeafe",
+            "left": 400,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 540,
+            "height": 100,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_BdmJvFRX",
+            "top": 275,
+            "fill": "#dcfce7",
+            "left": 400,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 540,
+            "height": 100,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_EdCX8H7R",
+            "top": 390,
+            "fill": "#fce7f3",
+            "left": 400,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 540,
+            "height": 100,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_ggkZJvN7",
+            "top": 175,
+            "left": 420,
+            "type": "text",
+            "width": 500,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px\"><strong>拼音领读</strong>：rén</p><p style=\"font-size:16px\">我们一起读两遍</p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_I9k4JeeM",
+            "top": 290,
+            "left": 420,
+            "type": "text",
+            "width": 500,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px\"><strong>字形联想</strong></p><p style=\"font-size:16px\">“人”像两条腿，稳稳站</p>",
+            "defaultColor": "#166534",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_oIlmUKkf",
+            "top": 405,
+            "left": 420,
+            "type": "text",
+            "width": 500,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px\"><strong>互动</strong></p><p style=\"font-size:16px\">站起来，学一学“人”的样子</p>",
+            "defaultColor": "#9d174d",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791421712586,
+    "outlineId": "scene_4",
+    "updatedAt": 1791421712586
+  },
+  {
+    "id": "IxyIlUU3i4w_1hvxfuxiL",
+    "type": "slide",
+    "order": 5,
+    "title": "天地人在一起",
+    "actions": [
+      {
+        "id": "action_LRg3x9gZ",
+        "type": "spotlight",
+        "elementId": "text_Idiie6WT"
+      },
+      {
+        "id": "action_xnkwZdTr",
+        "text": "看，这是'天'。天上有什么呀？跟老师读，天。",
+        "type": "speech"
+      },
+      {
+        "id": "action_NQy3vMq9",
+        "type": "spotlight",
+        "elementId": "text_EhM-GvLi"
+      },
+      {
+        "id": "action_8YNnbXGP",
+        "text": "再看下面，这是'地'。我们的小脚踩着地。读一读，地。",
+        "type": "speech"
+      },
+      {
+        "id": "action_sb0zbbu1",
+        "type": "spotlight",
+        "elementId": "text_CHpzhGhP"
+      },
+      {
+        "id": "action_vjxC1cXS",
+        "text": "中间的，就是'人'。我们就站在中间，读，人。",
+        "type": "speech"
+      },
+      {
+        "id": "action_iEFew3KJ",
+        "type": "spotlight",
+        "elementId": "text_TQZku75c"
+      },
+      {
+        "id": "action_Z6imNcHH",
+        "text": "现在连起来读。天，地，人。一遍一遍，读整齐。",
+        "type": "speech"
+      },
+      {
+        "id": "action_EsiowuCs",
+        "type": "spotlight",
+        "elementId": "text_uhcKyjxd"
+      },
+      {
+        "id": "action_wQNJE3he",
+        "text": "天在上，地在下，人站在中间。天地人，是一家！",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "9mvNy-A4Rjo3A1Fh_ejJt",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "text_M9XA4s9r",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 560,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px\"><strong>天地人在一起</strong></p>",
+            "defaultColor": "#1f2937",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_JAreBUgt",
+            "top": 126,
+            "fill": "#5b9bd5",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 160,
+            "height": 4,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_rkGRHRnQ",
+            "top": 140,
+            "left": 60,
+            "type": "text",
+            "width": 400,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px\"><span style=\"color:#6b7280\">tiān · dì · rén</span></p>",
+            "defaultColor": "#6b7280",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_Z_B5uu3v",
+            "top": 210,
+            "fill": "#dbeafe",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 380,
+            "height": 88,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_5-0Ki4xg",
+            "top": 310,
+            "fill": "#dcfce7",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 380,
+            "height": 88,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_LCJBSTEA",
+            "top": 410,
+            "fill": "#fef3c7",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 380,
+            "height": 88,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_Idiie6WT",
+            "top": 222,
+            "left": 80,
+            "type": "text",
+            "width": 340,
+            "height": 64,
+            "rotate": 0,
+            "content": "<p style=\"font-size:28px;text-align:center\"><strong>天</strong> <span style=\"font-size:18px;color:#4b5563\">tiān</span></p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_CHpzhGhP",
+            "top": 322,
+            "left": 80,
+            "type": "text",
+            "width": 340,
+            "height": 64,
+            "rotate": 0,
+            "content": "<p style=\"font-size:28px;text-align:center\"><strong>人</strong> <span style=\"font-size:18px;color:#4b5563\">rén</span></p>",
+            "defaultColor": "#166534",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_EhM-GvLi",
+            "top": 422,
+            "left": 80,
+            "type": "text",
+            "width": 340,
+            "height": 64,
+            "rotate": 0,
+            "content": "<p style=\"font-size:28px;text-align:center\"><strong>地</strong> <span style=\"font-size:18px;color:#4b5563\">dì</span></p>",
+            "defaultColor": "#92400e",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_deBxkjI9",
+            "top": 210,
+            "fill": "#e8f4fd",
+            "left": 480,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 460,
+            "height": 150,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_maFMcDZU",
+            "top": 223,
+            "left": 500,
+            "type": "text",
+            "width": 420,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px;text-align:center\"><strong>连读练习</strong></p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_TQZku75c",
+            "top": 283,
+            "left": 500,
+            "type": "text",
+            "width": 420,
+            "height": 64,
+            "rotate": 0,
+            "content": "<p style=\"font-size:28px;text-align:center\"><strong>天 — 地 — 人</strong></p>",
+            "defaultColor": "#1f2937",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_PhMDMCYr",
+            "top": 380,
+            "fill": "#fdf2e9",
+            "left": 480,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 460,
+            "height": 120,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_uhcKyjxd",
+            "top": 389,
+            "left": 500,
+            "type": "text",
+            "width": 420,
+            "height": 103,
+            "rotate": 0,
+            "content": "<p style=\"font-size:18px;text-align:center\">天在上，地在下，</p><p style=\"font-size:18px;text-align:center\">人站在中间，</p><p style=\"font-size:18px;text-align:center\">天地人是一家。</p>",
+            "defaultColor": "#7c2d12",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791421747552,
+    "outlineId": "scene_5",
+    "updatedAt": 1791421747552
+  },
+  {
+    "id": "8RUZNXGCY69N_2JOC1Rmy",
+    "type": "quiz",
+    "order": 6,
+    "title": "识字小闯关",
+    "actions": [
+      {
+        "id": "action_k0CC_Bmq",
+        "text": "刚才我们认过的字宝宝，你还记得吗？现在来玩识字小闯关。每一题自己选一选，慢慢来，不着急。做完以后，老师和你一起看一看。",
+        "type": "speech"
+      },
+      {
+        "id": "action_EZmWt9xs",
+        "text": "答对了，会有小星星和小掌声哦。加油，你一定可以！",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "quiz",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "single",
+          "answer": [
+            "A"
+          ],
+          "points": 10,
+          "options": [
+            {
+              "label": "天（tiān）",
+              "value": "A"
+            },
+            {
+              "label": "地（dì）",
+              "value": "B"
+            },
+            {
+              "label": "人（rén）",
+              "value": "C"
+            },
+            {
+              "label": "花（huā）",
+              "value": "D"
+            }
+          ],
+          "analysis": "天空中飘着白云，小鸟在天上飞。这里的\"天\"读tiān，就是天空的天。所以选A。地（dì）是脚下的大地，人（rén）是我们自己，花（huā）是开在地上的，都不对哦。",
+          "question": "天上有什么？我们一起选一选。",
+          "hasAnswer": true
+        },
+        {
+          "id": "q2",
+          "type": "single",
+          "answer": [
+            "C"
+          ],
+          "points": 10,
+          "options": [
+            {
+              "label": "天（tiān）",
+              "value": "A"
+            },
+            {
+              "label": "云（yún）",
+              "value": "B"
+            },
+            {
+              "label": "地（dì）",
+              "value": "C"
+            },
+            {
+              "label": "鸟（niǎo）",
+              "value": "D"
+            }
+          ],
+          "analysis": "小草从泥土里钻出来，长在大地上。\"地\"读dì，就是土地、大地的地。所以选C。天（tiān）和云（yún）都在高高的天上，鸟（niǎo）会飞，小草不会飞哦。",
+          "question": "小草长在哪里？我们看一看，选一选。",
+          "hasAnswer": true
+        },
+        {
+          "id": "q3",
+          "type": "single",
+          "answer": [
+            "B"
+          ],
+          "points": 10,
+          "options": [
+            {
+              "label": "日（rì）",
+              "value": "A"
+            },
+            {
+              "label": "人（rén）",
+              "value": "B"
+            },
+            {
+              "label": "口（kǒu）",
+              "value": "C"
+            },
+            {
+              "label": "天（tiān）",
+              "value": "D"
+            }
+          ],
+          "analysis": "图上的小娃娃就是我们自己呀，你、我、他都是\"人\"。\"人\"读rén，一撇一捺，就像一个人张开腿站着。所以选B。日（rì）是太阳，口（kǒu）是嘴巴，天（tiān）是天空，都不对哦。",
+          "question": "图上站着一个小娃娃，他是谁？选一选。",
+          "hasAnswer": true
+        }
+      ]
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791421754684,
+    "outlineId": "scene_6",
+    "updatedAt": 1791421754684
+  },
+  {
+    "id": "9TGrBJoc178twHDK0kUP8",
+    "type": "slide",
+    "order": 7,
+    "title": "你、我、他真好用",
+    "actions": [
+      {
+        "id": "action__RWtAUdt",
+        "type": "spotlight",
+        "elementId": "text_icZAhJZR"
+      },
+      {
+        "id": "action__4SXdL-5",
+        "text": "刚才的小闯关，大家都闯过来啦！现在，我们认识三个新朋友。它们就是——你、我、他。",
+        "type": "speech"
+      },
+      {
+        "id": "action_yVHNDF16",
+        "type": "spotlight",
+        "elementId": "text_H3Q6Gl1v"
+      },
+      {
+        "id": "action_fnV4C2bB",
+        "text": "先看第一个字，你。旁边写着拼音，我们一起读，你。跟老师说，你。",
+        "type": "speech"
+      },
+      {
+        "id": "action_pKli9RlJ",
+        "type": "spotlight",
+        "elementId": "text_UZEFtUVE"
+      },
+      {
+        "id": "action_dTnoTyqN",
+        "text": "再看第二个字，我。说话说到自己，就用我。一起读，我。声音再大一点，我。",
+        "type": "speech"
+      },
+      {
+        "id": "action_1fm7h3Ru",
+        "type": "spotlight",
+        "elementId": "text_syAAmKPg"
+      },
+      {
+        "id": "action_ruP3jz3T",
+        "text": "第三个字，他。说到别人，就用他。我们读一读，他。",
+        "type": "speech"
+      },
+      {
+        "id": "action_Qv2IZvHE",
+        "type": "spotlight",
+        "elementId": "text_ELIRL8_K"
+      },
+      {
+        "id": "action_jBNlXtoG",
+        "text": "老师用它们说一句话。你是小红，我是小明，他是小刚。小朋友，你也来说一说。",
+        "type": "speech"
+      },
+      {
+        "id": "action_Ftqu5zFb",
+        "text": "你、我、他，真好用。说话的时候天天都用得到，我们一起再读一遍，你、我、他。",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "k17tv5ByqKSoE-IzhsG98",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "text_icZAhJZR",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px\"><strong>你、我、他 真好用</strong></p>",
+            "defaultColor": "#1f4e79",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_-a7x2Tl3",
+            "top": 136,
+            "fill": "#5b9bd5",
+            "left": 70,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 860,
+            "height": 4,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_vyJhaYzv",
+            "top": 180,
+            "fill": "#e8f4fd",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 260,
+            "height": 180,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_YAfhf4j1",
+            "top": 180,
+            "fill": "#fef3c7",
+            "left": 370,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 260,
+            "height": 180,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_mziceGXS",
+            "top": 180,
+            "fill": "#dcfce7",
+            "left": 680,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 260,
+            "height": 180,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_sCcsyQYt",
+            "top": 200,
+            "left": 80,
+            "type": "text",
+            "width": 220,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px;text-align:center\">nǐ</p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_H3Q6Gl1v",
+            "top": 264,
+            "left": 80,
+            "type": "text",
+            "width": 220,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>你</strong></p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_EnkS98ef",
+            "top": 200,
+            "left": 390,
+            "type": "text",
+            "width": 220,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px;text-align:center\">wǒ</p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_UZEFtUVE",
+            "top": 264,
+            "left": 390,
+            "type": "text",
+            "width": 220,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>我</strong></p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_DeVCezXV",
+            "top": 200,
+            "left": 700,
+            "type": "text",
+            "width": 220,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px;text-align:center\">tā</p>",
+            "defaultColor": "#166534",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_syAAmKPg",
+            "top": 264,
+            "left": 700,
+            "type": "text",
+            "width": 220,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>他</strong></p>",
+            "defaultColor": "#166534",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_EEBIizBI",
+            "top": 400,
+            "fill": "#f5f8ff",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 880,
+            "height": 95,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_ELIRL8_K",
+            "top": 418,
+            "left": 80,
+            "type": "text",
+            "width": 840,
+            "height": 58,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center\"><span style=\"color:#1e40af\"><strong>你</strong></span>是小红，<span style=\"color:#b45309\"><strong>我</strong></span>是<span style=\"color:#b45309\"></span>小明，<span style=\"color:#166534\"><strong>他</strong></span>是小刚。</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791421775255,
+    "outlineId": "scene_7",
+    "updatedAt": 1791421775255
+  },
+  {
+    "id": "IVI4KSchzYW30gXeeCp5-",
+    "type": "slide",
+    "order": 8,
+    "title": "说说'我'",
+    "actions": [
+      {
+        "id": "action_tLCWO1mM",
+        "type": "spotlight",
+        "elementId": "text_NqxZU50H"
+      },
+      {
+        "id": "action_ChFF9g9P",
+        "text": "刚才我们认识了'你、我、他'，真棒。今天我们先来学一个字——'我'。",
+        "type": "speech"
+      },
+      {
+        "id": "action_JteYkpW5",
+        "type": "spotlight",
+        "elementId": "text_evm3g9vD"
+      },
+      {
+        "id": "action_5VGBItcN",
+        "text": "看一看，图里的小朋友指着自己说话。指着自己，就说'我'。你是不是也常常这样说呀？",
+        "type": "speech"
+      },
+      {
+        "id": "action_wOGVGew1",
+        "type": "spotlight",
+        "elementId": "text_LiB4_zzQ"
+      },
+      {
+        "id": "action_wZnfB6E5",
+        "text": "我们一起来读拼音，wǒ。嘴巴张圆一点，wǒ。",
+        "type": "speech"
+      },
+      {
+        "id": "action_5FHiwgjS",
+        "type": "spotlight",
+        "elementId": "text_5b5H6Ju2"
+      },
+      {
+        "id": "action_Aq-MK_Wq",
+        "text": "这个字就是'我'。跟老师读一遍，我。声音再响亮一点，我。",
+        "type": "speech"
+      },
+      {
+        "id": "action_DdhiTt4r",
+        "type": "spotlight",
+        "elementId": "text_c_SuvZrn"
+      },
+      {
+        "id": "action_N-FnoB9y",
+        "text": "读一读，wǒ——我。再来一遍，wǒ——我。真不错！",
+        "type": "speech"
+      },
+      {
+        "id": "action_-u1o_Lbp",
+        "type": "spotlight",
+        "elementId": "text_do0xUBfu"
+      },
+      {
+        "id": "action_Px8LCjvT",
+        "text": "现在轮到你啦。指着自己，说一句'我是……'，说说你叫什么名字。",
+        "type": "speech"
+      },
+      {
+        "id": "action_xBVhG27w",
+        "type": "discussion",
+        "topic": "指着自己，说一说'我是……'",
+        "prompt": "小朋友，伸出小手指一指自己，大声说出你的名字和喜欢的东西吧。",
+        "agentId": "gen-kdeeZ_ye"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "AfGYGZBmvEdXCFFdlmBy-",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "shape_KOtKb20S",
+            "top": 155,
+            "fill": "#fff4e6",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 360,
+            "height": 330,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_QvoFoe-s",
+            "top": 155,
+            "fill": "#eaf4fd",
+            "left": 460,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 480,
+            "height": 330,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_KrbRmbdy",
+            "top": 362,
+            "fill": "#dcfce7",
+            "left": 476,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 436,
+            "height": 68,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_HEOJ_f4L",
+            "top": 187,
+            "fill": "#ffd9a0",
+            "left": 216,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 48,
+            "height": 48,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_pG3Vkmy3",
+            "top": 198,
+            "fill": "#4a3b2a",
+            "left": 228,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 5,
+            "height": 5,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_IphjTL-I",
+            "top": 198,
+            "fill": "#4a3b2a",
+            "left": 247,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 5,
+            "height": 5,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "line_r-qd5xCp",
+            "end": [
+              12,
+              0
+            ],
+            "top": 214,
+            "left": 234,
+            "type": "line",
+            "color": "#c98b5e",
+            "curve": [
+              6,
+              4
+            ],
+            "start": [
+              0,
+              0
+            ],
+            "style": "solid",
+            "width": 2,
+            "points": [
+              "",
+              ""
+            ],
+            "rotate": 0
+          },
+          {
+            "id": "shape_ek0DezhA",
+            "top": 237,
+            "fill": "#8ecae6",
+            "left": 220,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 40,
+            "height": 42,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "line_GcmdS6wl",
+            "end": [
+              0,
+              13
+            ],
+            "top": 245,
+            "left": 238,
+            "type": "line",
+            "color": "#ffd9a0",
+            "start": [
+              20,
+              0
+            ],
+            "style": "solid",
+            "width": 3,
+            "points": [
+              "",
+              ""
+            ],
+            "rotate": 0
+          },
+          {
+            "id": "shape_k9W6l15l",
+            "top": 254,
+            "fill": "#ffd9a0",
+            "left": 232,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 12,
+            "height": 12,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_VLWurTfH",
+            "top": 239,
+            "fill": "#ffb347",
+            "left": 482,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 10,
+            "height": 10,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_sqmgbAP4",
+            "top": 315,
+            "fill": "#ffb347",
+            "left": 482,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 10,
+            "height": 10,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_A3BJ1nq5",
+            "top": 391,
+            "fill": "#3fa66a",
+            "left": 482,
+            "path": "M 1 0.5 A 0.5 0.5 0 1 1 0 0.5 A 0.5 0.5 0 1 1 1 0.5 Z",
+            "type": "shape",
+            "width": 10,
+            "height": 10,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_NqxZU50H",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 500,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px\"><strong>说说“我”</strong></p>",
+            "defaultColor": "#1f4e79",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_ZSNLenmx",
+            "top": 128,
+            "fill": "#ffb347",
+            "left": 64,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 200,
+            "height": 4,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_LiB4_zzQ",
+            "top": 304,
+            "left": 80,
+            "type": "text",
+            "width": 320,
+            "height": 64,
+            "rotate": 0,
+            "content": "<p style=\"font-size:28px;text-align:center\">wǒ</p>",
+            "defaultColor": "#e07a1f",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_5b5H6Ju2",
+            "top": 378,
+            "left": 80,
+            "type": "text",
+            "width": 320,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>我</strong></p>",
+            "defaultColor": "#1f4e79",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_evm3g9vD",
+            "top": 218,
+            "left": 500,
+            "type": "text",
+            "width": 400,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px\">指自己，就说“我”</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_c_SuvZrn",
+            "top": 294,
+            "left": 500,
+            "type": "text",
+            "width": 400,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px\">读一读：wǒ —— 我</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_do0xUBfu",
+            "top": 370,
+            "left": 500,
+            "type": "text",
+            "width": 400,
+            "height": 52,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px\">说一说：我是……</p>",
+            "defaultColor": "#1a7a45",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791421826920,
+    "outlineId": "scene_8",
+    "updatedAt": 1791421826920
+  },
+  {
+    "id": "WtWmPU3e4wVVTzomQP11B",
+    "type": "slide",
+    "order": 9,
+    "title": "说说'你'和'他'",
+    "actions": [
+      {
+        "id": "action_iXYY2Z0j",
+        "type": "spotlight",
+        "elementId": "text_lSftbYKi"
+      },
+      {
+        "id": "action_3P_X6TMN",
+        "text": "刚才我们说了'我'。现在说一说'你'和'他'。",
+        "type": "speech"
+      },
+      {
+        "id": "action_64CuQUNj",
+        "type": "spotlight",
+        "elementId": "text_gXHhKAzp"
+      },
+      {
+        "id": "action_yFJK8VYo",
+        "text": "看，图上有几个小朋友。他们面对面，正在说话呢。",
+        "type": "speech"
+      },
+      {
+        "id": "action_pv0JHdXa",
+        "type": "spotlight",
+        "elementId": "text_VZ4gLSQz"
+      },
+      {
+        "id": "action_D70SlHxo",
+        "text": "面对面的时候，我们指着对方，就说'你'。",
+        "type": "speech"
+      },
+      {
+        "id": "action_MOTURk6N",
+        "type": "spotlight",
+        "elementId": "text_zl3lfQ_I"
+      },
+      {
+        "id": "action_LjyqRUw1",
+        "text": "跟我读，你，nǐ。你，nǐ。",
+        "type": "speech"
+      },
+      {
+        "id": "action_g6MSrdrp",
+        "type": "spotlight",
+        "elementId": "text_EQSl9E-y"
+      },
+      {
+        "id": "action_YZLpCn5b",
+        "text": "旁边还有一个小朋友，他没有说话，我们说到他，就用'他'。",
+        "type": "speech"
+      },
+      {
+        "id": "action_CnBbsflR",
+        "type": "spotlight",
+        "elementId": "text_11QCR_Pw"
+      },
+      {
+        "id": "action_anXesyVl",
+        "text": "一起读，他，tā。他，tā。",
+        "type": "speech"
+      },
+      {
+        "id": "action_ps-KMCSV",
+        "type": "spotlight",
+        "elementId": "text_MvNkc87v"
+      },
+      {
+        "id": "action_M4cKE0-e",
+        "text": "我们来试一试。指同桌，说'你'。指远处的小朋友，说'他'。你，他。真棒！",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "TIkVqVG2zR6onygtWuBR8",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "text_lSftbYKi",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px\"><strong>说说“你”和“他”</strong></p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape__M9RtrBb",
+            "top": 128,
+            "fill": "#5b9bd5",
+            "left": 70,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 860,
+            "height": 3,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_Nc5gY_gF",
+            "top": 160,
+            "fill": "#dbeafe",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 430,
+            "height": 240,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_aRtUUrlJ",
+            "top": 160,
+            "fill": "#ffedd5",
+            "left": 510,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 430,
+            "height": 240,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_gXHhKAzp",
+            "top": 180,
+            "left": 80,
+            "type": "text",
+            "width": 390,
+            "height": 58,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center\">🧒  🧒</p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_BeeQ9FTU",
+            "top": 180,
+            "left": 530,
+            "type": "text",
+            "width": 390,
+            "height": 58,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center\">🧒  🧒　　🧒</p>",
+            "defaultColor": "#c2410c",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_zl3lfQ_I",
+            "top": 251,
+            "left": 80,
+            "type": "text",
+            "width": 390,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>你　nǐ</strong></p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_11QCR_Pw",
+            "top": 251,
+            "left": 530,
+            "type": "text",
+            "width": 390,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>他　tā</strong></p>",
+            "defaultColor": "#c2410c",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_VZ4gLSQz",
+            "top": 334,
+            "left": 80,
+            "type": "text",
+            "width": 390,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px;text-align:center\">面对面，指着对方说</p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_EQSl9E-y",
+            "top": 334,
+            "left": 530,
+            "type": "text",
+            "width": 390,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px;text-align:center\">说旁边的小朋友</p>",
+            "defaultColor": "#c2410c",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_mX9bb5M3",
+            "top": 420,
+            "fill": "#f3f4f6",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 880,
+            "height": 92,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_MvNkc87v",
+            "top": 428,
+            "left": 80,
+            "type": "text",
+            "width": 840,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:18px\">指同桌，说“你”。</p><p style=\"font-size:18px\">指远处的小朋友，说“他”。</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791421846671,
+    "outlineId": "scene_9",
+    "updatedAt": 1791421846671
+  },
+  {
+    "id": "fCJ9lpbaBq6IHlweC_nR3",
+    "type": "interactive",
+    "order": 10,
+    "title": "你我他点一点",
+    "actions": [
+      {
+        "id": "action_hiCqd9On",
+        "text": "刚才我们指同桌说'你'，指远处的小朋友说'他'。现在我们来玩一玩点一点的小游戏。",
+        "type": "speech"
+      },
+      {
+        "id": "action_wmjdVz02",
+        "type": "widget_highlight",
+        "target": "#startScreen",
+        "content": "点一点这里，游戏就开始啦。"
+      },
+      {
+        "id": "action_wed5CmRi",
+        "text": "屏幕上有小朋友，还有一句话。看一看，想一想，该用哪个字。",
+        "type": "speech"
+      },
+      {
+        "id": "action_mEzb0HxR",
+        "type": "widget_annotation",
+        "target": "#sentenceBar",
+        "content": "先读一读这句话，再想用'你''我''他'里的哪一个。"
+      },
+      {
+        "id": "action_fP7alC0k",
+        "type": "widget_highlight",
+        "target": "#field",
+        "content": "飘过来的气泡里就是'你''我''他'，点一点对的字。"
+      },
+      {
+        "id": "action_cqXZ2E9f",
+        "text": "答对了有笑脸，还有星星。答错了也没关系，我们再来一次。",
+        "type": "speech"
+      },
+      {
+        "id": "action_lw-QkZxt",
+        "type": "widget_highlight",
+        "target": "#starVal",
+        "content": "每答对一题，星星就多一颗。"
+      },
+      {
+        "id": "action_efBK2sJK",
+        "text": "你、我、他，越用越熟练。下一关，我们再来考一考。",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "url": "",
+      "html": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no\">\n<title>你我他 点一点</title>\n<style>\n*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}\nhtml,body{margin:0;padding:0;height:100%;overflow:hidden;}\nbody{\n  font-family:\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",\"Heiti SC\",\"Noto Sans SC\",sans-serif;\n  background:#8FD8F5;color:#2B3A55;\n  user-select:none;-webkit-user-select:none;\n  display:flex;justify-content:center;align-items:stretch;\n}\n#experiment{\n  position:relative;width:100%;max-width:720px;\n  height:100vh;height:100dvh;\n  display:flex;flex-direction:column;overflow:hidden;\n  background:linear-gradient(170deg,#CFEEFF 0%,#E7F9F0 55%,#FFF6DF 100%);\n  box-shadow:0 0 40px rgba(0,0,0,.15);\n}\n#app{flex:1;min-height:0;display:flex;flex-direction:column;}\n\n/* ---------- HUD ---------- */\n#hud{flex:none;display:flex;align-items:center;gap:5px;padding:8px 8px 6px;}\n.hud-item{\n  display:flex;align-items:center;gap:3px;background:#fff;border-radius:999px;\n  padding:3px 9px;font-size:13px;font-weight:800;color:#3B4C6B;\n  box-shadow:0 2px 0 rgba(43,58,85,.10);white-space:nowrap;\n}\n#levelChip{background:#FFE9B8;color:#A96A00;}\n.spacer{flex:1;}\n#pause-btn{\n  flex:none;width:42px;height:34px;border:none;border-radius:12px;background:#fff;\n  color:#3B4C6B;font-size:16px;box-shadow:0 2px 0 rgba(43,58,85,.10);cursor:pointer;\n}\n#pause-btn:active{transform:translateY(2px);box-shadow:none;}\n\n/* ---------- 时间条 ---------- */\n#timerWrap{flex:none;height:9px;background:rgba(43,58,85,.10);margin:0 10px;border-radius:999px;overflow:hidden;}\n#timerBar{height:100%;width:100%;border-radius:999px;background:linear-gradient(90deg,#6EE7B7,#FCD34D);transition:background .3s;}\n#timerBar.low{background:linear-gradient(90deg,#FDBA74,#FCA5A5);}\n#timerBar.out{background:#D7DEE8;}\n\n/* ---------- 舞台 ---------- */\n#stage{flex:1;min-height:0;display:flex;flex-direction:column;position:relative;}\n\n#kidsRow{flex:none;display:flex;justify-content:space-around;align-items:flex-end;padding:6px 6px 0;}\n.kid{display:flex;flex-direction:column;align-items:center;width:33%;max-width:110px;}\n.kid .marks{height:22px;display:flex;align-items:center;gap:2px;font-size:16px;line-height:1;transition:opacity .5s;}\n.kid .marks .m.ref{display:inline-block;animation:bob .8s infinite;}\n.kid .marks .m.lis{animation:bob 1.2s infinite;}\n.kid .avatar{\n  width:58px;height:58px;border-radius:50%;background:#fff;border:3px solid #fff;\n  display:flex;align-items:center;justify-content:center;font-size:32px;\n  box-shadow:0 3px 0 rgba(43,58,85,.12);\n  transition:box-shadow .35s,border-color .35s;\n}\n.kid.ref .avatar{\n  border-color:#5EE7A8;\n  animation:pulseRing 1.2s infinite;\n}\n.kid .kname{font-size:12px;font-weight:800;color:#5A6B87;margin-top:3px;}\n.kid.cue-hidden .marks{opacity:0;}\n.kid.cue-hidden .avatar{border-color:#fff;box-shadow:0 3px 0 rgba(43,58,85,.12);animation:none;}\n\n@keyframes pulseRing{\n  0%,100%{box-shadow:0 0 0 4px rgba(94,231,168,.55),0 3px 0 rgba(43,58,85,.12);}\n  50%{box-shadow:0 0 0 11px rgba(94,231,168,.15),0 3px 0 rgba(43,58,85,.12);}\n}\n@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}\n\n/* ---------- 句子 ---------- */\n#sentenceBar{\n  flex:none;margin:7px 10px 4px;background:#fff;border-radius:18px;\n  padding:9px 12px;min-height:56px;\n  font-size:clamp(18px,5.2vw,27px);font-weight:800;line-height:1.4;\n  box-shadow:0 4px 0 rgba(43,58,85,.10);\n  display:flex;align-items:center;justify-content:center;flex-wrap:wrap;\n  text-align:center;transition:background .25s;\n}\n#sentenceBar.correct{background:#DFFBEC;}\n.speakerTag{color:#E8734A;margin-right:1px;}\n.blank{\n  display:inline-flex;align-items:center;justify-content:center;\n  min-width:1.5em;height:1.4em;margin:0 5px;padding:0 .12em;\n  border:3px dashed #FFB74D;border-radius:10px;\n  color:#FFB74D;background:#FFF8E6;vertical-align:middle;\n}\n.blank.filled{border-style:solid;border-color:#2FB3AD;color:#fff;background:#2FB3AD;animation:pop .35s ease-out;}\n@keyframes pop{0%{transform:scale(.4);}60%{transform:scale(1.25);}100%{transform:scale(1);}}\n\n/* ---------- 气泡区 ---------- */\n#field{flex:1;min-height:130px;position:relative;overflow:hidden;}\n.bubble{position:absolute;left:0;top:0;cursor:pointer;will-change:transform;touch-action:manipulation;}\n.binner{\n  width:100%;height:100%;border-radius:50%;\n  display:flex;flex-direction:column;align-items:center;justify-content:center;\n  color:#fff;font-weight:900;line-height:1;\n  box-shadow:inset 0 -7px 0 rgba(0,0,0,.13),0 7px 16px rgba(43,58,85,.20);\n  transition:filter .3s,opacity .3s;\n}\n.binner .ch{letter-spacing:-1px;text-shadow:0 2px 0 rgba(0,0,0,.12);}\n.binner .py{font-weight:700;opacity:.92;margin-top:3px;letter-spacing:.5px;}\n.binner.ni{background:linear-gradient(160deg,#63DFD8,#2FB3AD);}\n.binner.wo{background:linear-gradient(160deg,#FFC46E,#F09433);}\n.binner.ta{background:linear-gradient(160deg,#BCA6FC,#8B6CE8);}\n.bubble.wrong{opacity:.35;filter:grayscale(1);pointer-events:none;}\n.bubble.hinted .binner{animation:glowPulse 1s infinite;}\n.binner.shake{animation:shake .42s;}\n.binner.pop{animation:popOut .42s ease-out forwards;}\n@keyframes shake{0%,100%{transform:translateX(0);}20%{transform:translateX(-9px);}40%{transform:translateX(9px);}60%{transform:translateX(-6px);}80%{transform:translateX(6px);}}\n@keyframes popOut{0%{transform:scale(1);}45%{transform:scale(1.28);}100%{transform:scale(0);opacity:0;}}\n@keyframes glowPulse{\n  0%,100%{box-shadow:inset 0 -7px 0 rgba(0,0,0,.13),0 0 0 0 rgba(255,255,255,.95);}\n  50%{box-shadow:inset 0 -7px 0 rgba(0,0,0,.13),0 0 0 16px rgba(255,255,255,0);}\n}\n\n.particle{position:absolute;left:0;top:0;pointer-events:none;z-index:6;animation:burst .8s ease-out forwards;}\n@keyframes burst{\n  0%{transform:translate(-50%,-50%) scale(.4);opacity:1;}\n  100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.4);opacity:0;}\n}\n.floatscore{\n  position:absolute;left:0;top:0;pointer-events:none;z-index:7;\n  font-weight:900;font-size:22px;color:#12A594;text-shadow:0 2px 0 #fff;\n  animation:floatUp 1s ease-out forwards;\n}\n@keyframes floatUp{\n  0%{transform:translate(-50%,-50%) scale(.6);opacity:1;}\n  100%{transform:translate(-50%,-190%) scale(1.2);opacity:0;}\n}\n\n/* ---------- 底部提示 ---------- */\n#footer{flex:none;padding:6px 12px 12px;min-height:38px;text-align:center;\n  font-size:14px;font-weight:700;color:#5A6B87;line-height:1.35;}\n\n/* ---------- 遮罩层 ---------- */\n.overlay{\n  position:absolute;inset:0;z-index:50;display:flex;flex-direction:column;\n  align-items:center;justify-content:center;padding:18px;text-align:center;\n  background:rgba(233,248,255,.97);\n}\n.overlay.hidden{display:none;}\nh1{font-size:clamp(24px,7vw,36px);margin:0 0 4px;color:#2B3A55;letter-spacing:2px;}\n.sub{font-size:15px;color:#7C8CA8;margin:0 0 14px;letter-spacing:3px;font-weight:700;}\n.cards{display:flex;gap:12px;margin-bottom:14px;}\n.mini{\n  width:70px;height:82px;border-radius:18px;color:#fff;font-size:34px;font-weight:900;\n  display:flex;flex-direction:column;align-items:center;justify-content:center;\n  box-shadow:0 5px 0 rgba(43,58,85,.16);\n}\n.mini span{font-size:14px;font-weight:700;opacity:.92;margin-top:2px;}\n.mini.ni{background:linear-gradient(160deg,#63DFD8,#2FB3AD);}\n.mini.wo{background:linear-gradient(160deg,#FFC46E,#F09433);}\n.mini.ta{background:linear-gradient(160deg,#BCA6FC,#8B6CE8);}\n.rules{\n  background:#fff;border-radius:16px;padding:12px 16px;font-size:14px;font-weight:700;\n  color:#4A5B78;line-height:1.9;box-shadow:0 4px 0 rgba(43,58,85,.10);margin-bottom:16px;\n  max-width:340px;\n}\n.rules b{color:#E8734A;}\n.big-btn{\n  border:none;border-radius:999px;padding:15px 46px;font-size:21px;font-weight:900;\n  color:#fff;background:linear-gradient(160deg,#54D6C9,#22A79F);\n  box-shadow:0 6px 0 #17867F;cursor:pointer;font-family:inherit;letter-spacing:2px;\n}\n.big-btn:active{transform:translateY(4px);box-shadow:0 2px 0 #17867F;}\n.big-btn.alt{background:linear-gradient(160deg,#FFC46E,#F09433);box-shadow:0 6px 0 #C4761F;}\n.big-btn.alt:active{box-shadow:0 2px 0 #C4761F;}\n\n.res-row{display:flex;gap:10px;margin:6px 0 12px;}\n.res-box{background:#fff;border-radius:14px;padding:8px 14px;min-width:78px;box-shadow:0 4px 0 rgba(43,58,85,.10);}\n.res-box .lb{font-size:11px;color:#8A99B3;font-weight:700;}\n.res-box .vl{font-size:20px;font-weight:900;color:#2B3A55;}\n#resBigStars{font-size:32px;letter-spacing:4px;margin:4px 0 6px;}\n#resAch{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;max-width:340px;margin-bottom:14px;}\n.ach-item{\n  background:#EEF3F9;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:800;\n  color:#9AA8BE;display:flex;align-items:center;gap:4px;\n}\n.ach-item.got{background:#FFF3D0;color:#A96A00;box-shadow:0 2px 0 rgba(201,140,0,.2);}\n\n/* toast & 徽章弹窗 */\n.toast{\n  position:absolute;left:50%;top:42%;transform:translate(-50%,-50%) scale(.7);\n  background:#fff;border-radius:20px;padding:18px 28px;font-size:20px;font-weight:900;\n  color:#2B3A55;box-shadow:0 8px 26px rgba(43,58,85,.25);z-index:60;\n  opacity:0;pointer-events:none;transition:all .3s;white-space:nowrap;\n}\n.toast.show{opacity:1;transform:translate(-50%,-50%) scale(1);}\n.ach-pop{\n  position:absolute;left:50%;top:14px;transform:translate(-50%,-140%);\n  display:flex;align-items:center;gap:9px;background:#fff;border-radius:16px;\n  padding:8px 16px;box-shadow:0 6px 18px rgba(43,58,85,.22);z-index:70;\n  transition:transform .35s cubic-bezier(.2,1.4,.5,1);white-space:nowrap;\n}\n.ach-pop.show{transform:translate(-50%,0);}\n.ach-pop .ai{font-size:24px;}\n.ach-pop .at{font-size:10px;color:#8A99B3;font-weight:800;}\n.ach-pop .an{font-size:15px;font-weight:900;color:#A96A00;}\n</style>\n\n<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js\"></script>\n<script>\ndocument.addEventListener(\"DOMContentLoaded\", function() {\n    const katexOptions = {\n        delimiters: [\n            {left: '\\\\[', right: '\\\\]', display: true},\n            {left: '\\\\(', right: '\\\\)', display: false},\n            {left: '$$', right: '$$', display: true},\n            {left: '$', right: '$', display: false}\n        ],\n        throwOnError: false,\n        strict: false,\n        trust: true\n    };\n\n    let renderTimeout;\n    function safeRender() {\n        if (renderTimeout) clearTimeout(renderTimeout);\n        renderTimeout = setTimeout(() => {\n            renderMathInElement(document.body, katexOptions);\n        }, 100);\n    }\n\n    renderMathInElement(document.body, katexOptions);\n\n    const observer = new MutationObserver((mutations) => {\n        let shouldRender = false;\n        mutations.forEach((mutation) => {\n            if (mutation.target &&\n                mutation.target.className &&\n                typeof mutation.target.className === 'string' &&\n                mutation.target.className.includes('katex')) {\n                return;\n            }\n            shouldRender = true;\n        });\n\n        if (shouldRender) {\n            safeRender();\n        }\n    });\n\n    observer.observe(document.body, {\n        childList: true,\n        subtree: true,\n        characterData: true\n    });\n\n    setInterval(() => {\n        const text = document.body.innerText;\n        if (text.includes('\\\\(') || text.includes('$$')) {\n            safeRender();\n        }\n    }, 2000);\n});\n</script>\n</head>\n<body>\n<div id=\"experiment\">\n  <div id=\"app\">\n    <header id=\"hud\">\n      <div class=\"hud-item\"><span>🏆</span><span id=\"scoreVal\">0</span></div>\n      <div class=\"hud-item\"><span>⭐</span><span id=\"starVal\">0</span></div>\n      <div class=\"hud-item\"><span>🔥</span><span id=\"streakVal\">0</span></div>\n      <div class=\"hud-item\" id=\"levelChip\">第 1 关</div>\n      <div class=\"spacer\"></div>\n      <button id=\"pause-btn\" onclick=\"togglePause()\" aria-label=\"暂停\">⏸</button>\n    </header>\n    <div id=\"timerWrap\"><div id=\"timerBar\"></div></div>\n    <div id=\"stage\">\n      <div id=\"kidsRow\"></div>\n      <div id=\"sentenceBar\"></div>\n      <div id=\"field\"></div>\n    </div>\n    <div id=\"footer\"><span id=\"hintText\">点一点，选出正确的字！</span></div>\n  </div>\n\n  <!-- 开始页 -->\n  <div id=\"startScreen\" class=\"overlay\">\n    <h1>你我他 点一点</h1>\n    <p class=\"sub\">nǐ &nbsp; wǒ &nbsp; tā</p>\n    <div class=\"cards\">\n      <div class=\"mini ni\">你<span>nǐ</span></div>\n      <div class=\"mini wo\">我<span>wǒ</span></div>\n      <div class=\"mini ta\">他<span>tā</span></div>\n    </div>\n    <div class=\"rules\">\n      💬 在说话的小朋友<br>\n      👀 听他说话的小朋友<br>\n      ⭐ 句子里说的那个人<br><br>\n      <b>⭐在自己身上 → 我</b><br>\n      <b>⭐在👀身上 → 你</b><br>\n      <b>⭐在别人身上 → 他</b>\n    </div>\n    <button class=\"big-btn\" onclick=\"startGame()\">开始玩 ▶</button>\n  </div>\n\n  <!-- 暂停页 -->\n  <div id=\"pauseScreen\" class=\"overlay hidden\">\n    <h1>休息一下</h1>\n    <p class=\"sub\">⏸ 已暂停</p>\n    <button class=\"big-btn\" onclick=\"togglePause()\" style=\"margin-bottom:14px;\">继续玩 ▶</button>\n    <button class=\"big-btn alt\" onclick=\"restartGame()\">重新开始</button>\n  </div>\n\n  <!-- 结算页 -->\n  <div id=\"resultScreen\" class=\"overlay hidden\">\n    <h1>玩完啦！</h1>\n    <div id=\"resBigStars\">⭐☆☆</div>\n    <div class=\"res-row\">\n      <div class=\"res-box\"><div class=\"lb\">总得分</div><div class=\"vl\" id=\"resScore\">0</div></div>\n      <div class=\"res-box\"><div class=\"lb\">答对</div><div class=\"vl\" id=\"resStars\">0</div></div>\n      <div class=\"res-box\"><div class=\"lb\">正确率</div><div class=\"vl\" id=\"resAcc\">0%</div></div>\n    </div>\n    <div style=\"font-size:13px;font-weight:800;color:#7C8CA8;margin-bottom:8px;\">最高分：<span id=\"resBest\">0</span></div>\n    <div id=\"resAch\"></div>\n    <button class=\"big-btn\" onclick=\"startGame()\">再玩一次 ▶</button>\n  </div>\n\n  <div id=\"levelToast\" class=\"toast\"></div>\n  <div id=\"achPop\" class=\"ach-pop\"></div>\n\n  <script type=\"application/json\" id=\"widget-config\">\n  {\n    \"type\": \"game\",\n    \"gameType\": \"action\",\n    \"description\": \"点击漂浮的‘你/我/他’气泡，判断句子中的人称代词。\",\n    \"gameConfig\": {\n      \"controls\": [\"tap_bubble\"],\n      \"initialConditions\": { \"levels\": 3, \"roundsPerLevel\": 6, \"bubbleSpeed\": [24,44,66] },\n      \"successCondition\": \"答对并拿到星星\"\n    },\n    \"scoring\": { \"correctPoints\": 10, \"speedBonus\": 5 },\n    \"achievements\": [\n      { \"id\": \"first\", \"name\": \"小小侦探\", \"icon\": \"🔍\" },\n      { \"id\": \"streak5\", \"name\": \"连对五题\", \"icon\": \"🔥\" },\n      { \"id\": \"fast\", \"name\": \"小闪电\", \"icon\": \"⚡\" },\n      { \"id\": \"perfect\", \"name\": \"全对啦\", \"icon\": \"💯\" },\n      { \"id\": \"master\", \"name\": \"人称小达人\", \"icon\": \"👑\" }\n    ]\n  }\n  </script>\n</div>\n\n<script>\n/* ================= 数据 ================= */\nvar KIDS = {\n  mei:  { name:'小美', emoji:'👧' },\n  ming: { name:'小明', emoji:'👦' },\n  gang: { name:'小刚', emoji:'🧒' }\n};\n\nvar RAW = [\n  { sp:'mei',  who:'我', ref:'mei',  text:'___ 叫小美。',      hint:'小美说她自己，要用“我”。' },\n  { sp:'ming', who:'我', ref:'ming', text:'___ 叫小明。',      hint:'小明说他自己，要用“我”。' },\n  { sp:'gang', who:'我', ref:'gang', text:'___ 今年六岁。',    hint:'说话人在说自己，要用“我”。' },\n  { sp:'mei',  who:'我', ref:'mei',  text:'___ 爱吃苹果。',    hint:'小美说她自己，要用“我”。' },\n  { sp:'ming', who:'我', ref:'ming', text:'___ 的铅笔在这里。',hint:'小明说他自己，要用“我”。' },\n  { sp:'gang', who:'我', ref:'gang', text:'___ 会画画。',      hint:'小刚说他自己，要用“我”。' },\n  { sp:'mei',  who:'我', ref:'mei',  text:'___ 想玩滑梯。',    hint:'小美说她自己，要用“我”。' },\n\n  { sp:'mei',  who:'你', ref:'ming', text:'___ 好厉害！',      hint:'小美对着小明说话，要用“你”。' },\n  { sp:'mei',  who:'你', ref:'ming', text:'___ 叫什么名字？',  hint:'小美在问面前的小朋友，要用“你”。' },\n  { sp:'ming', who:'你', ref:'mei',  text:'___ 快来一起玩！',  hint:'小明在叫小美，要用“你”。' },\n  { sp:'gang', who:'你', ref:'mei',  text:'请 ___ 喝水。',     hint:'水是给说话对象喝的，要用“你”。' },\n  { sp:'mei',  who:'你', ref:'gang', text:'___ 坐这里吧。',    hint:'小美请面前的小朋友坐下，要用“你”。' },\n  { sp:'ming', who:'你', ref:'gang', text:'___ 真棒！',        hint:'小明在夸面前的小朋友，要用“你”。' },\n  { sp:'gang', who:'你', ref:'ming', text:'___ 笑一笑。',      hint:'小刚对面前的小朋友说话，要用“你”。' },\n\n  { sp:'mei',  who:'他', ref:'gang', text:'___ 在跑步。',      hint:'小美说的是旁边那个人，要用“他”。' },\n  { sp:'mei',  who:'他', ref:'ming', text:'___ 在唱歌。',      hint:'说的是旁边不在对话里的人，要用“他”。' },\n  { sp:'ming', who:'他', ref:'gang', text:'___ 是我的好朋友。',hint:'说的是旁边那个人，要用“他”。' },\n  { sp:'gang', who:'他', ref:'ming', text:'把球给 ___ 吧。',   hint:'球要给旁边那个人，要用“他”。' },\n  { sp:'mei',  who:'他', ref:'ming', text:'___ 跑得真快！',    hint:'说的是旁边那个人，要用“他”。' },\n  { sp:'ming', who:'他', ref:'mei',  text:'___ 在看书。',      hint:'说的是旁边那个人，要用“他”。' },\n  { sp:'gang', who:'他', ref:'mei',  text:'___ 在笑呢。',      hint:'说的是旁边那个人，要用“他”。' }\n];\n\nvar PRONOUNS = [\n  { ch:'你', py:'nǐ', cls:'ni' },\n  { ch:'我', py:'wǒ', cls:'wo' },\n  { ch:'他', py:'tā', cls:'ta' }\n];\n\nvar ACHIEVEMENTS = [\n  { id:'first',   name:'小小侦探', icon:'🔍' },\n  { id:'streak5', name:'连对五题', icon:'🔥' },\n  { id:'fast',    name:'小闪电',   icon:'⚡' },\n  { id:'perfect', name:'全对啦',   icon:'💯' },\n  { id:'master',  name:'人称小达人', icon:'👑' }\n];\n\nvar SPEEDS = [24, 44, 66];\nvar LIMITS = [16, 14, 12];\nvar ROUNDS_PER_LEVEL = 6;\nvar LEVELS = 3;\n\n/* ================= 状态 ================= */\nvar state = {\n  phase:'ready', running:false, paused:false, locked:true,\n  level:1, round:0,\n  score:0, stars:0, streak:0, bestStreak:0,\n  correctCount:0, wrongCount:0, fastCount:0,\n  wrongThisRound:false, levelWrong:0,\n  current:null, questions:[], roundLimit:16, timerRemain:16, timeUp:false,\n  lastResult:null, bubbleSpeed:24, unlocked:{}, cueTimer:null\n};\n\nvar bubbles = [];\nvar lastTs = 0;\nvar el = {};\n\n/* ================= 音效 ================= */\nvar actx = null;\nfunction initAudio(){\n  if(actx) return;\n  try{\n    actx = new (window.AudioContext || window.webkitAudioContext)();\n    if(actx.state === 'suspended') actx.resume();\n  }catch(e){ actx = null; }\n}\nfunction beep(freq, start, dur, type, vol){\n  if(!actx) return;\n  try{\n    var o = actx.createOscillator(), g = actx.createGain();\n    o.type = type || 'sine';\n    o.frequency.value = freq;\n    var t = actx.currentTime + start;\n    g.gain.setValueAtTime(0.0001, t);\n    g.gain.linearRampToValueAtTime(vol || 0.13, t + 0.02);\n    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);\n    o.connect(g); g.connect(actx.destination);\n    o.start(t); o.stop(t + dur + 0.06);\n  }catch(e){}\n}\nfunction playCorrect(){ beep(523,0,0.16,'sine',0.16); beep(659,0.09,0.16,'sine',0.14); beep(784,0.18,0.26,'sine',0.14); }\nfunction playWrong(){ beep(340,0,0.16,'sine',0.10); beep(262,0.13,0.24,'sine',0.09); }\nfunction playLevel(){ [523,659,784,1047].forEach(function(f,i){ beep(f, i*0.11, 0.22, 'sine', 0.14); }); }\nfunction playTap(){ beep(700,0,0.06,'triangle',0.07); }\n\n/* ================= 工具 ================= */\nfunction $(id){ return document.getElementById(id); }\nfunction show(node){ node.classList.remove('hidden'); }\nfunction hide(node){ node.classList.add('hidden'); }\nfunction shuffle(a){\n  for(var i = a.length - 1; i > 0; i--){\n    var j = Math.floor(Math.random() * (i + 1));\n    var t = a[i]; a[i] = a[j]; a[j] = t;\n  }\n  return a;\n}\nfunction findBubble(ch){\n  for(var i = 0; i < bubbles.length; i++){ if(bubbles[i].id === ch) return bubbles[i]; }\n  return null;\n}\n\n/* ================= 状态发布 ================= */\nfunction publishState(observation){\n  var root = document.getElementById('experiment');\n  if(!root) throw new Error('Missing interaction scope');\n  try{\n    var raw = JSON.stringify(observation);\n    if(typeof raw !== 'string' || new TextEncoder().encode(raw).length > 32768)\n      throw new Error('Invalid state publication');\n    var node = root.querySelector('script[data-maic-observation]');\n    if(!node){\n      node = document.createElement('script');\n      node.type = 'application/json';\n      node.setAttribute('data-maic-observation','');\n      root.appendChild(node);\n    }\n    node.textContent = raw;\n  }catch(error){\n    root.querySelectorAll('script[data-maic-observation]').forEach(function(n){ n.remove(); });\n    throw error;\n  }\n}\n\nfunction buildSummary(){\n  if(state.phase === 'ready') return '游戏还没有开始，学生看到了开始页面。';\n  if(state.phase === 'paused') return '游戏已暂停。';\n  if(state.phase === 'levelup') return '第 ' + state.level + ' 关通过，马上进入下一关。';\n  if(state.phase === 'finished')\n    return '游戏结束，得分 ' + state.score + ' 分，答对 ' + state.correctCount + ' 题，答错 ' + state.wrongCount + ' 题。';\n  var q = state.current;\n  if(!q) return '正在准备题目。';\n  var s = '第 ' + state.level + ' 关 第 ' + (state.round + 1) + ' 题：' +\n          KIDS[q.sp].name + '说“' + q.text.replace('___','＿＿') + '”，' +\n          (state.locked ? '学生已经作答。' : '学生还没有作答。');\n  return s;\n}\n\nfunction publish(){\n  var q = state.current;\n  var obs = {\n    summary: buildSummary(),\n    state: {\n      phase: state.phase,\n      level: state.level,\n      roundInLevel: state.round + 1,\n      roundsPerLevel: ROUNDS_PER_LEVEL,\n      totalLevels: LEVELS,\n      score: state.score,\n      stars: state.stars,\n      streak: state.streak,\n      bestStreak: state.bestStreak,\n      correctCount: state.correctCount,\n      wrongCount: state.wrongCount,\n      paused: state.paused,\n      timerRemaining: Math.round(state.timerRemain * 10) / 10,\n      timerLimit: state.roundLimit,\n      question: q ? {\n        speaker: KIDS[q.sp].name,\n        sentence: q.text,\n        answer: q.who,\n        refersTo: KIDS[q.ref].name,\n        role: q.who === '我' ? '说话人自己' : (q.who === '你' ? '正在对话的小朋友' : '旁边的第三个人')\n      } : null,\n      roundStatus: state.locked ? (state.lastResult || 'idle') : 'waiting',\n      achievements: Object.keys(state.unlocked)\n    }\n  };\n  publishState(obs);\n}\n\n/* ================= 初始化 ================= */\nfunction init(){\n  el.kidsRow = $('kidsRow');\n  el.sentenceBar = $('sentenceBar');\n  el.field = $('field');\n  el.timerBar = $('timerBar');\n  el.hintText = $('hintText');\n  el.startScreen = $('startScreen');\n  el.pauseScreen = $('pauseScreen');\n  el.resultScreen = $('resultScreen');\n  el.levelToast = $('levelToast');\n  el.achPop = $('achPop');\n\n  buildBubbles();\n  layoutField();\n\n  window.addEventListener('resize', function(){\n    layoutField();\n    var W = el.field.clientWidth, H = el.field.clientHeight;\n    bubbles.forEach(function(b){\n      b.x = Math.min(Math.max(b.r + 2, b.x), Math.max(b.r + 2, W - b.r - 2));\n      b.y = Math.min(Math.max(b.r + 2, b.y), Math.max(b.r + 2, H - b.r - 2));\n      renderBubble(b);\n    });\n  });\n\n  state.phase = 'ready';\n  updateHUD();\n  publish();\n  requestAnimationFrame(loop);\n}\n\nfunction buildBubbles(){\n  el.field.innerHTML = '';\n  bubbles = PRONOUNS.map(function(p){\n    var node = document.createElement('div');\n    node.className = 'bubble';\n    var inner = document.createElement('div');\n    inner.className = 'binner ' + p.cls;\n    inner.innerHTML = '<span class=\"ch\">' + p.ch + '</span><span class=\"py\">' + p.py + '</span>';\n    node.appendChild(inner);\n    node.addEventListener('pointerdown', function(ev){\n      ev.preventDefault();\n      onTap(p.ch);\n    });\n    el.field.appendChild(node);\n    return {\n      id: p.ch, el: node, inner: inner,\n      baseClass: 'binner ' + p.cls,\n      x: 0, y: 0, vx: 0, vy: 0, r: 42, dead: false\n    };\n  });\n}\n\nfunction layoutField(){\n  var W = el.field.clientWidth, H = el.field.clientHeight;\n  if(!W || !H) return;\n  var r = Math.min(54, Math.max(28, Math.min(W / 8.4, H / 3.8)));\n  bubbles.forEach(function(b){\n    b.r = r;\n    b.el.style.width = (r * 2) + 'px';\n    b.el.style.height = (r * 2) + 'px';\n    var ch = b.el.querySelector('.ch');\n    var py = b.el.querySelector('.py');\n    if(ch) ch.style.fontSize = Math.round(r * 0.98) + 'px';\n    if(py) py.style.fontSize = Math.round(r * 0.34) + 'px';\n    renderBubble(b);\n  });\n}\n\nfunction renderBubble(b){\n  b.el.style.transform = 'translate3d(' + (b.x - b.r) + 'px,' + (b.y - b.r) + 'px,0)';\n}\n\n/* ================= 主循环 ================= */\nfunction loop(ts){\n  if(!lastTs) lastTs = ts;\n  var dt = Math.min(0.05, (ts - lastTs) / 1000);\n  lastTs = ts;\n  if(state.running && !state.paused && !state.locked){\n    stepBubbles(dt);\n    stepTimer(dt);\n  }\n  requestAnimationFrame(loop);\n}\n\nfunction stepBubbles(dt){\n  var W = el.field.clientWidth, H = el.field.clientHeight;\n  if(!W || !H) return;\n  var i, j, b;\n  for(i = 0; i < bubbles.length; i++){\n    b = bubbles[i];\n    if(b.dead) continue;\n    b.x += b.vx * dt;\n    b.y += b.vy * dt;\n  }\n  for(i = 0; i < bubbles.length; i++){\n    for(j = i + 1; j < bubbles.length; j++){\n      var a = bubbles[i], c = bubbles[j];\n      if(a.dead || c.dead) continue;\n      var dx = c.x - a.x, dy = c.y - a.y;\n      var d = Math.sqrt(dx * dx + dy * dy) || 0.001;\n      var minD = a.r + c.r + 8;\n      if(d < minD){\n        var push = (minD - d) / 2;\n        dx /= d; dy /= d;\n        a.x -= dx * push; a.y -= dy * push;\n        c.x += dx * push; c.y += dy * push;\n        var tvx = a.vx, tvy = a.vy;\n        a.vx = c.vx; a.vy = c.vy; c.vx = tvx; c.vy = tvy;\n      }\n    }\n  }\n  for(i = 0; i < bubbles.length; i++){\n    b = bubbles[i];\n    if(b.dead) continue;\n    if(b.x < b.r){ b.x = b.r; b.vx = Math.abs(b.vx); }\n    if(b.x > W - b.r){ b.x = W - b.r; b.vx = -Math.abs(b.vx); }\n    if(b.y < b.r){ b.y = b.r; b.vy = Math.abs(b.vy); }\n    if(b.y > H - b.r){ b.y = H - b.r; b.vy = -Math.abs(b.vy); }\n    renderBubble(b);\n  }\n}\n\nfunction stepTimer(dt){\n  state.timerRemain = Math.max(0, state.timerRemain - dt);\n  var pct = state.roundLimit > 0 ? (state.timerRemain / state.roundLimit) * 100 : 0;\n  el.timerBar.style.width = pct + '%';\n  if(state.timerRemain <= 0){\n    el.timerBar.className = 'out';\n    if(!state.timeUp){\n      state.timeUp = true;\n      el.hintText.textContent = '慢慢想，不着急～';\n      restoreCue();\n      var c = state.current ? findBubble(state.current.who) : null;\n      if(c) c.el.classList.add('hinted');\n      publish();\n    }\n  }else{\n    el.timerBar.className = pct < 35 ? 'low' : '';\n  }\n}\n\n/* ================= 关卡 / 回合 ================= */\nfunction pickQuestions(){\n  var pool = shuffle(RAW.slice());\n  var need = LEVELS * ROUNDS_PER_LEVEL;\n  var out = [];\n  for(var i = 0; i < need; i++){ out.push(pool[i % pool.length]); }\n  return out;\n}\n\nfunction startGame(){\n  initAudio();\n  playTap();\n  hide(el.startScreen);\n  hide(el.pauseScreen);\n  hide(el.resultScreen);\n  hideToast();\n\n  state.phase = 'playing';\n  state.running = true;\n  state.paused = false;\n  state.locked = true;\n  state.level = 1;\n  state.round = 0;\n  state.score = 0; state.stars = 0; state.streak = 0; state.bestStreak = 0;\n  state.correctCount = 0; state.wrongCount = 0; state.fastCount = 0;\n  state.levelWrong = 0;\n  state.lastResult = null;\n  state.current = null;\n  state.questions = pickQuestions();\n  state.roundLimit = LIMITS[0];\n  state.bubbleSpeed = SPEEDS[0];\n  el.hintText.textContent = '⭐指着谁，说的就是谁。点一点！';\n\n  updateHUD();\n  layoutField();\n  resetBubbles(state.bubbleSpeed, true);\n  nextRound();\n}\n\nfunction nextRound(){\n  if(state.round >= ROUNDS_PER_LEVEL){ endLevel(); return; }\n  var idx = (state.level - 1) * ROUNDS_PER_LEVEL + state.round;\n  var q = state.questions[idx];\n  if(!q){ endGame(); return; }\n\n  state.current = q;\n  state.locked = false;\n  state.wrongThisRound = false;\n  state.timeUp = false;\n  state.lastResult = null;\n  state.timerRemain = state.roundLimit;\n  el.timerBar.style.width = '100%';\n  el.timerBar.className = '';\n  el.hintText.textContent = '⭐指着谁，说的就是谁。点一点！';\n\n  renderScene(q);\n  resetBubbles(state.bubbleSpeed, true);\n  updateHUD();\n  publish();\n}\n\nfunction renderScene(q){\n  /* 补全听话人 */\n  var ids = ['mei','ming','gang'];\n  var others = ids.filter(function(k){ return k !== q.sp; });\n  var lis;\n  if(q.who === '我'){ lis = others[0]; }\n  else if(q.who === '你'){ lis = q.ref; }\n  else { lis = others.filter(function(k){ return k !== q.ref; })[0] || others[0]; }\n  q.lis = lis;\n\n  el.kidsRow.innerHTML = '';\n  ids.forEach(function(id){\n    var isSpk = id === q.sp;\n    var isRef = id === q.ref;\n    var isLis = id === lis;\n    var kid = document.createElement('div');\n    kid.className = 'kid' + (isRef ? ' ref' : '');\n    kid.setAttribute('data-kid', id);\n    var marks = '';\n    if(isLis) marks += '<span class=\"m lis\">👀</span>';\n    if(isSpk) marks += '<span class=\"m spk\">💬</span>';\n    if(isRef) marks += '<span class=\"m ref\">⭐</span>';\n    kid.innerHTML =\n      '<div class=\"marks\">' + marks + '</div>' +\n      '<div class=\"avatar\">' + KIDS[id].emoji + '</div>' +\n      '<div class=\"kname\">' + KIDS[id].name + '</div>';\n    el.kidsRow.appendChild(kid);\n  });\n\n  var parts = q.text.split('___');\n  el.sentenceBar.className = '';\n  el.sentenceBar.innerHTML =\n    '<span class=\"speakerTag\">' + KIDS[q.sp].name + '</span>说：' +\n    (parts[0] || '') +\n    '<span class=\"blank\" id=\"blankSlot\">?</span>' +\n    (parts[1] || '');\n\n  scheduleCue();\n}\n\nfunction scheduleCue(){\n  if(state.cueTimer){ clearTimeout(state.cueTimer); state.cueTimer = null; }\n  if(state.level <= 1) return;\n  var delay = state.level === 2 ? 4000 : 1600;\n  state.cueTimer = setTimeout(function(){\n    var kids = el.kidsRow.querySelectorAll('.kid');\n    for(var i = 0; i < kids.length; i++){ kids[i].classList.add('cue-hidden'); }\n  }, delay);\n}\n\nfunction restoreCue(){\n  if(state.cueTimer){ clearTimeout(state.cueTimer); state.cueTimer = null; }\n  var kids = el.kidsRow.querySelectorAll('.kid');\n  for(var i = 0; i < kids.length; i++){ kids[i].classList.remove('cue-hidden'); }\n}\n\nfunction resetBubbles(speed, rePos){\n  var W = el.field.clientWidth, H = el.field.clientHeight;\n  if(W < 60 || H < 60) return;\n  var n = bubbles.length;\n  for(var i = 0; i < n; i++){\n    var b = bubbles[i];\n    b.dead = false;\n    b.el.style.display = '';\n    b.el.style.opacity = '1';\n    b.el.classList.remove('wrong', 'hinted');\n    b.inner.className = b.baseClass;\n\n    if(rePos){\n      var col = (i + 0.5) / n;\n      var tx = W * col + (Math.random() - 0.5) * W * 0.16;\n      var ty = H * (0.34 + Math.random() * 0.32);\n      b.x = Math.min(Math.max(b.r + 4, tx), Math.max(b.r + 4, W - b.r - 4));\n      b.y = Math.min(Math.max(b.r + 4, ty), Math.max(b.r + 4, H - b.r - 4));\n    }\n\n    var ang = Math.random() * Math.PI * 2;\n    b.vx = Math.cos(ang) * speed;\n    b.vy = Math.sin(ang) * speed;\n\n    b.x = Math.min(Math.max(b.r + 2, b.x), Math.max(b.r + 2, W - b.r - 2));\n    b.y = Math.min(Math.max(b.r + 2, b.y), Math.max(b.r + 2, H - b.r - 2));\n    renderBubble(b);\n  }\n}\n\n/* ================= 作答 ================= */\nfunction onTap(ch){\n  if(!state.running || state.paused || state.locked) return;\n  if(!state.current) return;\n  initAudio();\n  if(ch === state.current.who) doCorrect(ch);\n  else doWrong(ch);\n}\n\nfunction doCorrect(ch){\n  state.locked = true;\n  var b = findBubble(ch);\n  var pts = 10;\n  if(!state.wrongThisRound){\n    pts += Math.round(5 * (state.timerRemain / state.roundLimit));\n    state.streak++;\n    if((state.roundLimit - state.timerRemain) <= 3) state.fastCount++;\n  }else{\n    state.streak = 0;\n  }\n  state.score += pts;\n  state.stars++;\n  state.correctCount++;\n  state.lastResult = 'correct';\n  if(state.streak > state.bestStreak) state.bestStreak = state.streak;\n\n  if(b){\n    b.dead = true;\n    b.inner.classList.add('pop');\n    (function(node){ setTimeout(function(){ node.style.display = 'none'; }, 430); })(b.el);\n    burstStars(b.x, b.y, 8);\n  }\n\n  var slot = $('blankSlot');\n  if(slot){\n    slot.textContent = ch;\n    slot.classList.add('filled');\n  }\n  el.sentenceBar.classList.add('correct');\n  el.hintText.textContent = '太棒了！+' + pts + ' 分';\n  if(b) floatScore(b.x, b.y, '+' + pts);\n\n  playCorrect();\n  updateHUD();\n  checkAchievements();\n  publish();\n\n  setTimeout(function(){\n    el.sentenceBar.classList.remove('correct');\n    state.round++;\n    if(state.round >= ROUNDS_PER_LEVEL) endLevel();\n    else nextRound();\n  }, 1150);\n}\n\nfunction doWrong(ch){\n  var q = state.current;\n  var b = findBubble(ch);\n  state.wrongThisRound = true;\n  state.wrongCount++;\n  state.levelWrong++;\n  state.streak = 0;\n  state.lastResult = 'wrong';\n\n  if(b){\n    b.dead = true;\n    b.inner.classList.add('shake');\n    (function(node){\n      setTimeout(function(){ node.el.classList.add('wrong'); }, 360);\n    })(b);\n  }\n  el.hintText.textContent = '没关系，再想想～ ' + q.hint;\n  playWrong();\n  updateHUD();\n  publish();\n\n  if(state.cueTimer){ clearTimeout(state.cueTimer); }\n  state.cueTimer = setTimeout(function(){\n    restoreCue();\n    var c = findBubble(q.who);\n    if(c) c.el.classList.add('hinted');\n  }, 800);\n}\n\n/* ================= 特效 ================= */\nfunction burstStars(x, y, n){\n  for(var i = 0; i < n; i++){\n    var s = document.createElement('div');\n    s.className = 'particle';\n    s.textContent = Math.random() < 0.5 ? '⭐' : '✨';\n    s.style.left = x + 'px';\n    s.style.top = y + 'px';\n    var ang = Math.random() * Math.PI * 2;\n    var dist = 45 + Math.random() * 75;\n    s.style.setProperty('--dx', (Math.cos(ang) * dist).toFixed(1) + 'px');\n    s.style.setProperty('--dy', (Math.sin(ang) * dist).toFixed(1) + 'px');\n    s.style.fontSize = (14 + Math.random() * 12).toFixed(0) + 'px';\n    el.field.appendChild(s);\n    (function(node){ setTimeout(function(){ node.remove(); }, 820); })(s);\n  }\n}\n\nfunction floatScore(x, y, txt){\n  var d = document.createElement('div');\n  d.className = 'floatscore';\n  d.textContent = txt;\n  d.style.left = x + 'px';\n  d.style.top = y + 'px';\n  el.field.appendChild(d);\n  (function(node){ setTimeout(function(){ node.remove(); }, 1020); })(d);\n}\n\nfunction showToast(msg){\n  el.levelToast.textContent = msg;\n  el.levelToast.classList.add('show');\n}\nfunction hideToast(){ el.levelToast.classList.remove('show'); }\n\nfunction showAch(a){\n  el.achPop.innerHTML =\n    '<span class=\"ai\">' + a.icon + '</span><div><div class=\"at\">获得徽章！</div>' +\n    '<div class=\"an\">' + a.name + '</div></div>';\n  el.achPop.classList.add('show');\n  if(el.achPop._t) clearTimeout(el.achPop._t);\n  el.achPop._t = setTimeout(function(){ el.achPop.classList.remove('show'); }, 2300);\n}\n\nfunction unlock(id){\n  if(state.unlocked[id]) return;\n  state.unlocked[id] = true;\n  var a = null;\n  for(var i = 0; i < ACHIEVEMENTS.length; i++){\n    if(ACHIEVEMENTS[i].id === id){ a = ACHIEVEMENTS[i]; break; }\n  }\n  if(a) showAch(a);\n}\n\nfunction checkAchievements(){\n  if(state.correctCount >= 1) unlock('first');\n  if(state.streak >= 5) unlock('streak5');\n  if(state.fastCount >= 3) unlock('fast');\n  if(state.score >= 150) unlock('master');\n}\n\n/* ================= 关卡结束 ================= */\nfunction endLevel(){\n  state.running = false;\n  state.locked = true;\n  bubbles.forEach(function(b){ b.el.style.display = 'none'; });\n\n  if(state.levelWrong === 0) unlock('perfect');\n\n  if(state.level >= LEVELS){ endGame(); return; }\n\n  state.phase = 'levelup';\n  showToast('第 ' + state.level + ' 关 通过啦！🎉');\n  playLevel();\n  publish();\n\n  setTimeout(function(){\n    hideToast();\n    state.level++;\n    state.round = 0;\n    state.levelWrong = 0;\n    state.roundLimit = LIMITS[state.level - 1];\n    state.bubbleSpeed = SPEEDS[state.level - 1];\n    state.phase = 'playing';\n    state.running = true;\n    updateHUD();\n    nextRound();\n  }, 1900);\n}\n\nfunction endGame(){\n  state.running = false;\n  state.locked = true;\n  state.phase = 'finished';\n  bubbles.forEach(function(b){ b.el.style.display = 'none'; });\n\n  var totalQ = LEVELS * ROUNDS_PER_LEVEL;\n  var acc = totalQ > 0 ? Math.round(state.correctCount / totalQ * 100) : 0;\n  var starCount = acc >= 90 ? 3 : (acc >= 70 ? 2 : 1);\n\n  $('resBigStars').textContent = '⭐'.repeat(starCount) + '☆'.repeat(3 - starCount);\n  $('resScore').textContent = state.score;\n  $('resStars').textContent = state.stars + ' / ' + totalQ;\n  $('resAcc').textContent = acc + '%';\n\n  var best = 0;\n  try{ best = Number(localStorage.getItem('nwt_best') || 0) || 0; }catch(e){ best = 0; }\n  if(state.score > best){\n    best = state.score;\n    try{ localStorage.setItem('nwt_best', String(best)); }catch(e){}\n  }\n  $('resBest').textContent = best;\n\n  var html = '';\n  for(var i = 0; i < ACHIEVEMENTS.length; i++){\n    var a = ACHIEVEMENTS[i];\n    var got = !!state.unlocked[a.id];\n    html += '<div class=\"ach-item' + (got ? ' got' : '') + '\">' +\n            '<span>' + a.icon + '</span><span>' + a.name + '</span></div>';\n  }\n  $('resAch').innerHTML = html;\n\n  show(el.resultScreen);\n  playLevel();\n  publish();\n}\n\n/* ================= 暂停 / 重置 ================= */\nfunction togglePause(){\n  if(state.phase !== 'playing' && state.phase !== 'paused') return;\n  state.paused = !state.paused;\n  if(state.paused){\n    state.phase = 'paused';\n    show(el.pauseScreen);\n    $('pause-btn').textContent = '▶';\n  }else{\n    state.phase = 'playing';\n    hide(el.pauseScreen);\n    $('pause-btn').textContent = '⏸';\n  }\n  publish();\n}\n\nfunction restartGame(){\n  hide(el.pauseScreen);\n  $('pause-btn').textContent = '⏸';\n  startGame();\n}\n\nfunction updateHUD(){\n  $('scoreVal').textContent = state.score;\n  $('starVal').textContent = state.stars;\n  $('streakVal').textContent = state.streak;\n  $('levelChip').textContent = '第 ' + state.level + ' 关';\n}\n\n/* ================= 外部驱动 ================= */\nwindow.setGameParam = function(key, value){\n  if(key === 'score'){\n    state.score = Number(value) || 0;\n    updateHUD();\n  }else if(key === 'paused'){\n    var want = (value === true || value === 'true');\n    if(want !== state.paused && (state.phase === 'playing' || state.phase === 'paused')) togglePause();\n  }else if(key === 'level'){\n    var lv = Math.max(1, Math.min(LEVELS, Number(value) || 1));\n    state.level = lv;\n    state.roundLimit = LIMITS[lv - 1];\n    state.bubbleSpeed = SPEEDS[lv - 1];\n    updateHUD();\n    if(state.running && !state.paused) nextRound();\n  }else if(key === 'speed'){\n    state.bubbleSpeed = Number(value) || SPEEDS[state.level - 1];\n  }\n  publish();\n};\n\nwindow.addEventListener('message', function(event){\n  var data = event.data || {};\n  var type = data.type;\n  var target = data.target;\n  var st = data.state;\n  var content = data.content;\n\n  if(type === 'SET_WIDGET_STATE'){\n    if(st){\n      Object.keys(st).forEach(function(key){\n        var control = document.getElementById(key + '-slider') ||\n                      document.getElementById(key) ||\n                      document.querySelector('[data-var=\"' + key + '\"]');\n        if(control){\n          control.value = st[key];\n          control.dispatchEvent(new Event('input', { bubbles: true }));\n        }\n        if(typeof window.setGameParam === 'function') window.setGameParam(key, st[key]);\n      });\n    }\n  }else if(type === 'HIGHLIGHT_ELEMENT'){\n    var hEl = document.querySelector(target);\n    if(hEl){\n      hEl.style.outline = '3px solid rgba(139, 92, 246, 0.8)';\n      hEl.style.outlineOffset = '4px';\n      hEl.style.animation = 'pulse-highlight 2s infinite';\n      setTimeout(function(){\n        hEl.style.outline = '';\n        hEl.style.animation = '';\n      }, 3000);\n    }\n  }else if(type === 'ANNOTATE_ELEMENT'){\n    var aEl = document.querySelector(target);\n    if(aEl && content){\n      var rect = aEl.getBoundingClientRect();\n      var tip = document.createElement('div');\n      tip.className = 'teacher-annotation';\n      tip.style.cssText = 'position:fixed; top:' + (rect.top - 40) + 'px; left:' + rect.left +\n        'px; background:rgba(139,92,246,0.95); color:white; padding:8px 12px; border-radius:8px;' +\n        ' font-size:14px; z-index:1000; animation:fadeIn 0.3s;';\n      tip.textContent = content;\n      document.body.appendChild(tip);\n      setTimeout(function(){ tip.remove(); }, 4000);\n    }\n  }else if(type === 'REVEAL_ELEMENT'){\n    var rEl = document.querySelector(target);\n    if(rEl){\n      rEl.style.display = '';\n      rEl.style.opacity = '1';\n    }\n  }\n});\n\nvar styleNode = document.createElement('style');\nstyleNode.textContent =\n  '@keyframes pulse-highlight { 0%, 100% { outline-color: rgba(139, 92, 246, 0.8); } 50% { outline-color: rgba(139, 92, 246, 0.4); } }' +\n  '@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }';\ndocument.head.appendChild(styleNode);\n\n/* ================= 启动 ================= */\nif(document.readyState === 'loading'){\n  document.addEventListener('DOMContentLoaded', init);\n}else{\n  init();\n}\n</script>\n</body>\n</html>",
+      "type": "interactive",
+      "widgetType": "game",
+      "widgetConfig": {
+        "type": "game",
+        "scoring": {
+          "speedBonus": 5,
+          "correctPoints": 10
+        },
+        "gameType": "action",
+        "gameConfig": {
+          "controls": [
+            "tap_bubble"
+          ],
+          "successCondition": "答对并拿到星星",
+          "initialConditions": {
+            "levels": 3,
+            "bubbleSpeed": [
+              24,
+              44,
+              66
+            ],
+            "roundsPerLevel": 6
+          }
+        },
+        "description": "点击漂浮的‘你/我/他’气泡，判断句子中的人称代词。",
+        "achievements": [
+          {
+            "id": "first",
+            "icon": "🔍",
+            "name": "小小侦探"
+          },
+          {
+            "id": "streak5",
+            "icon": "🔥",
+            "name": "连对五题"
+          },
+          {
+            "id": "fast",
+            "icon": "⚡",
+            "name": "小闪电"
+          },
+          {
+            "id": "perfect",
+            "icon": "💯",
+            "name": "全对啦"
+          },
+          {
+            "id": "master",
+            "icon": "👑",
+            "name": "人称小达人"
+          }
+        ]
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791422032395,
+    "outlineId": "scene_10",
+    "updatedAt": 1791422032395
+  },
+  {
+    "id": "ghi-SNU6N1kx0tvM_vkz-",
+    "type": "quiz",
+    "order": 11,
+    "title": "人称代词小考考",
+    "actions": [
+      {
+        "id": "action_FBeqJ_IX",
+        "text": "刚才我们练了“你、我、他”。现在，来闯关啦。",
+        "type": "speech"
+      },
+      {
+        "id": "action_VB_t9U-4",
+        "text": "自己看一看，自己选一选。做完了，老师再和你一起看。",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "quiz",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "single",
+          "answer": [
+            "A"
+          ],
+          "points": 10,
+          "options": [
+            {
+              "label": "我（wǒ）",
+              "value": "A"
+            },
+            {
+              "label": "你（nǐ）",
+              "value": "B"
+            },
+            {
+              "label": "他（tā）",
+              "value": "C"
+            },
+            {
+              "label": "天（tiān）",
+              "value": "D"
+            }
+          ],
+          "analysis": "指着自己说话，就是说自己，用“我（wǒ）”。比如：我是小学生。“你”是说对面的人，“他”是说别人，“天”是天空，不是人称。",
+          "question": "看一看：小明指着自己说话，用哪个字？",
+          "hasAnswer": true
+        },
+        {
+          "id": "q2",
+          "type": "single",
+          "answer": [
+            "B"
+          ],
+          "points": 10,
+          "options": [
+            {
+              "label": "我（wǒ）",
+              "value": "A"
+            },
+            {
+              "label": "你（nǐ）",
+              "value": "B"
+            },
+            {
+              "label": "地（dì）",
+              "value": "C"
+            },
+            {
+              "label": "人（rén）",
+              "value": "D"
+            }
+          ],
+          "analysis": "对着对面的人说话，就用“你（nǐ）”。比如：你好！而“我”是说自己，“地”和“人”不是人称代词。",
+          "question": "看一看：小明指着对面的人说话，用哪个字？",
+          "hasAnswer": true
+        },
+        {
+          "id": "q3",
+          "type": "single",
+          "answer": [
+            "C"
+          ],
+          "points": 10,
+          "options": [
+            {
+              "label": "我（wǒ）",
+              "value": "A"
+            },
+            {
+              "label": "你（nǐ）",
+              "value": "B"
+            },
+            {
+              "label": "他（tā）",
+              "value": "C"
+            },
+            {
+              "label": "天（tiān）",
+              "value": "D"
+            }
+          ],
+          "analysis": "小明和小红在说话，说的是旁边另外一个人，用“他（tā）”。“我”说自己，“你”说对面听话的人，“天”不是人称。句子是：他是小红。",
+          "question": "看图：小明指着旁边的小红，说：＿＿是小红。用哪个字？",
+          "hasAnswer": true
+        }
+      ]
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791422037267,
+    "outlineId": "scene_11",
+    "updatedAt": 1791422037267
+  },
+  {
+    "id": "pw4L82c3BOS0p-wyS7dgk",
+    "type": "slide",
+    "order": 12,
+    "title": "看图认一认",
+    "actions": [
+      {
+        "id": "action_rnuriDf4",
+        "type": "spotlight",
+        "elementId": "text_RLx_Cx8n"
+      },
+      {
+        "id": "action_22bM4tja",
+        "text": "刚才我们玩了点一点。现在，我们的任务是——看图认一认。",
+        "type": "speech"
+      },
+      {
+        "id": "action_FsaXBc9b",
+        "type": "spotlight",
+        "elementId": "text_mZQBcRtA"
+      },
+      {
+        "id": "action_gaLpsjs0",
+        "text": "看这幅图。天上有什么？蓝蓝的天，还有一朵云。这个字就是“天”，tiān。",
+        "type": "speech"
+      },
+      {
+        "id": "action_HxHGp9hZ",
+        "type": "spotlight",
+        "elementId": "text_mA7kef_8"
+      },
+      {
+        "id": "action_cpkz_yxY",
+        "text": "天，天，天。我们一起读一遍，tiān。声音亮一点。",
+        "type": "speech"
+      },
+      {
+        "id": "action_zJ_DrfKw",
+        "type": "spotlight",
+        "elementId": "text_70lZ505l"
+      },
+      {
+        "id": "action_6pntJqRn",
+        "text": "再看这幅图。绿绿的小芽长在哪里？长在大地上。这个字是“地”，dì。跟我读，dì。",
+        "type": "speech"
+      },
+      {
+        "id": "action_UMo9i8ht",
+        "type": "spotlight",
+        "elementId": "text_H2kazRWe"
+      },
+      {
+        "id": "action_PSB1Evgc",
+        "text": "这个小朋友站得直直的。这个字是“人”，rén。你看它像不像两条腿？读一读，rén。",
+        "type": "speech"
+      },
+      {
+        "id": "action_SI4iKSN3",
+        "type": "spotlight",
+        "elementId": "text_VYgBemvA"
+      },
+      {
+        "id": "action_90IuNsH3",
+        "text": "他抬起小手打招呼啦。这就是“你、我、他”，nǐ、wǒ、tā。三个字，好朋友。",
+        "type": "speech"
+      },
+      {
+        "id": "action_XsjdIY3y",
+        "type": "spotlight",
+        "elementId": "text_mHJ0Rkcn"
+      },
+      {
+        "id": "action_2O6PFZ-1",
+        "text": "现在用你的小手指一指：哪幅图是“天”呀？指给老师看。再用小手指着字，读一读。读完的小朋友，真棒！",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "pSwJ8DZ_EeWljrUF5Rugg",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "text_RLx_Cx8n",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px\"><strong>看图认一认</strong></p>",
+            "defaultColor": "#1f2937",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_rTGL_pUD",
+            "top": 128,
+            "fill": "#f4a261",
+            "left": 70,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 860,
+            "height": 3,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_d8g6KyUW",
+            "top": 150,
+            "fill": "#dbeafe",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 300,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_zZyIrNEp",
+            "top": 150,
+            "fill": "#dcfce7",
+            "left": 210,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 300,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_2LRnHiiz",
+            "top": 150,
+            "fill": "#fef3c7",
+            "left": 360,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 300,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_NQSW2wWy",
+            "top": 150,
+            "fill": "#fce7f3",
+            "left": 510,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 300,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_hWIPrYlv",
+            "top": 150,
+            "fill": "#ede9fe",
+            "left": 660,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 300,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_J6MpEVZV",
+            "top": 150,
+            "fill": "#ffedd5",
+            "left": 810,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 300,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_mZQBcRtA",
+            "top": 176,
+            "left": 80,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\">🌤️</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_70lZ505l",
+            "top": 176,
+            "left": 230,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\">🌱</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_H2kazRWe",
+            "top": 176,
+            "left": 380,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\">🧍</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_UtcX8oWl",
+            "top": 176,
+            "left": 530,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\">👋</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_fcl_RRAy",
+            "top": 176,
+            "left": 680,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\">🙋</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_VYgBemvA",
+            "top": 176,
+            "left": 830,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\">👦</p>",
+            "defaultColor": "#333333",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_mA7kef_8",
+            "top": 278,
+            "left": 80,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>天</strong></p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_Rnne0F_x",
+            "top": 278,
+            "left": 230,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>地</strong></p>",
+            "defaultColor": "#166534",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_bEiyAXSY",
+            "top": 278,
+            "left": 380,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>人</strong></p>",
+            "defaultColor": "#92400e",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_8bRi5n12",
+            "top": 278,
+            "left": 530,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>你</strong></p>",
+            "defaultColor": "#9d174d",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_jGPWDttm",
+            "top": 278,
+            "left": 680,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>我</strong></p>",
+            "defaultColor": "#5b21b6",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_87T21ph1",
+            "top": 278,
+            "left": 830,
+            "type": "text",
+            "width": 90,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:36px;text-align:center\"><strong>他</strong></p>",
+            "defaultColor": "#9a3412",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_pjaBXhcf",
+            "top": 380,
+            "left": 80,
+            "type": "text",
+            "width": 90,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">tiān</p>",
+            "defaultColor": "#475569",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_BLKDziIc",
+            "top": 380,
+            "left": 230,
+            "type": "text",
+            "width": 90,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">dì</p>",
+            "defaultColor": "#475569",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_PpH9LDhy",
+            "top": 380,
+            "left": 380,
+            "type": "text",
+            "width": 90,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">rén</p>",
+            "defaultColor": "#475569",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_g8UuVoPX",
+            "top": 380,
+            "left": 530,
+            "type": "text",
+            "width": 90,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">nǐ</p>",
+            "defaultColor": "#475569",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_BJnQ9lvA",
+            "top": 380,
+            "left": 680,
+            "type": "text",
+            "width": 90,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">wǒ</p>",
+            "defaultColor": "#475569",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_Jc-GEbPS",
+            "top": 380,
+            "left": 830,
+            "type": "text",
+            "width": 90,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">tā</p>",
+            "defaultColor": "#475569",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_mHJ0Rkcn",
+            "top": 464,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px;text-align:center\">看图说字：这幅图是哪个字？读一读</p>",
+            "defaultColor": "#64748b",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791422077453,
+    "outlineId": "scene_12",
+    "updatedAt": 1791422077453
+  },
+  {
+    "id": "FtSbjetoxJyD1BzmmboP3",
+    "type": "slide",
+    "order": 13,
+    "title": "大声读一读",
+    "actions": [
+      {
+        "id": "action_XDMjJzvO",
+        "type": "spotlight",
+        "elementId": "text_itYYdY7s"
+      },
+      {
+        "id": "action_Aiqj1p7f",
+        "text": "前面我们看图认了字，现在我们大声读一读。",
+        "type": "speech"
+      },
+      {
+        "id": "action_KBU7FSvR",
+        "type": "spotlight",
+        "elementId": "text_condUaI2"
+      },
+      {
+        "id": "action_tKnlV94P",
+        "text": "先读三个字：天，tiān；地，dì；人，rén。看老师的样子，我们一起读一读。",
+        "type": "speech"
+      },
+      {
+        "id": "action_Rvb8fFjl",
+        "type": "spotlight",
+        "elementId": "text_idR4-rX3"
+      },
+      {
+        "id": "action_gdjOnLHr",
+        "text": "再读三个词：你，nǐ；我，wǒ；他，tā。你我他，一起大声读。",
+        "type": "speech"
+      },
+      {
+        "id": "action_stPk8-GS",
+        "type": "spotlight",
+        "elementId": "text_VKVrvtsd"
+      },
+      {
+        "id": "action_l9EhAvnD",
+        "text": "现在拍着小手读：天在上，地在下，人站在中间。",
+        "type": "speech"
+      },
+      {
+        "id": "action_bZitTMm9",
+        "type": "spotlight",
+        "elementId": "text_q6lo1Syi"
+      },
+      {
+        "id": "action_M2I0VHWU",
+        "text": "跟着老师读儿歌：我是小学生，你是好朋友，他是小同伴，天地人是一家。读完了，老师先领读，全班再齐读，然后分组读一读，最后比一比，看哪一组读得又准又好听。",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "vRvMJ3NOMfKWZ8YTCjP6L",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "shape_nCcdxTPr",
+            "top": 128,
+            "fill": "#5b9bd5",
+            "left": 70,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 860,
+            "height": 3,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_MnN_U1HQ",
+            "top": 142,
+            "fill": "#dbeafe",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 125,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_gbRCa7xX",
+            "top": 142,
+            "fill": "#dbeafe",
+            "left": 205,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 125,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_O3vmI0YD",
+            "top": 142,
+            "fill": "#dbeafe",
+            "left": 350,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 125,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_SscUMjVb",
+            "top": 142,
+            "fill": "#fef3c7",
+            "left": 520,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 125,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_5lF9-nyt",
+            "top": 142,
+            "fill": "#fef3c7",
+            "left": 665,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 125,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_Nds_Iqox",
+            "top": 142,
+            "fill": "#fef3c7",
+            "left": 810,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 130,
+            "height": 125,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_TbqzgteN",
+            "top": 276,
+            "fill": "#e0f2fe",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 380,
+            "height": 155,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_FAW71T1h",
+            "top": 276,
+            "fill": "#fce7f3",
+            "left": 480,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 460,
+            "height": 155,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_SkG5w6Vg",
+            "top": 448,
+            "fill": "#dbeafe",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 178,
+            "height": 60,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_qqe0IO0l",
+            "top": 448,
+            "fill": "#bfdbfe",
+            "left": 294,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 178,
+            "height": 60,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_VUv3DGCL",
+            "top": 448,
+            "fill": "#93c5fd",
+            "left": 528,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 178,
+            "height": 60,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_jyomoKi7",
+            "top": 448,
+            "fill": "#60a5fa",
+            "left": 762,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 178,
+            "height": 60,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_itYYdY7s",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;color:#1e3a8a\"><strong>大声读一读</strong></p>",
+            "defaultColor": "#1e3a8a",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_condUaI2",
+            "top": 154,
+            "left": 70,
+            "type": "text",
+            "width": 110,
+            "height": 58,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center;color:#1e40af\"><strong>天</strong></p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_pSfTvoHb",
+            "top": 212,
+            "left": 70,
+            "type": "text",
+            "width": 110,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center;color:#64748b\">tiān</p>",
+            "defaultColor": "#64748b",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_Q8yXe3vx",
+            "top": 154,
+            "left": 215,
+            "type": "text",
+            "width": 110,
+            "height": 58,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center;color:#1e40af\"><strong>地</strong></p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_LJTFNM15",
+            "top": 212,
+            "left": 215,
+            "type": "text",
+            "width": 110,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center;color:#64748b\">dì</p>",
+            "defaultColor": "#64748b",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_adg5Ismz",
+            "top": 154,
+            "left": 360,
+            "type": "text",
+            "width": 110,
+            "height": 58,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center;color:#1e40af\"><strong>人</strong></p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_vdcC06b_",
+            "top": 212,
+            "left": 360,
+            "type": "text",
+            "width": 110,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center;color:#64748b\">rén</p>",
+            "defaultColor": "#64748b",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_idR4-rX3",
+            "top": 154,
+            "left": 530,
+            "type": "text",
+            "width": 110,
+            "height": 58,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center;color:#b45309\"><strong>你</strong></p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_lFz1in_p",
+            "top": 212,
+            "left": 530,
+            "type": "text",
+            "width": 110,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center;color:#64748b\">nǐ</p>",
+            "defaultColor": "#64748b",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_NprgI5zS",
+            "top": 154,
+            "left": 675,
+            "type": "text",
+            "width": 110,
+            "height": 58,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center;color:#b45309\"><strong>我</strong></p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_h_BbgBpM",
+            "top": 212,
+            "left": 675,
+            "type": "text",
+            "width": 110,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center;color:#64748b\">wǒ</p>",
+            "defaultColor": "#64748b",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_rnPekgCx",
+            "top": 154,
+            "left": 820,
+            "type": "text",
+            "width": 110,
+            "height": 58,
+            "rotate": 0,
+            "content": "<p style=\"font-size:24px;text-align:center;color:#b45309\"><strong>他</strong></p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_Ybqg9Rit",
+            "top": 212,
+            "left": 820,
+            "type": "text",
+            "width": 110,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center;color:#64748b\">tā</p>",
+            "defaultColor": "#64748b",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_t5lqzIWi",
+            "top": 288,
+            "left": 80,
+            "type": "text",
+            "width": 340,
+            "height": 49,
+            "rotate": 0,
+            "content": "<p style=\"font-size:18px;color:#0369a1\"><strong>节奏朗读</strong></p>",
+            "defaultColor": "#0369a1",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_VKVrvtsd",
+            "top": 340,
+            "left": 80,
+            "type": "text",
+            "width": 340,
+            "height": 49,
+            "rotate": 0,
+            "content": "<p style=\"font-size:18px;text-align:center;color:#334155\">天在上，地在下，人站在中间。</p>",
+            "defaultColor": "#334155",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_2Ss4uqTS",
+            "top": 288,
+            "left": 500,
+            "type": "text",
+            "width": 420,
+            "height": 49,
+            "rotate": 0,
+            "content": "<p style=\"font-size:18px;color:#be185d\"><strong>读儿歌</strong></p>",
+            "defaultColor": "#be185d",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_q6lo1Syi",
+            "top": 340,
+            "left": 500,
+            "type": "text",
+            "width": 420,
+            "height": 76,
+            "rotate": 0,
+            "content": "<p style=\"font-size:18px;text-align:center;color:#334155\">我是小学生，你是好朋友，</p><p style=\"font-size:18px;text-align:center;color:#334155\">他是小同伴，天地人是一家。</p>",
+            "defaultColor": "#334155",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_c6IyEvJZ",
+            "top": 455,
+            "left": 70,
+            "type": "text",
+            "width": 158,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px;text-align:center;color:#1e3a8a\"><strong>领读</strong></p>",
+            "defaultColor": "#1e3a8a",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_OvY_D829",
+            "top": 455,
+            "left": 304,
+            "type": "text",
+            "width": 158,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px;text-align:center;color:#1e3a8a\"><strong>齐读</strong></p>",
+            "defaultColor": "#1e3a8a",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_pIgvUfyO",
+            "top": 455,
+            "left": 538,
+            "type": "text",
+            "width": 158,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px;text-align:center;color:#1e3a8a\"><strong>分组读</strong></p>",
+            "defaultColor": "#1e3a8a",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_sKf0UHTI",
+            "top": 455,
+            "left": 772,
+            "type": "text",
+            "width": 158,
+            "height": 46,
+            "rotate": 0,
+            "content": "<p style=\"font-size:16px;text-align:center;color:#1e3a8a\"><strong>比赛读</strong></p>",
+            "defaultColor": "#1e3a8a",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "line_8Zl2SyXn",
+            "end": [
+              52,
+              0
+            ],
+            "top": 478,
+            "left": 240,
+            "type": "line",
+            "color": "#5b9bd5",
+            "start": [
+              0,
+              0
+            ],
+            "style": "solid",
+            "width": 3,
+            "points": [
+              "",
+              "arrow"
+            ],
+            "rotate": 0
+          },
+          {
+            "id": "line_OcFxis5i",
+            "end": [
+              52,
+              0
+            ],
+            "top": 478,
+            "left": 474,
+            "type": "line",
+            "color": "#5b9bd5",
+            "start": [
+              0,
+              0
+            ],
+            "style": "solid",
+            "width": 3,
+            "points": [
+              "",
+              "arrow"
+            ],
+            "rotate": 0
+          },
+          {
+            "id": "line_3_e60Tpa",
+            "end": [
+              52,
+              0
+            ],
+            "top": 478,
+            "left": 708,
+            "type": "line",
+            "color": "#5b9bd5",
+            "start": [
+              0,
+              0
+            ],
+            "style": "solid",
+            "width": 3,
+            "points": [
+              "",
+              "arrow"
+            ],
+            "rotate": 0
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791422147544,
+    "outlineId": "scene_13",
+    "updatedAt": 1791422147544
+  },
+  {
+    "id": "M2y0IwEarpFL2EXgqELrC",
+    "type": "slide",
+    "order": 14,
+    "title": "今天我们学会了",
+    "actions": [
+      {
+        "id": "action_AwT6XWC3",
+        "type": "spotlight",
+        "elementId": "text_KQqgu2Db"
+      },
+      {
+        "id": "action_dmsZ1Q3C",
+        "text": "小朋友们，今天我们学会了。一起读一读这六个字。",
+        "type": "speech"
+      },
+      {
+        "id": "action_IvmKGRh0",
+        "type": "laser",
+        "elementId": "text_RMv1GDti"
+      },
+      {
+        "id": "action_S8l5VXM7",
+        "text": "天，tiān。地，dì。人，rén。天地人，是一家。",
+        "type": "speech"
+      },
+      {
+        "id": "action_0jSEUclJ",
+        "type": "laser",
+        "elementId": "text_Xp-hie2r"
+      },
+      {
+        "id": "action_17KjsUIh",
+        "text": "再看，地，dì。地上长着小草，开着小花。",
+        "type": "speech"
+      },
+      {
+        "id": "action_RA11L-jE",
+        "type": "laser",
+        "elementId": "text_HlNoaQlc"
+      },
+      {
+        "id": "action_NXl0JT7z",
+        "text": "人，rén。我们都是一家人。",
+        "type": "speech"
+      },
+      {
+        "id": "action_Mo_3o4mJ",
+        "type": "laser",
+        "elementId": "text_ARX3MVif"
+      },
+      {
+        "id": "action_2U0cBBXA",
+        "text": "你，nǐ。我，wǒ。他，tā。你我他，是好朋友。",
+        "type": "speech"
+      },
+      {
+        "id": "action_adtKD4JA",
+        "type": "spotlight",
+        "elementId": "text_6FCfcYrd"
+      },
+      {
+        "id": "action_7zM7ewMH",
+        "text": "今天大家认真读书，大胆发言，真棒！每人三颗小星星。",
+        "type": "speech"
+      },
+      {
+        "id": "action_rXzXa6dt",
+        "type": "spotlight",
+        "elementId": "text_zcT6I6Bv"
+      },
+      {
+        "id": "action_MLhSWElp",
+        "text": "回家以后，指给爸爸妈妈看一看，说一说这六个字，好不好？",
+        "type": "speech"
+      },
+      {
+        "id": "action_d4O6fkL3",
+        "text": "这节课就到这里。小朋友们真棒，给自己鼓鼓掌！再见啦！",
+        "type": "speech"
+      }
+    ],
+    "content": {
+      "type": "slide",
+      "canvas": {
+        "id": "cHdzqJ5I5zxblJF-B2uWw",
+        "theme": {
+          "shadow": {
+            "h": 0,
+            "v": 0,
+            "blur": 10,
+            "color": "#000000"
+          },
+          "outline": {
+            "color": "#d14424",
+            "style": "solid",
+            "width": 2
+          },
+          "fontName": "Microsoft YaHei",
+          "fontColor": "#333333",
+          "themeColors": [
+            "#5b9bd5",
+            "#ed7d31",
+            "#a5a5a5",
+            "#ffc000",
+            "#4472c4"
+          ],
+          "backgroundColor": "#ffffff"
+        },
+        "elements": [
+          {
+            "id": "text_KQqgu2Db",
+            "top": 50,
+            "left": 60,
+            "type": "text",
+            "width": 880,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>今天我们学会了</strong></p>",
+            "defaultColor": "#1f2937",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_3kOfi2gG",
+            "top": 126,
+            "fill": "#f59e0b",
+            "left": 450,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 100,
+            "height": 5,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_RumOwZ0f",
+            "top": 150,
+            "fill": "#fef3c7",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 120,
+            "height": 170,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_gesIH9w4",
+            "top": 150,
+            "fill": "#dbeafe",
+            "left": 212,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 120,
+            "height": 170,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_K2yWKNfy",
+            "top": 150,
+            "fill": "#dcfce7",
+            "left": 364,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 120,
+            "height": 170,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_MItM8osp",
+            "top": 150,
+            "fill": "#fce7f3",
+            "left": 516,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 120,
+            "height": 170,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_bSzobe2d",
+            "top": 150,
+            "fill": "#ede9fe",
+            "left": 668,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 120,
+            "height": 170,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_ZQQ4TLAn",
+            "top": 150,
+            "fill": "#ffedd5",
+            "left": 820,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 120,
+            "height": 170,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_xKC-YcVC",
+            "top": 178,
+            "left": 80,
+            "type": "text",
+            "width": 80,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">tiān</p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_RMv1GDti",
+            "top": 221,
+            "left": 80,
+            "type": "text",
+            "width": 80,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>天</strong></p>",
+            "defaultColor": "#b45309",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_opET3f5c",
+            "top": 178,
+            "left": 232,
+            "type": "text",
+            "width": 80,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">dì</p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_Xp-hie2r",
+            "top": 221,
+            "left": 232,
+            "type": "text",
+            "width": 80,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>地</strong></p>",
+            "defaultColor": "#1e40af",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_rl_7I7sT",
+            "top": 178,
+            "left": 384,
+            "type": "text",
+            "width": 80,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">rén</p>",
+            "defaultColor": "#166534",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_hlNoaQlc",
+            "top": 221,
+            "left": 384,
+            "type": "text",
+            "width": 80,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>人</strong></p>",
+            "defaultColor": "#166534",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_x8ryWytV",
+            "top": 178,
+            "left": 536,
+            "type": "text",
+            "width": 80,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">nǐ</p>",
+            "defaultColor": "#9d174d",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_ARX3MVif",
+            "top": 221,
+            "left": 536,
+            "type": "text",
+            "width": 80,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>你</strong></p>",
+            "defaultColor": "#9d174d",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_UXumpio0",
+            "top": 178,
+            "left": 688,
+            "type": "text",
+            "width": 80,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">wǒ</p>",
+            "defaultColor": "#5b21b6",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_W518nOvx",
+            "top": 221,
+            "left": 688,
+            "type": "text",
+            "width": 80,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>我</strong></p>",
+            "defaultColor": "#5b21b6",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_dvJOc-Ry",
+            "top": 178,
+            "left": 840,
+            "type": "text",
+            "width": 80,
+            "height": 43,
+            "rotate": 0,
+            "content": "<p style=\"font-size:14px;text-align:center\">tā</p>",
+            "defaultColor": "#c2410c",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_pkKdU0uJ",
+            "top": 221,
+            "left": 840,
+            "type": "text",
+            "width": 80,
+            "height": 70,
+            "rotate": 0,
+            "content": "<p style=\"font-size:32px;text-align:center\"><strong>他</strong></p>",
+            "defaultColor": "#c2410c",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "shape_rCMYoc8e",
+            "top": 345,
+            "fill": "#f0f9ff",
+            "left": 60,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 430,
+            "height": 160,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "shape_03BWYis2",
+            "top": 345,
+            "fill": "#fef9c3",
+            "left": 510,
+            "path": "M 0 0 L 1 0 L 1 1 L 0 1 Z",
+            "type": "shape",
+            "width": 430,
+            "height": 160,
+            "rotate": 0,
+            "viewBox": [
+              1,
+              1
+            ],
+            "fixedRatio": false
+          },
+          {
+            "id": "text_zcT6I6Bv",
+            "top": 369,
+            "left": 80,
+            "type": "text",
+            "width": 390,
+            "height": 112,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px\"><strong>小任务</strong></p><p style=\"font-size:16px\">回家指给爸爸妈妈看</p><p style=\"font-size:16px\">说一说六个字</p>",
+            "defaultColor": "#0c4a6e",
+            "defaultFontName": "Microsoft YaHei"
+          },
+          {
+            "id": "text_6FCfcYrd",
+            "top": 369,
+            "left": 530,
+            "type": "text",
+            "width": 390,
+            "height": 112,
+            "rotate": 0,
+            "content": "<p style=\"font-size:20px\"><strong>我做到了</strong></p><p style=\"font-size:16px\">认真读书，大胆发言</p><p style=\"font-size:16px\"><span style=\"color:#f59e0b\">★ ★ ★</span></p>",
+            "defaultColor": "#92400e",
+            "defaultFontName": "Microsoft YaHei"
+          }
+        ],
+        "background": {
+          "type": "solid",
+          "color": "#ffffff"
+        },
+        "viewportSize": 1000,
+        "viewportRatio": 0.5625
+      }
+    },
+    "stageId": "stage-i7TIjkOluoSr",
+    "createdAt": 1791422180697,
+    "outlineId": "scene_14",
+    "updatedAt": 1791422180697
+  }
+]

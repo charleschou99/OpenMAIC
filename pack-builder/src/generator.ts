@@ -246,7 +246,7 @@ async function generateViaServer(
     let payload: Record<string, unknown> | undefined;
     for (const url of pollUrls) {
       try {
-        const res = await fetch(url, { cache: 'no-store' });
+        const res = await fetch(url);
         if (res.ok) {
           payload = (await res.json()) as Record<string, unknown>;
           break;
@@ -259,11 +259,20 @@ async function generateViaServer(
       throw new Error(`Run ${runId} could not be polled — no reachable status endpoint`);
     }
 
-    // Two response shapes exist: the job view at the top level, and `{ run: {...} }`.
+    // Three places can carry the classroom id, depending on which endpoint answered:
+    // the run view (`run.stageId`), a job view at the top level (`stageId`), and the
+    // job view's success `result.classroomId`. The job view is what the server's own
+    // pollUrl returns, and it does NOT include `stageId` — so all three are checked.
     const run = (payload.run as Record<string, unknown> | undefined) ?? payload;
     const state = run.state ?? run.runState;
     if (typeof state === 'string') lastState = state;
-    if (typeof run.stageId === 'string') stageId = run.stageId;
+    const result = (payload.result as Record<string, unknown> | undefined) ?? undefined;
+    const candidate =
+      (typeof run.stageId === 'string' && run.stageId) ||
+      (typeof payload.stageId === 'string' && payload.stageId) ||
+      (typeof result?.classroomId === 'string' && result.classroomId) ||
+      undefined;
+    if (candidate) stageId = candidate;
 
     if (state === 'completed' || payload.done === true) break;
     if (state === 'failed' || state === 'ended' || state === 'paused') {
@@ -275,8 +284,36 @@ async function generateViaServer(
     }
   }
 
+  // The finishing view may not have named the classroom. Ask the runs endpoint, which
+  // always carries `run.stageId`, rather than giving up on a run that really did finish.
   if (!stageId) {
-    throw new Error(`Run ${runId} completed but reported no stage id`);
+    for (const url of pollUrls) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) continue;
+        const payload = (await res.json()) as Record<string, unknown>;
+        const run = (payload.run as Record<string, unknown> | undefined) ?? payload;
+        const result = payload.result as Record<string, unknown> | undefined;
+        const found =
+          (typeof run.stageId === 'string' && run.stageId) ||
+          (typeof payload.stageId === 'string' && payload.stageId) ||
+          (typeof result?.classroomId === 'string' && result.classroomId) ||
+          undefined;
+        if (found) {
+          stageId = found;
+          break;
+        }
+      } catch {
+        // try the next candidate URL
+      }
+    }
+  }
+
+  if (!stageId) {
+    throw new Error(
+      `Run ${runId} completed but no endpoint reported a classroom id ` +
+        `(tried ${pollUrls.join(', ')})`,
+    );
   }
 
   // Read the finished document the same way the classroom does.
@@ -445,7 +482,7 @@ export async function isServerReachable(
 ): Promise<{ ok: boolean; reason?: string; version?: string }> {
   const base = serverUrl.replace(/\/+$/, '');
   try {
-    const res = await fetch(`${base}/api/health`, { cache: 'no-store' });
+    const res = await fetch(`${base}/api/health`);
     if (!res.ok) return { ok: false, reason: `health check answered ${res.status}` };
     const body = (await res.json()) as { status?: string; version?: string };
     if (body.status !== 'ok') {
